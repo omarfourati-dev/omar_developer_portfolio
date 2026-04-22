@@ -62,4 +62,4 @@ jobs:
         run: docker compose ps
 
       - name: Reload Caddy
-        run: docker exec caddy caddy reload --config /etc/caddy/Caddyfile --force 2>/dev/null || echo "Caddy reload skipped (first deploy – add Caddyfile entry manually)"
+        run: docker compose -f /opt/caddy/docker-compose.yml exec caddy caddy reload --config /etc/caddy/Caddyfile

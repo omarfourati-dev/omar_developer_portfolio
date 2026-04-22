@@ -38,7 +38,6 @@ export default function About() {
       id="about"
       className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden"
     >
-      {/* Section number backdrop */}
       <span className="section-number">01</span>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -47,10 +46,7 @@ export default function About() {
           <div className="flex items-center gap-4 mb-3">
             <span
               className="text-xs tracking-[0.25em] uppercase"
-              style={{
-                fontFamily: "var(--font-space-mono)",
-                color: "#C9A84C",
-              }}
+              style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
             >
               01 / about
             </span>
@@ -61,7 +57,7 @@ export default function About() {
           </h2>
         </ScrollReveal>
 
-        {/* Stats bar — 2x2 on mobile, 4 columns on desktop */}
+        {/* Stats bar */}
         <ScrollReveal delay={0.1} className="mb-16">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {highlights.map((item, i) => (
@@ -72,10 +68,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="relative p-5 rounded-xl text-center overflow-hidden"
-                style={{
-                  backgroundColor: "#131008",
-                  border: "1px solid #2A2218",
-                }}
+                style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
               >
                 <div
                   className="absolute top-0 left-4 right-4 h-[1px]"
@@ -83,10 +76,7 @@ export default function About() {
                 />
                 <p
                   className="text-3xl font-bold mb-1"
-                  style={{
-                    fontFamily: "var(--font-syne)",
-                    color: "#C9A84C",
-                  }}
+                  style={{ fontFamily: "var(--font-syne)", color: "#C9A84C" }}
                 >
                   {item.value}
                 </p>
@@ -98,12 +88,13 @@ export default function About() {
           </div>
         </ScrollReveal>
 
-        {/* Main content: photo + bio */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
-          {/* Photo — left column on desktop, top on mobile */}
-          <ScrollReveal className="lg:col-span-2" direction="left">
-            <div className="relative max-w-xs mx-auto lg:mx-0">
-              {/* Corner bracket decorations */}
+        {/* Centered content */}
+        <div className="flex flex-col items-center">
+
+          {/* Photo — centered */}
+          <ScrollReveal className="mb-10">
+            <div className="relative max-w-[220px] w-full mx-auto">
+              {/* Corner brackets */}
               <div className="absolute -top-2 -left-2 w-5 h-5 pointer-events-none z-10"
                 style={{ borderTop: "2px solid rgba(201,168,76,0.6)", borderLeft: "2px solid rgba(201,168,76,0.6)" }} />
               <div className="absolute -top-2 -right-2 w-5 h-5 pointer-events-none z-10"
@@ -113,57 +104,46 @@ export default function About() {
               <div className="absolute -bottom-2 -right-2 w-5 h-5 pointer-events-none z-10"
                 style={{ borderBottom: "2px solid rgba(201,168,76,0.6)", borderRight: "2px solid rgba(201,168,76,0.6)" }} />
 
-            <div
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden"
-              style={{ border: "1px solid #2A2218" }}
-            >
-              {!imgError ? (
-                <Image
-                  src="/images/omar.JPG"
-                  alt="Omar Fourati"
-                  fill
-                  className="object-cover"
-                  onError={() => setImgError(true)}
-                />
-              ) : (
-                /* Stylized fallback with OF monogram */
-                <div
-                  className="absolute inset-0 geometric-bg flex flex-col items-center justify-center gap-4"
-                  style={{ backgroundColor: "#131008" }}
-                >
-                  <span
-                    className="text-7xl font-extrabold"
-                    style={{
-                      fontFamily: "var(--font-syne)",
-                      color: "#C9A84C",
-                    }}
-                  >
-                    OF
-                  </span>
-                  <span
-                    className="text-xs tracking-[0.3em] uppercase"
-                    style={{
-                      fontFamily: "var(--font-space-mono)",
-                      color: "#6B6054",
-                    }}
-                  >
-                    Omar Fourati
-                  </span>
-                </div>
-              )}
-              {/* Gold bottom accent */}
               <div
-                className="absolute bottom-0 left-0 right-0 h-1"
-                style={{
-                  background:
-                    "linear-gradient(90deg, #C9A84C, transparent)",
-                }}
-              />
+                className="relative aspect-[4/5] rounded-2xl overflow-hidden"
+                style={{ border: "1px solid #2A2218" }}
+              >
+                {!imgError ? (
+                  <Image
+                    src="/images/omar.JPG"
+                    alt="Omar Fourati"
+                    fill
+                    className="object-cover"
+                    onError={() => setImgError(true)}
+                  />
+                ) : (
+                  <div
+                    className="absolute inset-0 geometric-bg flex flex-col items-center justify-center gap-4"
+                    style={{ backgroundColor: "#131008" }}
+                  >
+                    <span
+                      className="text-7xl font-extrabold"
+                      style={{ fontFamily: "var(--font-syne)", color: "#C9A84C" }}
+                    >
+                      OF
+                    </span>
+                    <span
+                      className="text-xs tracking-[0.3em] uppercase"
+                      style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                    >
+                      Omar Fourati
+                    </span>
+                  </div>
+                )}
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-1"
+                  style={{ background: "linear-gradient(90deg, #C9A84C, transparent)" }}
+                />
+              </div>
             </div>
-            </div>{/* end corner bracket wrapper */}
 
-            {/* Location tag */}
-            <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
+            {/* Location */}
+            <div className="flex items-center gap-2 mt-4 justify-center">
               <span style={{ color: "#C9A84C" }}>📍</span>
               <span className="text-sm" style={{ color: "#A89B84" }}>
                 Köln, Deutschland
@@ -171,11 +151,11 @@ export default function About() {
             </div>
           </ScrollReveal>
 
-          {/* Bio — right column */}
-          <div className="lg:col-span-3 space-y-8">
+          {/* Bio + Languages + Interests — centered, max-w-2xl */}
+          <div className="w-full max-w-2xl space-y-8">
             <ScrollReveal delay={0.1}>
               <p
-                className="text-base sm:text-lg leading-relaxed"
+                className="text-base sm:text-lg leading-relaxed text-center"
                 style={{ color: "#A89B84" }}
               >
                 {t("bio")}
@@ -185,38 +165,26 @@ export default function About() {
             {/* Languages */}
             <ScrollReveal delay={0.2}>
               <h3
-                className="text-sm tracking-[0.2em] uppercase mb-4"
-                style={{
-                  fontFamily: "var(--font-space-mono)",
-                  color: "#C9A84C",
-                }}
+                className="text-sm tracking-[0.2em] uppercase mb-4 text-center"
+                style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
               >
                 Sprachen
               </h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {languages.map((lang) => (
                   <div
                     key={lang.name}
                     className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                    style={{
-                      backgroundColor: "#131008",
-                      border: "1px solid #2A2218",
-                    }}
+                    style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
                   >
                     <span className="text-xl">{lang.flag}</span>
                     <div>
-                      <p
-                        className="text-sm font-medium"
-                        style={{ color: "#F0E8D5" }}
-                      >
+                      <p className="text-sm font-medium" style={{ color: "#F0E8D5" }}>
                         {lang.name}
                       </p>
                       <p
                         className="text-xs"
-                        style={{
-                          fontFamily: "var(--font-space-mono)",
-                          color: "#6B6054",
-                        }}
+                        style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                       >
                         {lang.level}
                       </p>
@@ -229,15 +197,12 @@ export default function About() {
             {/* Interests */}
             <ScrollReveal delay={0.3}>
               <h3
-                className="text-sm tracking-[0.2em] uppercase mb-4"
-                style={{
-                  fontFamily: "var(--font-space-mono)",
-                  color: "#C9A84C",
-                }}
+                className="text-sm tracking-[0.2em] uppercase mb-4 text-center"
+                style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
               >
                 Interessen
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {interests.map((interest) => (
                   <span
                     key={interest}
@@ -254,6 +219,7 @@ export default function About() {
               </div>
             </ScrollReveal>
           </div>
+
         </div>
       </div>
     </section>
