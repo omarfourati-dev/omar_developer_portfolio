@@ -106,19 +106,6 @@ export const projects: Project[] = [
     category: "ai",
   },
   {
-    id: "ki-lotto-prognose",
-    title: "KI-Lotto-Prognose",
-    description: {
-      de: "KI-gestütztes Lotterie-Analyse-System mit Echtzeit-Vorhersagen und Edge-Caching via Vercel KV.",
-      en: "AI-powered lottery analysis system with real-time predictions and edge caching via Vercel KV.",
-      fr: "Système d'analyse de loterie alimenté par IA avec prédictions en temps réel.",
-      ar: "نظام تحليل اليانصيب بالذكاء الاصطناعي مع توقعات فورية.",
-    },
-    tags: ["Next.js 14", "TypeScript", "Framer Motion", "Vercel KV"],
-    featured: false,
-    category: "ai",
-  },
-  {
     id: "plan-your-idea",
     title: "DayFlow",
     description: {
