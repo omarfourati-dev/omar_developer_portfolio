@@ -15,19 +15,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "llm-council",
-    title: "LLM-Council",
-    description: {
-      de: "Dreistufiger KI-Konsens-Engine: Individuelle Modelle antworten, prüfen sich gegenseitig anonym und ein 'Vorsitzender' synthetisiert die finale Antwort.",
-      en: "Three-stage AI consensus engine: models respond individually, conduct anonymous peer reviews, and a 'chairman' synthesizes the final answer.",
-      fr: "Moteur de consensus IA en trois étapes : réponses individuelles, révision par les pairs anonyme, et un 'président' synthétise la réponse finale.",
-      ar: "محرك إجماع الذكاء الاصطناعي ثلاثي المراحل: ردود فردية ومراجعة مجهولة الهوية واصطناعي نهائي.",
-    },
-    tags: ["React", "FastAPI", "OpenRouter", "Python", "TypeScript"],
-    featured: true,
-    category: "ai",
-  },
-  {
     id: "ki-wm-prognosen",
     title: "KI-WM-Prognosen",
     description: {
