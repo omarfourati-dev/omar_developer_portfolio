@@ -10,7 +10,7 @@ export default function Skills() {
   const t = useTranslations("skills");
 
   return (
-    <section id="skills" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
+    <section id="skills" className="relative py-32 sm:py-40 px-[5%] overflow-hidden">
       {/* Section number backdrop */}
       <span className="section-number">02</span>
 
@@ -22,9 +22,9 @@ export default function Skills() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Header */}
-        <ScrollReveal className="mb-16">
+        <ScrollReveal className="mb-20">
           <div className="flex items-center gap-4 mb-3">
             <span
               className="text-xs tracking-[0.25em] uppercase"
@@ -34,20 +34,20 @@ export default function Skills() {
             </span>
             <hr className="gold-rule flex-1" />
           </div>
-          <h2 className="text-section-title" style={{ color: "#F0E8D5" }}>
+          <h2 className="text-section-title text-center" style={{ color: "#F0E8D5" }}>
             {t("title")}
           </h2>
-          <p className="mt-3 text-base" style={{ color: "#A89B84" }}>
+          <p className="mt-3 text-base text-center" style={{ color: "#A89B84" }}>
             {t("subtitle")}
           </p>
         </ScrollReveal>
 
         {/* Skill categories grid — 1 col mobile, 2 col tablet, 3 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, catIndex) => (
             <ScrollReveal key={category.id} delay={catIndex * 0.08}>
               <motion.div
-                className="relative p-6 rounded-2xl h-full overflow-hidden group"
+                className="relative p-8 rounded-2xl h-full overflow-hidden group"
                 style={{
                   backgroundColor: "#131008",
                   border: "1px solid #2A2218",

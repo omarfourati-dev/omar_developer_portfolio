@@ -31,7 +31,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
+    <section id="contact" className="relative py-32 sm:py-40 px-[5%] overflow-hidden">
       <span className="section-number">05</span>
 
       {/* Gold glow at bottom */}
@@ -40,7 +40,7 @@ export default function Contact() {
         style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent)" }}
       />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16 text-center">
           <div className="flex items-center justify-center gap-4 mb-3">

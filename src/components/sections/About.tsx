@@ -36,11 +36,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden"
+      className="relative py-32 sm:py-40 px-[5%] overflow-hidden"
     >
       <span className="section-number">01</span>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -52,14 +52,14 @@ export default function About() {
             </span>
             <hr className="gold-rule flex-1" />
           </div>
-          <h2 className="text-section-title" style={{ color: "#F0E8D5" }}>
+          <h2 className="text-section-title text-center" style={{ color: "#F0E8D5" }}>
             {t("title")}
           </h2>
         </ScrollReveal>
 
         {/* Stats bar */}
-        <ScrollReveal delay={0.1} className="mb-16">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <ScrollReveal delay={0.1} className="mb-20">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {highlights.map((item, i) => (
               <motion.div
                 key={item.label}
@@ -67,7 +67,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative p-5 rounded-xl text-center overflow-hidden"
+                className="relative p-7 rounded-xl text-center overflow-hidden"
                 style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
               >
                 <div

@@ -17,11 +17,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
+    <section id="projects" className="relative py-32 sm:py-40 px-[5%] overflow-hidden">
       {/* Section number backdrop */}
       <span className="section-number">03</span>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -33,16 +33,16 @@ export default function Projects() {
             </span>
             <hr className="gold-rule flex-1" />
           </div>
-          <h2 className="text-section-title" style={{ color: "#F0E8D5" }}>
+          <h2 className="text-section-title text-center" style={{ color: "#F0E8D5" }}>
             {t("title")}
           </h2>
-          <p className="mt-3 text-base" style={{ color: "#A89B84" }}>
+          <p className="mt-3 text-base text-center" style={{ color: "#A89B84" }}>
             {t("subtitle")}
           </p>
         </ScrollReveal>
 
         {/* Featured projects grid — 1 col mobile, 2 col tablet+ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {featuredProjects.map((project, i) => (
             <ProjectCard
               key={project.id}

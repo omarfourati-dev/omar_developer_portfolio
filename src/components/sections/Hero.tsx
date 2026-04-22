@@ -208,17 +208,20 @@ export default function Hero() {
         className="absolute bottom-20 left-0 right-0 overflow-hidden pointer-events-none"
       >
         <div
-          className="py-2.5 border-y"
-          style={{ borderColor: "rgba(201,168,76,0.07)" }}
+          className="py-3 border-y"
+          style={{
+            borderColor: "rgba(201,168,76,0.2)",
+            backgroundColor: "rgba(201,168,76,0.03)",
+          }}
         >
           <div className="ticker-track gap-10 px-4">
             {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
               <span
                 key={i}
-                className="text-[10px] tracking-[0.3em] uppercase whitespace-nowrap"
+                className="text-[11px] tracking-[0.3em] uppercase whitespace-nowrap"
                 style={{
                   fontFamily: "var(--font-space-mono)",
-                  color: "rgba(201,168,76,0.18)",
+                  color: "rgba(201,168,76,0.55)",
                 }}
               >
                 {item}

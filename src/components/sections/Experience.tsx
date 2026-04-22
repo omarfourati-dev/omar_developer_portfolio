@@ -122,10 +122,10 @@ export default function Experience() {
   const locale = useLocale();
 
   return (
-    <section id="experience" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
+    <section id="experience" className="relative py-32 sm:py-40 px-[5%] overflow-hidden">
       <span className="section-number">04</span>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -137,7 +137,7 @@ export default function Experience() {
             </span>
             <hr className="gold-rule flex-1" />
           </div>
-          <h2 className="text-section-title" style={{ color: "#F0E8D5" }}>
+          <h2 className="text-section-title text-center" style={{ color: "#F0E8D5" }}>
             {t("title")}
           </h2>
         </ScrollReveal>
