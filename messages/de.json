@@ -1,9 +1,79 @@
 {
-  "nav": {
+  "navigation": {
+    "home": "Startseite",
     "about": "Über mich",
-    "skills": "Skills",
+    "skills": "Fähigkeiten",
     "projects": "Projekte",
     "experience": "Erfahrung",
     "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin Omar Fourati",
+    "title": "Fullstack Entwickler & KI-Spezialist",
+    "description": "Ich entwickle intelligente, skalierbare Web-Anwendungen mit modernem Stack: React, Next.js, FastAPI und Machine Learning.",
+    "cta": "Meine Arbeit entdecken"
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Leidenschaft für intelligente Anwendungen",
+    "bio": "Mit über 4 Jahren Erfahrung in der Softwareentwicklung konzentriere ich mich auf die Schaffung von KI-gestützten Lösungen und SaaS-Plattformen. Mein Fokus liegt auf sauberer Code-Architektur, benutzerfreundlicher Interfaces und robusten Backend-Systemen.",
+    "highlights": {
+      "projects": "10+ Projekte",
+      "experience": "4+ Jahre Erfahrung",
+      "languages": "5 Programmiersprachen",
+      "clients": "10+ Kunden"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "subtitle": "Technologien, in denen ich mich auszeichne",
+    "years_of_experience": "Jahre Erfahrung",
+    "proficiency_levels": {
+      "expert": "Experte",
+      "advanced": "Fortgeschritten",
+      "intermediate": "Mittelstufe"
+    }
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "subtitle": "Eine Auswahl meiner neuesten Arbeiten",
+    "featured": "Ausgewählte Projekte",
+    "other": "Weitere Projekte",
+    "view_project": "Projekt anzeigen",
+    "view_code": "Code anzeigen",
+    "technologies": "Technologien"
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "subtitle": "Meine berufliche Reise",
+    "work": "Berufserfahrung",
+    "education": "Ausbildung",
+    "certificates": "Zertifikate",
+    "current": "Aktuell"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns zusammenarbeiten",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "location": "Standort",
+    "message": "Nachricht",
+    "send": "Senden",
+    "social": "Soziale Medien"
+  },
+  "footer": {
+    "copyright": "© 2024 Omar Fourati. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutz",
+      "terms": "Bedingungen",
+      "sitemap": "Sitemap"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "back": "Zurück",
+    "next": "Weiter"
   }
 }

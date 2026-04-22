@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis Omar Fourati",
+    "title": "Développeur Fullstack & Spécialiste IA",
+    "description": "Je crée des applications web intelligentes et scalables avec une stack moderne: React, Next.js, FastAPI et Machine Learning.",
+    "cta": "Découvrir Mon Travail"
+  },
+  "about": {
+    "title": "À Propos De Moi",
+    "subtitle": "Passionné par la création d'applications intelligentes",
+    "bio": "Avec plus de 4 ans d'expérience en développement logiciel, je me concentre sur la création de solutions alimentées par l'IA et de plateformes SaaS. Mon expertise couvre l'architecture de code propre, les interfaces conviviales et les systèmes backend robustes.",
+    "highlights": {
+      "projects": "10+ Projets",
+      "experience": "4+ Ans d'Expérience",
+      "languages": "5 Langages de Programmation",
+      "clients": "10+ Clients"
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Technologies dans lesquelles j'excelle",
+    "years_of_experience": "Années d'Expérience",
+    "proficiency_levels": {
+      "expert": "Expert",
+      "advanced": "Avancé",
+      "intermediate": "Intermédiaire"
+    }
+  },
+  "projects": {
+    "title": "Projets en Vedette",
+    "subtitle": "Une sélection de mes travaux récents",
+    "featured": "Projets en Vedette",
+    "other": "Autres Projets",
+    "view_project": "Voir le Projet",
+    "view_code": "Voir le Code",
+    "technologies": "Technologies"
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Mon parcours professionnel",
+    "work": "Expérience Professionnelle",
+    "education": "Éducation",
+    "certificates": "Certificats",
+    "current": "Actuellement"
+  },
+  "contact": {
+    "title": "Contactez-Moi",
+    "subtitle": "Travaillons ensemble",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "message": "Message",
+    "send": "Envoyer",
+    "social": "Médias Sociaux"
+  },
+  "footer": {
+    "copyright": "© 2024 Omar Fourati. Tous droits réservés.",
+    "links": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "sitemap": "Plan du Site"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "back": "Retour",
+    "next": "Suivant"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Omar Fourati",
+    "title": "Fullstack Developer & AI Specialist",
+    "description": "I build intelligent, scalable web applications with modern stack: React, Next.js, FastAPI, and Machine Learning.",
+    "cta": "Explore My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate about building intelligent applications",
+    "bio": "With over 4 years of software development experience, I focus on creating AI-powered solutions and SaaS platforms. My expertise spans clean code architecture, user-friendly interfaces, and robust backend systems.",
+    "highlights": {
+      "projects": "10+ Projects",
+      "experience": "4+ Years Experience",
+      "languages": "5 Programming Languages",
+      "clients": "10+ Clients"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I excel at",
+    "years_of_experience": "Years of Experience",
+    "proficiency_levels": {
+      "expert": "Expert",
+      "advanced": "Advanced",
+      "intermediate": "Intermediate"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent work",
+    "featured": "Featured Projects",
+    "other": "Other Projects",
+    "view_project": "View Project",
+    "view_code": "View Code",
+    "technologies": "Technologies"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "work": "Work Experience",
+    "education": "Education",
+    "certificates": "Certificates",
+    "current": "Current"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "message": "Message",
+    "send": "Send",
+    "social": "Social Media"
+  },
+  "footer": {
+    "copyright": "© 2024 Omar Fourati. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "sitemap": "Sitemap"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next"
+  }
+}
