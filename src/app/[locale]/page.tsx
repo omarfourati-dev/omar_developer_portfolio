@@ -1,3 +1,11 @@
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+
 export default function HomePage() {
-  return <main><h1>Omar Fourati</h1></main>;
+  return (
+    <main>
+      <Hero />
+      <About />
+    </main>
+  );
 }
