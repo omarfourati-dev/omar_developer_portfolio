@@ -14,6 +14,7 @@ interface TimelineItemProps {
 }
 
 function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
+  const t = useTranslations("experience");
   const loc = locale as keyof typeof entry.role;
   const role = entry.role[loc] ?? entry.role.de;
   const description = entry.description[loc] ?? entry.description.de;
@@ -29,26 +30,29 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
       {/* Timeline line */}
       <div
         className="absolute left-0 top-2 bottom-0 w-px"
-        style={{ backgroundColor: "#2A2218" }}
+        style={{
+          background: isCurrent
+            ? "linear-gradient(to bottom, #C9A84C80, #2A2218)"
+            : "#2A2218",
+        }}
       />
 
       {/* Timeline dot */}
       <div
-        className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full"
+        className={`absolute left-[-6px] top-2 w-3 h-3 rounded-full ${isCurrent ? "dot-pulse" : ""}`}
         style={{
-          backgroundColor: isCurrent ? "#C9A84C" : "#2A2218",
-          border: "2px solid",
-          borderColor: isCurrent ? "#C9A84C" : "#6B6054",
-          boxShadow: isCurrent ? "0 0 12px rgba(201,168,76,0.5)" : "none",
+          backgroundColor: isCurrent ? "#C9A84C" : "#1A1510",
+          border: `2px solid ${isCurrent ? "#C9A84C" : "#6B6054"}`,
         }}
       />
 
       {/* Content */}
       <div
-        className="p-5 rounded-xl"
+        className="p-5 rounded-xl overflow-hidden"
         style={{
           backgroundColor: "#131008",
-          border: "1px solid #2A2218",
+          border: `1px solid ${isCurrent ? "rgba(201,168,76,0.25)" : "#2A2218"}`,
+          boxShadow: isCurrent ? "-3px 0 0 0 #C9A84C" : "none",
         }}
       >
         <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
@@ -83,7 +87,7 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
                   border: "1px solid rgba(201,168,76,0.3)",
                 }}
               >
-                ● Aktuell
+                ● {t("current")}
               </span>
             )}
           </div>
@@ -118,10 +122,10 @@ export default function Experience() {
   const locale = useLocale();
 
   return (
-    <section id="experience" className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+    <section id="experience" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
       <span className="section-number">04</span>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -197,7 +201,7 @@ export default function Experience() {
                   className="text-sm font-bold mb-1"
                   style={{ fontFamily: "var(--font-syne)", color: "#F0E8D5" }}
                 >
-                  {cert.role.de}
+                  {cert.role[locale as keyof typeof cert.role] ?? cert.role.de}
                 </p>
                 <p className="text-xs mb-2" style={{ color: "#A89B84" }}>
                   {cert.company}

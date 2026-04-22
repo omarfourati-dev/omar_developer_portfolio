@@ -160,6 +160,33 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
+   TICKER / MARQUEE
+   ============================================ */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 40s linear infinite;
+}
+[dir="rtl"] .ticker-track {
+  animation-direction: reverse;
+}
+
+/* ============================================
+   PULSE — current role dot
+   ============================================ */
+@keyframes gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.6), 0 0 12px rgba(201,168,76,0.5); }
+  50%       { box-shadow: 0 0 0 6px rgba(201,168,76,0), 0 0 20px rgba(201,168,76,0.3); }
+}
+.dot-pulse {
+  animation: gold-pulse 2.4s ease-in-out infinite;
+}
+
+/* ============================================
    FOCUS STYLES (accessibility)
    ============================================ */
 :focus-visible {

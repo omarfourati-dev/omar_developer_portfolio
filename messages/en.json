@@ -18,10 +18,10 @@
     "subtitle": "Passionate about building intelligent applications",
     "bio": "With over 4 years of software development experience, I focus on creating AI-powered solutions and SaaS platforms. My expertise spans clean code architecture, user-friendly interfaces, and robust backend systems.",
     "highlights": {
-      "projects": "10+ Projects",
-      "experience": "4+ Years Experience",
-      "languages": "5 Programming Languages",
-      "clients": "10+ Clients"
+      "projects": "Projects",
+      "experience": "Years Experience",
+      "languages": "Languages",
+      "clients": "Companies"
     }
   },
   "skills": {

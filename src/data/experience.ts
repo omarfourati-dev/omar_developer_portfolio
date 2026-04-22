@@ -1,169 +1,171 @@
 export interface ExperienceEntry {
   id: string;
   company: string;
-  role: {
-    de: string;
-    en: string;
-    fr: string;
-    ar: string;
-  };
+  role: { de: string; en: string; fr: string; ar: string };
   period: string;
   type: "work" | "education" | "certificate";
-  description: {
-    de: string;
-    en: string;
-    fr: string;
-    ar: string;
-  };
+  description: { de: string; en: string; fr: string; ar: string };
   tags?: string[];
   current?: boolean;
 }
 
 export const experiences: ExperienceEntry[] = [
   {
-    id: "freelance-fullstack",
-    company: "Freelance",
+    id: "keravonos-fulltime",
+    company: "Keravonos GmbH",
     role: {
-      de: "Fullstack Entwickler",
-      en: "Fullstack Developer",
-      fr: "Développeur Fullstack",
-      ar: "مطور Fullstack",
+      de: "Software Developer — Vollzeit",
+      en: "Software Developer — Full-time",
+      fr: "Développeur Logiciel — Temps plein",
+      ar: "مطور برمجيات — دوام كامل",
     },
-    period: "2022 - Present",
+    period: "Oktober 2025 — heute",
     type: "work",
-    description: {
-      de: "Entwicklung von KI-gestützten Anwendungen und B2B-SaaS-Plattformen. Spezialisiert auf Next.js, React, FastAPI und Machine Learning Integrationen.",
-      en: "Building AI-powered applications and B2B SaaS platforms. Specialized in Next.js, React, FastAPI, and ML integrations.",
-      fr: "Création d'applications alimentées par l'IA et de plateformes SaaS B2B. Spécialisé dans Next.js, React, FastAPI et les intégrations ML.",
-      ar: "بناء التطبيقات المدعومة بالذكاء الاصطناعي ومنصات SaaS للشركات. متخصص في Next.js و React و FastAPI وتكاملات ML.",
-    },
-    tags: ["Next.js", "React", "FastAPI", "Python", "TypeScript", "PostgreSQL"],
     current: true,
+    description: {
+      de: "Entwicklung moderner Web-Applikationen und KI-Plattformen. Flagship-Projekte: KerChat (Real-Time Chat) und Pronto (B2B Sales AI Platform).",
+      en: "Building modern web applications and AI platforms. Flagship projects: KerChat (real-time chat) and Pronto (B2B sales AI platform).",
+      fr: "Développement d'applications web modernes et de plateformes IA. Projets phares : KerChat et Pronto (plateforme IA B2B).",
+      ar: "تطوير تطبيقات ويب حديثة ومنصات ذكاء اصطناعي. مشاريع رئيسية: KerChat و Pronto.",
+    },
+    tags: ["Vue 3", "FastAPI", "TypeScript", "PostgreSQL", "OpenAI"],
   },
   {
-    id: "ai-engineer",
-    company: "AI Startup",
+    id: "keravonos-werkstudent",
+    company: "Keravonos GmbH",
     role: {
-      de: "KI-Ingenieur",
-      en: "AI Engineer",
-      fr: "Ingénieur IA",
-      ar: "مهندس ذكاء اصطناعي",
+      de: "Werkstudent — Softwareentwicklung",
+      en: "Working Student — Software Development",
+      fr: "Étudiant Salarié — Développement Logiciel",
+      ar: "طالب عامل — تطوير البرمجيات",
     },
-    period: "2021 - 2022",
+    period: "2022 — September 2025",
     type: "work",
     description: {
-      de: "Entwicklung von Machine Learning Modellen und KI-Konsens-Systemen. Implementierung von LLM-Integrationen mit OpenAI, Anthropic und Google APIs.",
-      en: "Built ML models and AI consensus systems. Implemented LLM integrations with OpenAI, Anthropic, and Google APIs.",
-      fr: "Création de modèles ML et de systèmes de consensus IA. Intégration d'API LLM avec OpenAI, Anthropic et Google.",
-      ar: "بناء نماذج ML وأنظمة إجماع الذكاء الاصطناعي. تكامل APIs LLM مع OpenAI و Anthropic و Google.",
+      de: "Neben dem Studium: Entwicklung von KerChat (Slack-Clone mit WebSockets) und Pronto (B2B Intent-Signal-Plattform mit OpenAI-Integration).",
+      en: "While studying: built KerChat (Slack clone with WebSockets) and Pronto (B2B intent signal platform with OpenAI integration).",
+      fr: "Pendant les études : développement de KerChat et Pronto.",
+      ar: "بجانب الدراسة: تطوير KerChat و Pronto.",
     },
-    tags: ["Python", "TensorFlow", "PyTorch", "OpenAI", "Claude", "Gemini"],
-    current: false,
+    tags: ["Vue 3", "FastAPI", "WebSockets", "OAuth 2.0", "MariaDB"],
+  },
+  {
+    id: "abus-werkstudent",
+    company: "ABUS Kransysteme GmbH",
+    role: {
+      de: "Werkstudent — Softwareentwicklung",
+      en: "Working Student — Software Development",
+      fr: "Étudiant Salarié — Développement",
+      ar: "طالب عامل — التطوير",
+    },
+    period: "2021 — 2022",
+    type: "work",
+    description: {
+      de: "Entwicklung interner Web-Applikationen für industrielle Kransysteme und betriebliche Prozesse.",
+      en: "Development of internal web applications for industrial crane systems and operational processes.",
+      fr: "Développement d'applications web internes pour systèmes de grues industrielles.",
+      ar: "تطوير تطبيقات ويب داخلية لأنظمة الرافعات الصناعية.",
+    },
+    tags: ["JavaScript", "Web Development"],
   },
 ];
 
 export const education: ExperienceEntry[] = [
   {
-    id: "degree-computer-science",
-    company: "University of Applied Sciences",
+    id: "bachelor-thkoeln",
+    company: "TH Köln — Campus Gummersbach",
     role: {
-      de: "Bachelor in Informatik",
-      en: "Bachelor in Computer Science",
-      fr: "Licence en Informatique",
-      ar: "بكالوريوس علوم الحاسوب",
+      de: "B.Sc. Informatik",
+      en: "B.Sc. Computer Science",
+      fr: "Licence Informatique",
+      ar: "بكالوريوس علوم الحاسب",
     },
-    period: "2018 - 2021",
+    period: "2020 — September 2025",
     type: "education",
     description: {
-      de: "Abschluss mit Fokus auf Softwareentwicklung, Algorithmen und Web-Technologien. Durchschnittsnote: 1.8",
-      en: "Graduated with focus on software development, algorithms, and web technologies. GPA: 1.8/4.0",
-      fr: "Diplômé avec spécialisation en développement logiciel et technologie web. Moyenne: 1.8",
-      ar: "تخرج مع التركيز على تطوير البرمجيات والخوارزميات وتقنيات الويب. المعدل التراكمي: 1.8",
+      de: "Bachelorstudium der Informatik mit Schwerpunkt Softwareentwicklung, Algorithmen und KI-Systeme.",
+      en: "Bachelor's in Computer Science with focus on software engineering, algorithms and AI systems.",
+      fr: "Licence Informatique axée sur le génie logiciel, les algorithmes et les systèmes IA.",
+      ar: "بكالوريوس علوم الحاسب مع التركيز على هندسة البرمجيات والخوارزميات وأنظمة الذكاء الاصطناعي.",
     },
-    tags: ["Computer Science", "Web Development", "Algorithms"],
-    current: false,
+    tags: ["Softwareentwicklung", "Algorithmen", "KI", "Datenbanken"],
   },
   {
-    id: "bootcamp-ai",
-    company: "AI Academy Online",
+    id: "dsh-heidelberg",
+    company: "F+U Academy Heidelberg / TH Köln",
     role: {
-      de: "Spezialisierung: Künstliche Intelligenz & Machine Learning",
-      en: "Specialization: AI & Machine Learning",
-      fr: "Spécialisation: IA et Machine Learning",
-      ar: "تخصص: الذكاء الاصطناعي والتعلم الآلي",
+      de: "DSH-Prüfung — Note 2",
+      en: "DSH German Language Exam — Grade 2",
+      fr: "Examen DSH Allemand — Note 2",
+      ar: "اختبار اللغة الألمانية DSH — درجة 2",
     },
-    period: "2021 - 2022",
+    period: "2018 — 2020",
     type: "education",
     description: {
-      de: "Intensive Schulung in Deep Learning, Natural Language Processing und Large Language Models. 400+ Stunden praktisches Lernen.",
-      en: "Intensive training in Deep Learning, NLP, and LLMs. 400+ hours of hands-on learning.",
-      fr: "Formation intensive en Deep Learning, NLP et LLMs. 400+ heures d'apprentissage pratique.",
-      ar: "تدريب مكثف في Deep Learning و NLP و LLMs. أكثر من 400 ساعة من التعلم العملي.",
+      de: "Deutsche Sprachprüfung für den Hochschulzugang (DSH) erfolgreich mit Note 2 bestanden.",
+      en: "Passed the German language proficiency exam for university admission with grade 2.",
+      fr: "Réussi l'examen d'allemand pour l'accès aux études supérieures avec la note 2.",
+      ar: "اجتياز امتحان اللغة الألمانية للقبول الجامعي بدرجة 2.",
     },
-    tags: ["AI", "ML", "Deep Learning", "NLP", "LLM"],
-    current: false,
   },
 ];
 
 export const certificates: ExperienceEntry[] = [
   {
-    id: "cert-aws",
-    company: "Amazon Web Services",
+    id: "cert-js",
+    company: "Udemy",
     role: {
-      de: "AWS Certified Solutions Architect",
-      en: "AWS Certified Solutions Architect",
-      fr: "AWS Certified Solutions Architect",
-      ar: "معماري الحلول المعتمد من AWS",
+      de: "JavaScript: From Zero to Expert",
+      en: "JavaScript: From Zero to Expert",
+      fr: "JavaScript: From Zero to Expert",
+      ar: "JavaScript: من الصفر إلى الخبير",
     },
     period: "2023",
     type: "certificate",
     description: {
-      de: "Zertifizierung für Cloud-Architektur und AWS-Services. Validiert Expertise in Skalierbarkeit, Sicherheit und Kostenoptimierung.",
-      en: "Certification for cloud architecture and AWS services. Validates expertise in scalability, security, and cost optimization.",
-      fr: "Certification en architecture cloud et services AWS. Valide l'expertise en scalabilité, sécurité et optimisation des coûts.",
-      ar: "شهادة في بنية السحابة وخدمات AWS. توثيق الخبرة في القابلية للتوسع والأمان وتحسين التكاليف.",
+      de: "Umfassendes JavaScript-Zertifikat — von Grundlagen bis zu fortgeschrittenen Konzepten.",
+      en: "Comprehensive JavaScript certification from basics to advanced concepts.",
+      fr: "Certification JavaScript complète de Udemy.",
+      ar: "شهادة JavaScript شاملة من Udemy.",
     },
-    tags: ["AWS", "Cloud", "Architecture"],
-    current: false,
+    tags: ["JavaScript", "ES6+"],
   },
   {
-    id: "cert-gcp",
-    company: "Google Cloud",
+    id: "cert-python",
+    company: "Udemy",
     role: {
-      de: "Google Cloud Professional Cloud Architect",
-      en: "Google Cloud Professional Cloud Architect",
-      fr: "Google Cloud Professional Cloud Architect",
-      ar: "معماري السحابة المهني من Google",
+      de: "Python: Complete Pro Bootcamp",
+      en: "Python: Complete Pro Bootcamp",
+      fr: "Python: Complete Pro Bootcamp",
+      ar: "Python: برنامج التدريب الاحترافي الكامل",
     },
-    period: "2024",
+    period: "2021 — 2023",
     type: "certificate",
     description: {
-      de: "Professionelle Zertifizierung für Google Cloud Platform. Expertise in Datenverwaltung, Machine Learning und produktiven Deployments.",
-      en: "Professional certification for Google Cloud Platform. Expertise in data management, ML, and production deployments.",
-      fr: "Certification professionnelle pour Google Cloud Platform. Expertise en gestion des données, ML et déploiements en production.",
-      ar: "شهادة احترافية لمنصة Google Cloud. خبرة في إدارة البيانات و ML والنشر في الإنتاج.",
+      de: "Professionelles Python-Bootcamp mit Django, REST APIs und Data Science.",
+      en: "Professional Python bootcamp including Django, REST APIs and Data Science.",
+      fr: "Bootcamp Python professionnel incluant Django et Data Science.",
+      ar: "بوتكامب Python احترافي يشمل Django وواجهات برمجة التطبيقات.",
     },
-    tags: ["Google Cloud", "GCP", "ML", "Data"],
-    current: false,
+    tags: ["Python", "Django", "Data Science"],
   },
   {
-    id: "cert-tensorflow",
-    company: "DeepLearning.AI",
+    id: "cert-testing",
+    company: "German Testing Board / TH Köln",
     role: {
-      de: "TensorFlow Spezialist",
-      en: "TensorFlow Specialist",
-      fr: "Spécialiste TensorFlow",
-      ar: "متخصص TensorFlow",
+      de: "Software Qualitätssicherung",
+      en: "Software Quality Assurance",
+      fr: "Assurance Qualité Logicielle",
+      ar: "ضمان جودة البرمجيات",
     },
-    period: "2023",
+    period: "2022 — 2023",
     type: "certificate",
     description: {
-      de: "Spezialisierungszertifikat für TensorFlow und Deep Learning. Praktische Expertise in Modellentwicklung und Optimierung.",
-      en: "Specialization certificate for TensorFlow and Deep Learning. Practical expertise in model development and optimization.",
-      fr: "Certificat de spécialisation pour TensorFlow et Deep Learning. Expertise pratique en développement et optimisation de modèles.",
-      ar: "شهادة تخصص في TensorFlow والتعلم العميق. خبرة عملية في تطوير النماذج والتحسين.",
+      de: "Zertifizierung in Software-Qualitätssicherung vom German Testing Board.",
+      en: "Software quality assurance certification from German Testing Board.",
+      fr: "Certification en assurance qualité logicielle du German Testing Board.",
+      ar: "شهادة ضمان جودة البرمجيات من مجلس الاختبار الألماني.",
     },
-    tags: ["TensorFlow", "Deep Learning", "ML"],
-    current: false,
+    tags: ["QA", "Testing", "Software-Qualität"],
   },
 ];

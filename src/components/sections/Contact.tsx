@@ -25,13 +25,13 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailto = `mailto:fourati.omar55@gmail.com?subject=Portfolio Contact from ${formState.name}&body=${encodeURIComponent(formState.message)}`;
+    const mailto = `mailto:info@omarfourati.de?subject=Portfolio Contact from ${formState.name}&body=${encodeURIComponent(formState.message)}`;
     window.location.href = mailto;
     setSent(true);
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+    <section id="contact" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
       <span className="section-number">05</span>
 
       {/* Gold glow at bottom */}
@@ -40,7 +40,7 @@ export default function Contact() {
         style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent)" }}
       />
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16 text-center">
           <div className="flex items-center justify-center gap-4 mb-3">
@@ -69,7 +69,7 @@ export default function Contact() {
           <ScrollReveal className="lg:col-span-2 space-y-6" direction="left">
             {/* Email */}
             <a
-              href="mailto:fourati.omar55@gmail.com"
+              href="mailto:info@omarfourati.de"
               className="flex items-center gap-4 p-5 rounded-xl group transition-colors"
               style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
             >
@@ -85,7 +85,7 @@ export default function Contact() {
                   className="text-sm font-medium group-hover:text-[#C9A84C] transition-colors"
                   style={{ color: "#F0E8D5" }}
                 >
-                  fourati.omar55@gmail.com
+                  info@omarfourati.de
                 </p>
               </div>
             </a>
@@ -112,7 +112,7 @@ export default function Contact() {
             {/* Social links */}
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/in/omarfourati-63a9b11ba/"
+                href="https://www.linkedin.com/in/omar-fourati-63a9b11ba/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl text-sm font-medium transition-all hover:border-[rgba(201,168,76,0.4)]"
@@ -126,7 +126,7 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/omarfourati55"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl text-sm font-medium transition-all hover:border-[rgba(201,168,76,0.4)]"

@@ -29,19 +29,19 @@ export default function About() {
   const highlights = [
     { value: "10+", label: t("highlights.projects") },
     { value: "4+", label: t("highlights.experience") },
-    { value: "4", label: "Sprachen" },
-    { value: "2", label: "Unternehmen" },
+    { value: "4", label: t("highlights.languages") },
+    { value: "2", label: t("highlights.clients") },
   ];
 
   return (
     <section
       id="about"
-      className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden"
+      className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden"
     >
       {/* Section number backdrop */}
       <span className="section-number">01</span>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -71,12 +71,16 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-5 rounded-xl text-center"
+                className="relative p-5 rounded-xl text-center overflow-hidden"
                 style={{
                   backgroundColor: "#131008",
                   border: "1px solid #2A2218",
                 }}
               >
+                <div
+                  className="absolute top-0 left-4 right-4 h-[1px]"
+                  style={{ background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent)" }}
+                />
                 <p
                   className="text-3xl font-bold mb-1"
                   style={{
@@ -98,13 +102,24 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
           {/* Photo — left column on desktop, top on mobile */}
           <ScrollReveal className="lg:col-span-2" direction="left">
+            <div className="relative max-w-xs mx-auto lg:mx-0">
+              {/* Corner bracket decorations */}
+              <div className="absolute -top-2 -left-2 w-5 h-5 pointer-events-none z-10"
+                style={{ borderTop: "2px solid rgba(201,168,76,0.6)", borderLeft: "2px solid rgba(201,168,76,0.6)" }} />
+              <div className="absolute -top-2 -right-2 w-5 h-5 pointer-events-none z-10"
+                style={{ borderTop: "2px solid rgba(201,168,76,0.6)", borderRight: "2px solid rgba(201,168,76,0.6)" }} />
+              <div className="absolute -bottom-2 -left-2 w-5 h-5 pointer-events-none z-10"
+                style={{ borderBottom: "2px solid rgba(201,168,76,0.6)", borderLeft: "2px solid rgba(201,168,76,0.6)" }} />
+              <div className="absolute -bottom-2 -right-2 w-5 h-5 pointer-events-none z-10"
+                style={{ borderBottom: "2px solid rgba(201,168,76,0.6)", borderRight: "2px solid rgba(201,168,76,0.6)" }} />
+
             <div
-              className="relative aspect-[4/5] max-w-xs mx-auto lg:mx-0 rounded-2xl overflow-hidden"
+              className="relative aspect-[4/5] rounded-2xl overflow-hidden"
               style={{ border: "1px solid #2A2218" }}
             >
               {!imgError ? (
                 <Image
-                  src="/images/omar.jpg"
+                  src="/images/omar.JPG"
                   alt="Omar Fourati"
                   fill
                   className="object-cover"
@@ -145,6 +160,7 @@ export default function About() {
                 }}
               />
             </div>
+            </div>{/* end corner bracket wrapper */}
 
             {/* Location tag */}
             <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">

@@ -52,7 +52,7 @@ export default function Navigation({ locale }: NavigationProps) {
           borderBottom: scrolled ? "1px solid rgba(201,168,76,0.12)" : "none",
         }}
       >
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
           {/* Logo mark */}
           <motion.a
             href="#"

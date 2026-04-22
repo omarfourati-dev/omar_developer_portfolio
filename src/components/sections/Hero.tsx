@@ -12,6 +12,12 @@ const roles = [
   "Développeur",
 ];
 
+const TICKER_ITEMS = [
+  "React", "Next.js", "TypeScript", "FastAPI", "Python", "Vue 3",
+  "TensorFlow", "PyTorch", "OpenAI API", "PostgreSQL", "Docker",
+  "WebSockets", "Framer Motion", "LangChain", "SQLAlchemy", "Tailwind CSS",
+];
+
 function LetterByLetter({
   text,
   className,
@@ -58,7 +64,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="geometric-bg relative min-h-screen flex flex-col justify-center items-center text-center px-5 sm:px-8 pt-20 pb-12 overflow-hidden"
+      className="geometric-bg relative min-h-screen flex flex-col justify-center items-center text-center px-5 sm:px-8 xl:px-16 pt-20 pb-12 overflow-hidden"
     >
       {/* Radial glow from center */}
       <div
@@ -86,7 +92,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Eyebrow label */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -156,7 +162,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-base sm:text-lg max-w-xl lg:max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ color: "#A89B84" }}
         >
           {t("description")}
@@ -193,6 +199,34 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
+
+      {/* Tech ticker — scrolling strip above scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.0 }}
+        className="absolute bottom-20 left-0 right-0 overflow-hidden pointer-events-none"
+      >
+        <div
+          className="py-2.5 border-y"
+          style={{ borderColor: "rgba(201,168,76,0.07)" }}
+        >
+          <div className="ticker-track gap-10 px-4">
+            {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
+              <span
+                key={i}
+                className="text-[10px] tracking-[0.3em] uppercase whitespace-nowrap"
+                style={{
+                  fontFamily: "var(--font-space-mono)",
+                  color: "rgba(201,168,76,0.18)",
+                }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div

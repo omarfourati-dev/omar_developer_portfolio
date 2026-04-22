@@ -17,11 +17,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+    <section id="projects" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
       {/* Section number backdrop */}
       <span className="section-number">03</span>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -43,11 +43,12 @@ export default function Projects() {
 
         {/* Featured projects grid — 1 col mobile, 2 col tablet+ */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {featuredProjects.map((project) => (
+          {featuredProjects.map((project, i) => (
             <ProjectCard
               key={project.id}
               project={project}
               locale={locale}
+              index={i}
               translations={cardTranslations}
             />
           ))}

@@ -10,7 +10,7 @@ export default function Skills() {
   const t = useTranslations("skills");
 
   return (
-    <section id="skills" className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+    <section id="skills" className="relative py-24 sm:py-32 px-5 sm:px-8 xl:px-16 overflow-hidden">
       {/* Section number backdrop */}
       <span className="section-number">02</span>
 
@@ -22,7 +22,7 @@ export default function Skills() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <ScrollReveal className="mb-16">
           <div className="flex items-center gap-4 mb-3">
@@ -47,21 +47,34 @@ export default function Skills() {
           {skillCategories.map((category, catIndex) => (
             <ScrollReveal key={category.id} delay={catIndex * 0.08}>
               <motion.div
-                className="p-6 rounded-2xl h-full"
+                className="relative p-6 rounded-2xl h-full overflow-hidden group"
                 style={{
                   backgroundColor: "#131008",
                   border: "1px solid #2A2218",
                 }}
-                whileHover={{
-                  borderColor: `${category.color}30`,
-                  backgroundColor: "#1A1510",
-                }}
-                transition={{ duration: 0.2 }}
+                whileHover={{ borderColor: `${category.color}35` }}
+                transition={{ duration: 0.25 }}
               >
+                {/* Top gradient accent */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl"
+                  style={{
+                    background: `linear-gradient(90deg, ${category.color}90, ${category.color}20, transparent)`,
+                  }}
+                />
+
+                {/* Inner hover glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: `radial-gradient(ellipse 80% 50% at 50% 0%, ${category.color}07 0%, transparent 70%)`,
+                  }}
+                />
+
                 {/* Category label */}
                 <div className="flex items-center gap-3 mb-5">
                   <div
-                    className="w-2 h-2 rounded-full"
+                    className="w-1.5 h-5 rounded-full"
                     style={{ backgroundColor: category.color }}
                   />
                   <h3
