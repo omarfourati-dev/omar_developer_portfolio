@@ -1,0 +1,421 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "OF Portfolio" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]: OF
+        - generic [ref=e6]: Portfolio
+      - generic [ref=e7]:
+        - link "حول" [ref=e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "المهارات" [ref=e9] [cursor=pointer]:
+          - /url: "#skills"
+        - link "المشاريع" [ref=e10] [cursor=pointer]:
+          - /url: "#projects"
+        - link "الخبرة" [ref=e11] [cursor=pointer]:
+          - /url: "#experience"
+        - link "اتصل بي" [ref=e12] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e14]:
+        - button "DE" [ref=e15]
+        - button "EN" [ref=e16]
+        - button "FR" [ref=e17]
+        - button "AR" [ref=e18]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e24]: Developer Portfolio
+        - heading "OMAR FOURATI" [level=1] [ref=e26]:
+          - generic "OMAR" [ref=e27]:
+            - generic [ref=e28]: O
+            - generic [ref=e29]: M
+            - generic [ref=e30]: A
+            - generic [ref=e31]: R
+          - generic "FOURATI" [ref=e32]:
+            - generic [ref=e33]: F
+            - generic [ref=e34]: O
+            - generic [ref=e35]: U
+            - generic [ref=e36]: R
+            - generic [ref=e37]: A
+            - generic [ref=e38]: T
+            - generic [ref=e39]: I
+        - paragraph [ref=e41]: Full-Stack Developer
+        - paragraph [ref=e42]: "أنا أبني تطبيقات ويب ذكية وقابلة للتوسع باستخدام تقنيات حديثة: React, Next.js, FastAPI والتعلم الآلي."
+        - generic [ref=e43]:
+          - link "استكشف عملي" [ref=e44] [cursor=pointer]:
+            - /url: "#projects"
+          - link "اتصل بي" [ref=e45] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e46]:
+        - generic [ref=e47]: scroll
+        - img [ref=e49]
+    - generic [ref=e51]:
+      - generic: "01"
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: 01 / about
+            - separator [ref=e56]
+          - heading "عني" [level=2] [ref=e57]
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: 10+
+            - paragraph [ref=e62]: 10+ مشاريع
+          - generic [ref=e63]:
+            - paragraph [ref=e64]: 4+
+            - paragraph [ref=e65]: 4+ سنوات خبرة
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: "4"
+            - paragraph [ref=e68]: Sprachen
+          - generic [ref=e69]:
+            - paragraph [ref=e70]: "2"
+            - paragraph [ref=e71]: Unternehmen
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - img "Omar Fourati" [ref=e75]
+            - generic [ref=e77]:
+              - generic [ref=e78]: 📍
+              - generic [ref=e79]: Köln, Deutschland
+          - generic [ref=e80]:
+            - paragraph [ref=e82]: بعد أكثر من 4 سنوات من خبرة تطوير البرمجيات، أركز على إنشاء حلول مدعومة بالذكاء الاصطناعي ومنصات SaaS. تشمل خبرتي هندسة الأكواد النظيفة والواجهات سهلة الاستخدام وأنظمة الخوادم الخلفية القوية.
+            - generic [ref=e83]:
+              - heading "Sprachen" [level=3] [ref=e84]
+              - generic [ref=e85]:
+                - generic [ref=e86]:
+                  - generic [ref=e87]: 🇩🇪
+                  - generic [ref=e88]:
+                    - paragraph [ref=e89]: Deutsch
+                    - paragraph [ref=e90]: C1
+                - generic [ref=e91]:
+                  - generic [ref=e92]: 🇬🇧
+                  - generic [ref=e93]:
+                    - paragraph [ref=e94]: English
+                    - paragraph [ref=e95]: B2
+                - generic [ref=e96]:
+                  - generic [ref=e97]: 🇫🇷
+                  - generic [ref=e98]:
+                    - paragraph [ref=e99]: Français
+                    - paragraph [ref=e100]: C1
+                - generic [ref=e101]:
+                  - generic [ref=e102]: 🇸🇦
+                  - generic [ref=e103]:
+                    - paragraph [ref=e104]: العربية
+                    - paragraph [ref=e105]: Muttersprache
+            - generic [ref=e106]:
+              - heading "Interessen" [level=3] [ref=e107]
+              - generic [ref=e108]:
+                - generic [ref=e109]: Sport
+                - generic [ref=e110]: Reisen
+                - generic [ref=e111]: Filme
+                - generic [ref=e112]: Kochen
+                - generic [ref=e113]: Videogames
+                - generic [ref=e114]: Karten
+    - generic [ref=e115]:
+      - generic: "02"
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: 02 / skills
+            - separator [ref=e120]
+          - heading "المهارات" [level=2] [ref=e121]
+          - paragraph [ref=e122]: التقنيات التي أتفوق فيها
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - heading "Frontend" [level=3] [ref=e128]
+            - generic [ref=e129]:
+              - generic [ref=e130]: React
+              - generic [ref=e132]: Next.js
+              - generic [ref=e134]: TypeScript
+              - generic [ref=e136]: Tailwind CSS
+              - generic [ref=e138]: Vue 3
+              - generic [ref=e140]: Framer Motion
+              - generic [ref=e142]: Zustand
+              - generic [ref=e144]: Radix UI
+          - generic [ref=e147]:
+            - heading "Backend" [level=3] [ref=e150]
+            - generic [ref=e151]:
+              - generic [ref=e152]: Python
+              - generic [ref=e154]: FastAPI
+              - generic [ref=e156]: Node.js
+              - generic [ref=e158]: PostgreSQL
+              - generic [ref=e160]: Prisma
+              - generic [ref=e162]: Docker
+              - generic [ref=e164]: REST APIs
+              - generic [ref=e166]: WebSockets
+          - generic [ref=e169]:
+            - heading "KI & ML" [level=3] [ref=e172]
+            - generic [ref=e173]:
+              - generic [ref=e174]: TensorFlow
+              - generic [ref=e176]: PyTorch
+              - generic [ref=e178]: XGBoost
+              - generic [ref=e180]: OpenAI API
+              - generic [ref=e182]: Claude API
+              - generic [ref=e184]: Gemini API
+              - generic [ref=e186]: LLM Integration
+              - generic [ref=e188]: Prompt Engineering
+          - generic [ref=e191]:
+            - heading "Datenbanken" [level=3] [ref=e194]
+            - generic [ref=e195]:
+              - generic [ref=e196]: PostgreSQL
+              - generic [ref=e198]: MariaDB
+              - generic [ref=e200]: Supabase
+              - generic [ref=e202]: Vercel KV
+              - generic [ref=e204]: Data Modeling
+              - generic [ref=e206]: Query Optimization
+          - generic [ref=e209]:
+            - heading "DevOps" [level=3] [ref=e212]
+            - generic [ref=e213]:
+              - generic [ref=e214]: Docker
+              - generic [ref=e216]: Nginx
+              - generic [ref=e218]: GitHub Actions
+              - generic [ref=e220]: Vercel
+              - generic [ref=e222]: CI/CD
+              - generic [ref=e224]: Linux
+          - generic [ref=e227]:
+            - heading "Sicherheit" [level=3] [ref=e230]
+            - generic [ref=e231]:
+              - generic [ref=e232]: AES-256-GCM Encryption
+              - generic [ref=e234]: OAuth 2.0
+              - generic [ref=e236]: JWT
+              - generic [ref=e238]: Zero-Knowledge Architecture
+              - generic [ref=e240]: HTTPS/TLS
+              - generic [ref=e242]: Web Security
+    - generic [ref=e244]:
+      - generic: "03"
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - generic [ref=e248]: 03 / projects
+            - separator [ref=e249]
+          - heading "المشاريع المميزة" [level=2] [ref=e250]
+          - paragraph [ref=e251]: مجموعة مختارة من أعمالي الأخيرة
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - generic [ref=e256]: ai
+            - heading "LLM-Council" [level=3] [ref=e257]
+            - paragraph [ref=e258]: "محرك إجماع الذكاء الاصطناعي ثلاثي المراحل: ردود فردية ومراجعة مجهولة الهوية واصطناعي نهائي."
+            - generic [ref=e259]:
+              - generic [ref=e260]: React
+              - generic [ref=e261]: FastAPI
+              - generic [ref=e262]: OpenRouter
+              - generic [ref=e263]: Python
+              - generic [ref=e264]: TypeScript
+          - generic [ref=e265]:
+            - generic [ref=e268]: ai
+            - heading "KI-WM-Prognosen" [level=3] [ref=e269]
+            - paragraph [ref=e270]: توقعات الذكاء الاصطناعي لكأس العالم 2026 باستخدام 4 نماذج ذكاء اصطناعي بشفافية كاملة.
+            - generic [ref=e271]:
+              - generic [ref=e272]: Next.js 15
+              - generic [ref=e273]: React 19
+              - generic [ref=e274]: TypeScript
+              - generic [ref=e275]: PostgreSQL
+              - generic [ref=e276]: Prisma
+              - generic [ref=e277]: "+4"
+          - generic [ref=e278]:
+            - generic [ref=e281]: ml
+            - heading "Trading-Bot" [level=3] [ref=e282]
+            - paragraph [ref=e283]: نظام تداول خوارزمي متكامل يجمع تعلم الآلة والتحليل التقني والاختبار التاريخي ومراقبة السوق المباشرة.
+            - generic [ref=e284]:
+              - generic [ref=e285]: Python
+              - generic [ref=e286]: TensorFlow
+              - generic [ref=e287]: PyTorch
+              - generic [ref=e288]: XGBoost
+              - generic [ref=e289]: MetaTrader5
+              - generic [ref=e290]: "+3"
+          - generic [ref=e291]:
+            - generic [ref=e294]: fullstack
+            - heading "KerChat" [level=3] [ref=e295]
+            - paragraph [ref=e296]: منصة دردشة فورية مع مصادقة OAuth ودعم متعدد القنوات والرسائل المباشرة.
+            - generic [ref=e297]:
+              - generic [ref=e298]: Vue 3
+              - generic [ref=e299]: FastAPI
+              - generic [ref=e300]: WebSockets
+              - generic [ref=e301]: TypeScript
+              - generic [ref=e302]: Tailwind
+              - generic [ref=e303]: "+2"
+          - generic [ref=e304]:
+            - generic [ref=e307]: saas
+            - heading "Pronto" [level=3] [ref=e308]
+            - paragraph [ref=e309]: منصة ذكاء مبيعات B2B تجمع إشارات النية وتولد رسائل تواصل مخصصة بالذكاء الاصطناعي.
+            - generic [ref=e310]:
+              - generic [ref=e311]: Vue 3
+              - generic [ref=e312]: FastAPI
+              - generic [ref=e313]: OpenAI
+              - generic [ref=e314]: TypeScript
+              - generic [ref=e315]: Tailwind
+              - generic [ref=e316]: "+2"
+          - generic [ref=e317]:
+            - generic [ref=e320]: security
+            - heading "Private-Key-Manager" [level=3] [ref=e321]
+            - paragraph [ref=e322]: تطبيق PWA لإدارة كلمات المرور مع تشفير AES-256-GCM من جانب العميل وبنية عدم المعرفة.
+            - generic [ref=e323]:
+              - generic [ref=e324]: React
+              - generic [ref=e325]: Node.js
+              - generic [ref=e326]: AES-256-GCM
+              - generic [ref=e327]: Docker
+              - generic [ref=e328]: Nginx
+              - generic [ref=e329]: "+2"
+        - generic [ref=e330]:
+          - heading "مشاريع أخرى" [level=3] [ref=e331]
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - heading "KI-Sport-Prognose" [level=4] [ref=e334]
+              - paragraph [ref=e335]: توقعات كرة القدم بالذكاء الاصطناعي مع نظام إجماع متعدد النماذج.
+              - generic [ref=e336]:
+                - generic [ref=e337]: Next.js 15
+                - generic [ref=e338]: TypeScript
+                - generic [ref=e339]: PostgreSQL
+            - generic [ref=e340]:
+              - heading "KI-Lotto-Prognose" [level=4] [ref=e341]
+              - paragraph [ref=e342]: نظام تحليل اليانصيب بالذكاء الاصطناعي مع توقعات فورية.
+              - generic [ref=e343]:
+                - generic [ref=e344]: Next.js 14
+                - generic [ref=e345]: TypeScript
+                - generic [ref=e346]: Framer Motion
+            - generic [ref=e347]:
+              - heading "DayFlow" [level=4] [ref=e348]
+              - paragraph [ref=e349]: تطبيق إنتاجية مع تخطيط المهام ولوحة أفكار وجمع الروابط.
+              - generic [ref=e350]:
+                - generic [ref=e351]: Next.js
+                - generic [ref=e352]: Supabase
+                - generic [ref=e353]: TypeScript
+            - generic [ref=e354]:
+              - heading "LinguaKids" [level=4] [ref=e355]
+              - paragraph [ref=e356]: منصة ذكاء اصطناعي لإنشاء كتب أطفال تفاعلية متعددة اللغات.
+              - generic [ref=e357]:
+                - generic [ref=e358]: Next.js 14
+                - generic [ref=e359]: Claude API
+                - generic [ref=e360]: OpenAI
+    - generic [ref=e361]:
+      - generic: "04"
+      - generic [ref=e362]:
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - generic [ref=e365]: 04 / experience
+            - separator [ref=e366]
+          - heading "الخبرة" [level=2] [ref=e367]
+        - generic [ref=e368]:
+          - heading "الخبرة المهنية" [level=3] [ref=e369]
+          - generic [ref=e370]:
+            - generic [ref=e374]:
+              - generic [ref=e375]:
+                - generic [ref=e376]:
+                  - heading "Freelance" [level=4] [ref=e377]
+                  - paragraph [ref=e378]: مطور Fullstack
+                - generic [ref=e379]:
+                  - generic [ref=e380]: 2022 - Present
+                  - generic [ref=e381]: ● Aktuell
+              - paragraph [ref=e382]: بناء التطبيقات المدعومة بالذكاء الاصطناعي ومنصات SaaS للشركات. متخصص في Next.js و React و FastAPI وتكاملات ML.
+              - generic [ref=e383]:
+                - generic [ref=e384]: Next.js
+                - generic [ref=e385]: React
+                - generic [ref=e386]: FastAPI
+                - generic [ref=e387]: Python
+                - generic [ref=e388]: TypeScript
+                - generic [ref=e389]: PostgreSQL
+            - generic [ref=e393]:
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - heading "AI Startup" [level=4] [ref=e396]
+                  - paragraph [ref=e397]: مهندس ذكاء اصطناعي
+                - generic [ref=e399]: 2021 - 2022
+              - paragraph [ref=e400]: بناء نماذج ML وأنظمة إجماع الذكاء الاصطناعي. تكامل APIs LLM مع OpenAI و Anthropic و Google.
+              - generic [ref=e401]:
+                - generic [ref=e402]: Python
+                - generic [ref=e403]: TensorFlow
+                - generic [ref=e404]: PyTorch
+                - generic [ref=e405]: OpenAI
+                - generic [ref=e406]: Claude
+                - generic [ref=e407]: Gemini
+        - generic [ref=e408]:
+          - heading "التعليم" [level=3] [ref=e409]
+          - generic [ref=e410]:
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e416]:
+                  - heading "University of Applied Sciences" [level=4] [ref=e417]
+                  - paragraph [ref=e418]: بكالوريوس علوم الحاسوب
+                - generic [ref=e420]: 2018 - 2021
+              - paragraph [ref=e421]: "تخرج مع التركيز على تطوير البرمجيات والخوارزميات وتقنيات الويب. المعدل التراكمي: 1.8"
+              - generic [ref=e422]:
+                - generic [ref=e423]: Computer Science
+                - generic [ref=e424]: Web Development
+                - generic [ref=e425]: Algorithms
+            - generic [ref=e429]:
+              - generic [ref=e430]:
+                - generic [ref=e431]:
+                  - heading "AI Academy Online" [level=4] [ref=e432]
+                  - paragraph [ref=e433]: "تخصص: الذكاء الاصطناعي والتعلم الآلي"
+                - generic [ref=e435]: 2021 - 2022
+              - paragraph [ref=e436]: تدريب مكثف في Deep Learning و NLP و LLMs. أكثر من 400 ساعة من التعلم العملي.
+              - generic [ref=e437]:
+                - generic [ref=e438]: AI
+                - generic [ref=e439]: ML
+                - generic [ref=e440]: Deep Learning
+                - generic [ref=e441]: NLP
+                - generic [ref=e442]: LLM
+        - generic [ref=e443]:
+          - heading "الشهادات" [level=3] [ref=e444]
+          - generic [ref=e445]:
+            - generic [ref=e446]:
+              - paragraph [ref=e447]: AWS Certified Solutions Architect
+              - paragraph [ref=e448]: Amazon Web Services
+              - text: "2023"
+            - generic [ref=e449]:
+              - paragraph [ref=e450]: Google Cloud Professional Cloud Architect
+              - paragraph [ref=e451]: Google Cloud
+              - text: "2024"
+            - generic [ref=e452]:
+              - paragraph [ref=e453]: TensorFlow Spezialist
+              - paragraph [ref=e454]: DeepLearning.AI
+              - text: "2023"
+    - generic [ref=e455]:
+      - generic: "05"
+      - generic [ref=e456]:
+        - generic [ref=e457]:
+          - generic [ref=e458]:
+            - separator [ref=e459]
+            - generic [ref=e460]: 05 / contact
+            - separator [ref=e461]
+          - heading "تواصل معي" [level=2] [ref=e462]
+          - paragraph [ref=e463]: دعنا نعمل معاً
+        - generic [ref=e464]:
+          - generic [ref=e465]:
+            - link "Email fourati.omar55@gmail.com" [ref=e466] [cursor=pointer]:
+              - /url: mailto:fourati.omar55@gmail.com
+              - img [ref=e468]
+              - generic [ref=e471]:
+                - paragraph [ref=e472]: Email
+                - paragraph [ref=e473]: fourati.omar55@gmail.com
+            - generic [ref=e474]:
+              - img [ref=e476]
+              - generic [ref=e479]:
+                - paragraph [ref=e480]: Location
+                - paragraph [ref=e481]: Köln, Deutschland
+            - generic [ref=e482]:
+              - link "LinkedIn" [ref=e483] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/omarfourati-63a9b11ba/
+                - img [ref=e485]
+                - text: LinkedIn
+              - link "GitHub" [ref=e487] [cursor=pointer]:
+                - /url: https://github.com
+                - img [ref=e489]
+                - text: GitHub
+          - generic [ref=e492]:
+            - generic [ref=e493]:
+              - generic [ref=e494]:
+                - generic [ref=e495]: Name
+                - textbox "Dein Name" [ref=e496]
+              - generic [ref=e497]:
+                - generic [ref=e498]: Email
+                - textbox "deine@email.de" [ref=e499]
+            - generic [ref=e500]:
+              - generic [ref=e501]: Nachricht
+              - textbox "Deine Nachricht..." [ref=e502]
+            - button "إرسال" [ref=e503]
+  - contentinfo [ref=e504]:
+    - paragraph [ref=e505]:
+      - generic [ref=e506]: © 2026 Omar Fourati
+      - text: · Built with Next.js + Framer Motion
+  - button "Open Next.js Dev Tools" [ref=e512] [cursor=pointer]:
+    - img [ref=e513]

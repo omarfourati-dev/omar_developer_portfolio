@@ -45,6 +45,7 @@ function LetterByLetter({
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const tNav = useTranslations("navigation");
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -106,8 +107,9 @@ export default function Hero() {
           <span className="h-px w-8" style={{ backgroundColor: "#C9A84C" }} />
         </motion.div>
 
-        {/* Main name — letter by letter */}
+        {/* Main name — always LTR regardless of locale */}
         <h1
+          dir="ltr"
           className="text-display mb-3 leading-none"
           style={{ color: "#F0E8D5" }}
         >
@@ -187,7 +189,7 @@ export default function Hero() {
               fontFamily: "var(--font-syne)",
             }}
           >
-            Kontakt
+            {tNav("contact")}
           </a>
         </motion.div>
       </div>

@@ -1,0 +1,411 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "OF" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]: OF
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "DE" [ref=e8]
+          - button "EN" [ref=e9]
+          - button "FR" [ref=e10]
+          - button "AR" [ref=e11]
+        - button "Toggle menu" [ref=e12]
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e21]: Developer Portfolio
+        - heading "OMAR FOURATI" [level=1] [ref=e23]:
+          - generic "OMAR" [ref=e24]:
+            - generic [ref=e25]: O
+            - generic [ref=e26]: M
+            - generic [ref=e27]: A
+            - generic [ref=e28]: R
+          - generic "FOURATI" [ref=e29]:
+            - generic [ref=e30]: F
+            - generic [ref=e31]: O
+            - generic [ref=e32]: U
+            - generic [ref=e33]: R
+            - generic [ref=e34]: A
+            - generic [ref=e35]: T
+            - generic [ref=e36]: I
+        - paragraph [ref=e38]: Full-Stack Developer
+        - paragraph [ref=e39]: "Ich entwickle intelligente, skalierbare Web-Anwendungen mit modernem Stack: React, Next.js, FastAPI und Machine Learning."
+        - generic [ref=e40]:
+          - link "Meine Arbeit entdecken" [ref=e41] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Kontakt" [ref=e42] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e43]:
+        - generic [ref=e44]: scroll
+        - img [ref=e46]
+    - generic [ref=e48]:
+      - generic: "01"
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: 01 / about
+            - separator [ref=e53]
+          - heading "Über mich" [level=2] [ref=e54]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: 10+
+            - paragraph [ref=e59]: 10+ Projekte
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: 4+
+            - paragraph [ref=e62]: 4+ Jahre Erfahrung
+          - generic [ref=e63]:
+            - paragraph [ref=e64]: "4"
+            - paragraph [ref=e65]: Sprachen
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: "2"
+            - paragraph [ref=e68]: Unternehmen
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - img "Omar Fourati" [ref=e72]
+            - generic [ref=e74]:
+              - generic [ref=e75]: 📍
+              - generic [ref=e76]: Köln, Deutschland
+          - generic [ref=e77]:
+            - paragraph [ref=e79]: Mit über 4 Jahren Erfahrung in der Softwareentwicklung konzentriere ich mich auf die Schaffung von KI-gestützten Lösungen und SaaS-Plattformen. Mein Fokus liegt auf sauberer Code-Architektur, benutzerfreundlicher Interfaces und robusten Backend-Systemen.
+            - generic [ref=e80]:
+              - heading "Sprachen" [level=3] [ref=e81]
+              - generic [ref=e82]:
+                - generic [ref=e83]:
+                  - generic [ref=e84]: 🇩🇪
+                  - generic [ref=e85]:
+                    - paragraph [ref=e86]: Deutsch
+                    - paragraph [ref=e87]: C1
+                - generic [ref=e88]:
+                  - generic [ref=e89]: 🇬🇧
+                  - generic [ref=e90]:
+                    - paragraph [ref=e91]: English
+                    - paragraph [ref=e92]: B2
+                - generic [ref=e93]:
+                  - generic [ref=e94]: 🇫🇷
+                  - generic [ref=e95]:
+                    - paragraph [ref=e96]: Français
+                    - paragraph [ref=e97]: C1
+                - generic [ref=e98]:
+                  - generic [ref=e99]: 🇸🇦
+                  - generic [ref=e100]:
+                    - paragraph [ref=e101]: العربية
+                    - paragraph [ref=e102]: Muttersprache
+            - generic [ref=e103]:
+              - heading "Interessen" [level=3] [ref=e104]
+              - generic [ref=e105]:
+                - generic [ref=e106]: Sport
+                - generic [ref=e107]: Reisen
+                - generic [ref=e108]: Filme
+                - generic [ref=e109]: Kochen
+                - generic [ref=e110]: Videogames
+                - generic [ref=e111]: Karten
+    - generic [ref=e112]:
+      - generic: "02"
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: 02 / skills
+            - separator [ref=e117]
+          - heading "Fähigkeiten" [level=2] [ref=e118]
+          - paragraph [ref=e119]: Technologien, in denen ich mich auszeichne
+        - generic [ref=e120]:
+          - generic [ref=e122]:
+            - heading "Frontend" [level=3] [ref=e125]
+            - generic [ref=e126]:
+              - generic [ref=e127]: React
+              - generic [ref=e129]: Next.js
+              - generic [ref=e131]: TypeScript
+              - generic [ref=e133]: Tailwind CSS
+              - generic [ref=e135]: Vue 3
+              - generic [ref=e137]: Framer Motion
+              - generic [ref=e139]: Zustand
+              - generic [ref=e141]: Radix UI
+          - generic [ref=e144]:
+            - heading "Backend" [level=3] [ref=e147]
+            - generic [ref=e148]:
+              - generic [ref=e149]: Python
+              - generic [ref=e151]: FastAPI
+              - generic [ref=e153]: Node.js
+              - generic [ref=e155]: PostgreSQL
+              - generic [ref=e157]: Prisma
+              - generic [ref=e159]: Docker
+              - generic [ref=e161]: REST APIs
+              - generic [ref=e163]: WebSockets
+          - generic [ref=e166]:
+            - heading "KI & ML" [level=3] [ref=e169]
+            - generic [ref=e170]:
+              - generic [ref=e171]: TensorFlow
+              - generic [ref=e173]: PyTorch
+              - generic [ref=e175]: XGBoost
+              - generic [ref=e177]: OpenAI API
+              - generic [ref=e179]: Claude API
+              - generic [ref=e181]: Gemini API
+              - generic [ref=e183]: LLM Integration
+              - generic [ref=e185]: Prompt Engineering
+          - generic [ref=e188]:
+            - heading "Datenbanken" [level=3] [ref=e191]
+            - generic [ref=e192]:
+              - generic [ref=e193]: PostgreSQL
+              - generic [ref=e195]: MariaDB
+              - generic [ref=e197]: Supabase
+              - generic [ref=e199]: Vercel KV
+              - generic [ref=e201]: Data Modeling
+              - generic [ref=e203]: Query Optimization
+          - generic [ref=e206]:
+            - heading "DevOps" [level=3] [ref=e209]
+            - generic [ref=e210]:
+              - generic [ref=e211]: Docker
+              - generic [ref=e213]: Nginx
+              - generic [ref=e215]: GitHub Actions
+              - generic [ref=e217]: Vercel
+              - generic [ref=e219]: CI/CD
+              - generic [ref=e221]: Linux
+          - generic [ref=e224]:
+            - heading "Sicherheit" [level=3] [ref=e227]
+            - generic [ref=e228]:
+              - generic [ref=e229]: AES-256-GCM Encryption
+              - generic [ref=e231]: OAuth 2.0
+              - generic [ref=e233]: JWT
+              - generic [ref=e235]: Zero-Knowledge Architecture
+              - generic [ref=e237]: HTTPS/TLS
+              - generic [ref=e239]: Web Security
+    - generic [ref=e241]:
+      - generic: "03"
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - generic [ref=e244]:
+            - generic [ref=e245]: 03 / projects
+            - separator [ref=e246]
+          - heading "Ausgewählte Projekte" [level=2] [ref=e247]
+          - paragraph [ref=e248]: Eine Auswahl meiner neuesten Arbeiten
+        - generic [ref=e249]:
+          - generic [ref=e250]:
+            - generic [ref=e253]: ai
+            - heading "LLM-Council" [level=3] [ref=e254]
+            - paragraph [ref=e255]: "Dreistufiger KI-Konsens-Engine: Individuelle Modelle antworten, prüfen sich gegenseitig anonym und ein 'Vorsitzender' synthetisiert die finale Antwort."
+            - generic [ref=e256]:
+              - generic [ref=e257]: React
+              - generic [ref=e258]: FastAPI
+              - generic [ref=e259]: OpenRouter
+              - generic [ref=e260]: Python
+              - generic [ref=e261]: TypeScript
+          - generic [ref=e262]:
+            - generic [ref=e265]: ai
+            - heading "KI-WM-Prognosen" [level=3] [ref=e266]
+            - paragraph [ref=e267]: KI-Prognosen für die FIFA WM 2026 mit 4 LLM-Modellen (GPT-4o, Gemini, Claude, Grok). Transparente Vorhersagen mit Begründungen in 5 Sprachen.
+            - generic [ref=e268]:
+              - generic [ref=e269]: Next.js 15
+              - generic [ref=e270]: React 19
+              - generic [ref=e271]: TypeScript
+              - generic [ref=e272]: PostgreSQL
+              - generic [ref=e273]: Prisma
+              - generic [ref=e274]: "+4"
+          - generic [ref=e275]:
+            - generic [ref=e278]: ml
+            - heading "Trading-Bot" [level=3] [ref=e279]
+            - paragraph [ref=e280]: Produktionsreifes algorithmisches Handelssystem mit Machine Learning, technischer Analyse, Backtesting und Live-Marktüberwachung via MetaTrader5.
+            - generic [ref=e281]:
+              - generic [ref=e282]: Python
+              - generic [ref=e283]: TensorFlow
+              - generic [ref=e284]: PyTorch
+              - generic [ref=e285]: XGBoost
+              - generic [ref=e286]: MetaTrader5
+              - generic [ref=e287]: "+3"
+          - generic [ref=e288]:
+            - generic [ref=e291]: fullstack
+            - heading "KerChat" [level=3] [ref=e292]
+            - paragraph [ref=e293]: Echtzeit-Chat-Plattform (Slack-Clone) mit OAuth-Authentifizierung, WebSockets, Multi-Channel-Support und Direktnachrichten.
+            - generic [ref=e294]:
+              - generic [ref=e295]: Vue 3
+              - generic [ref=e296]: FastAPI
+              - generic [ref=e297]: WebSockets
+              - generic [ref=e298]: TypeScript
+              - generic [ref=e299]: Tailwind
+              - generic [ref=e300]: "+2"
+          - generic [ref=e301]:
+            - generic [ref=e304]: saas
+            - heading "Pronto" [level=3] [ref=e305]
+            - paragraph [ref=e306]: "B2B Sales Intelligence Platform: Aggregiert automatisierte Intent-Signale aus öffentlichen Quellen und generiert KI-personalisierte Outreach-Nachrichten."
+            - generic [ref=e307]:
+              - generic [ref=e308]: Vue 3
+              - generic [ref=e309]: FastAPI
+              - generic [ref=e310]: OpenAI
+              - generic [ref=e311]: TypeScript
+              - generic [ref=e312]: Tailwind
+              - generic [ref=e313]: "+2"
+          - generic [ref=e314]:
+            - generic [ref=e317]: security
+            - heading "Private-Key-Manager" [level=3] [ref=e318]
+            - paragraph [ref=e319]: Enterprise-PWA für sicheres Passwort-Management mit client-seitiger AES-256-GCM Verschlüsselung, Zero-Knowledge-Architektur und Docker-Deployment.
+            - generic [ref=e320]:
+              - generic [ref=e321]: React
+              - generic [ref=e322]: Node.js
+              - generic [ref=e323]: AES-256-GCM
+              - generic [ref=e324]: Docker
+              - generic [ref=e325]: Nginx
+              - generic [ref=e326]: "+2"
+        - generic [ref=e327]:
+          - heading "Weitere Projekte" [level=3] [ref=e328]
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - heading "KI-Sport-Prognose" [level=4] [ref=e331]
+              - paragraph [ref=e332]: KI-gestützte Fußballprognosen mit mehreren LLM-Modellen und Konsens-System für Ligaspiele.
+              - generic [ref=e333]:
+                - generic [ref=e334]: Next.js 15
+                - generic [ref=e335]: TypeScript
+                - generic [ref=e336]: PostgreSQL
+            - generic [ref=e337]:
+              - heading "KI-Lotto-Prognose" [level=4] [ref=e338]
+              - paragraph [ref=e339]: KI-gestütztes Lotterie-Analyse-System mit Echtzeit-Vorhersagen und Edge-Caching via Vercel KV.
+              - generic [ref=e340]:
+                - generic [ref=e341]: Next.js 14
+                - generic [ref=e342]: TypeScript
+                - generic [ref=e343]: Framer Motion
+            - generic [ref=e344]:
+              - heading "DayFlow" [level=4] [ref=e345]
+              - paragraph [ref=e346]: Produktivitäts-App mit täglicher/wöchentlicher Aufgabenplanung, Ideen-Board (Masonry-Layout) und Link-Sammlung mit Open-Graph-Vorschauen.
+              - generic [ref=e347]:
+                - generic [ref=e348]: Next.js
+                - generic [ref=e349]: Supabase
+                - generic [ref=e350]: TypeScript
+            - generic [ref=e351]:
+              - heading "LinguaKids" [level=4] [ref=e352]
+              - paragraph [ref=e353]: KI-Plattform zur Generierung interaktiver Kinderbücher mit mehrsprachigen Lernfunktionen und Stripe-Zahlungsintegration.
+              - generic [ref=e354]:
+                - generic [ref=e355]: Next.js 14
+                - generic [ref=e356]: Claude API
+                - generic [ref=e357]: OpenAI
+    - generic [ref=e358]:
+      - generic: "04"
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - generic [ref=e361]:
+            - generic [ref=e362]: 04 / experience
+            - separator [ref=e363]
+          - heading "Erfahrung" [level=2] [ref=e364]
+        - generic [ref=e365]:
+          - heading "Berufserfahrung" [level=3] [ref=e366]
+          - generic [ref=e367]:
+            - generic [ref=e371]:
+              - generic [ref=e372]:
+                - generic [ref=e373]:
+                  - heading "Freelance" [level=4] [ref=e374]
+                  - paragraph [ref=e375]: Fullstack Entwickler
+                - generic [ref=e376]:
+                  - generic [ref=e377]: 2022 - Present
+                  - generic [ref=e378]: ● Aktuell
+              - paragraph [ref=e379]: Entwicklung von KI-gestützten Anwendungen und B2B-SaaS-Plattformen. Spezialisiert auf Next.js, React, FastAPI und Machine Learning Integrationen.
+              - generic [ref=e380]:
+                - generic [ref=e381]: Next.js
+                - generic [ref=e382]: React
+                - generic [ref=e383]: FastAPI
+                - generic [ref=e384]: Python
+                - generic [ref=e385]: TypeScript
+                - generic [ref=e386]: PostgreSQL
+            - generic [ref=e390]:
+              - generic [ref=e391]:
+                - generic [ref=e392]:
+                  - heading "AI Startup" [level=4] [ref=e393]
+                  - paragraph [ref=e394]: KI-Ingenieur
+                - generic [ref=e396]: 2021 - 2022
+              - paragraph [ref=e397]: Entwicklung von Machine Learning Modellen und KI-Konsens-Systemen. Implementierung von LLM-Integrationen mit OpenAI, Anthropic und Google APIs.
+              - generic [ref=e398]:
+                - generic [ref=e399]: Python
+                - generic [ref=e400]: TensorFlow
+                - generic [ref=e401]: PyTorch
+                - generic [ref=e402]: OpenAI
+                - generic [ref=e403]: Claude
+                - generic [ref=e404]: Gemini
+        - generic [ref=e405]:
+          - heading "Ausbildung" [level=3] [ref=e406]
+          - generic [ref=e407]:
+            - generic [ref=e411]:
+              - generic [ref=e412]:
+                - generic [ref=e413]:
+                  - heading "University of Applied Sciences" [level=4] [ref=e414]
+                  - paragraph [ref=e415]: Bachelor in Informatik
+                - generic [ref=e417]: 2018 - 2021
+              - paragraph [ref=e418]: "Abschluss mit Fokus auf Softwareentwicklung, Algorithmen und Web-Technologien. Durchschnittsnote: 1.8"
+              - generic [ref=e419]:
+                - generic [ref=e420]: Computer Science
+                - generic [ref=e421]: Web Development
+                - generic [ref=e422]: Algorithms
+            - generic [ref=e426]:
+              - generic [ref=e427]:
+                - generic [ref=e428]:
+                  - heading "AI Academy Online" [level=4] [ref=e429]
+                  - paragraph [ref=e430]: "Spezialisierung: Künstliche Intelligenz & Machine Learning"
+                - generic [ref=e432]: 2021 - 2022
+              - paragraph [ref=e433]: Intensive Schulung in Deep Learning, Natural Language Processing und Large Language Models. 400+ Stunden praktisches Lernen.
+              - generic [ref=e434]:
+                - generic [ref=e435]: AI
+                - generic [ref=e436]: ML
+                - generic [ref=e437]: Deep Learning
+                - generic [ref=e438]: NLP
+                - generic [ref=e439]: LLM
+        - generic [ref=e440]:
+          - heading "Zertifikate" [level=3] [ref=e441]
+          - generic [ref=e442]:
+            - generic [ref=e443]:
+              - paragraph [ref=e444]: AWS Certified Solutions Architect
+              - paragraph [ref=e445]: Amazon Web Services
+              - text: "2023"
+            - generic [ref=e446]:
+              - paragraph [ref=e447]: Google Cloud Professional Cloud Architect
+              - paragraph [ref=e448]: Google Cloud
+              - text: "2024"
+            - generic [ref=e449]:
+              - paragraph [ref=e450]: TensorFlow Spezialist
+              - paragraph [ref=e451]: DeepLearning.AI
+              - text: "2023"
+    - generic [ref=e452]:
+      - generic: "05"
+      - generic [ref=e453]:
+        - generic [ref=e454]:
+          - generic [ref=e455]:
+            - separator [ref=e456]
+            - generic [ref=e457]: 05 / contact
+            - separator [ref=e458]
+          - heading "Kontakt" [level=2] [ref=e459]
+          - paragraph [ref=e460]: Lassen Sie uns zusammenarbeiten
+        - generic [ref=e461]:
+          - generic [ref=e462]:
+            - link "Email fourati.omar55@gmail.com" [ref=e463] [cursor=pointer]:
+              - /url: mailto:fourati.omar55@gmail.com
+              - img [ref=e465]
+              - generic [ref=e468]:
+                - paragraph [ref=e469]: Email
+                - paragraph [ref=e470]: fourati.omar55@gmail.com
+            - generic [ref=e471]:
+              - img [ref=e473]
+              - generic [ref=e476]:
+                - paragraph [ref=e477]: Location
+                - paragraph [ref=e478]: Köln, Deutschland
+            - generic [ref=e479]:
+              - link "LinkedIn" [ref=e480] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/omarfourati-63a9b11ba/
+                - img [ref=e482]
+                - text: LinkedIn
+              - link "GitHub" [ref=e484] [cursor=pointer]:
+                - /url: https://github.com
+                - img [ref=e486]
+                - text: GitHub
+          - generic [ref=e489]:
+            - generic [ref=e490]:
+              - generic [ref=e491]:
+                - generic [ref=e492]: Name
+                - textbox "Dein Name" [ref=e493]
+              - generic [ref=e494]:
+                - generic [ref=e495]: Email
+                - textbox "deine@email.de" [ref=e496]
+            - generic [ref=e497]:
+              - generic [ref=e498]: Nachricht
+              - textbox "Deine Nachricht..." [ref=e499]
+            - button "Senden" [ref=e500]
+  - contentinfo [ref=e501]:
+    - paragraph [ref=e502]:
+      - generic [ref=e503]: © 2026 Omar Fourati
+      - text: · Built with Next.js + Framer Motion
+  - button "Open Next.js Dev Tools" [ref=e509] [cursor=pointer]:
+    - img [ref=e510]
