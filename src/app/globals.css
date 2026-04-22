@@ -1,66 +1,169 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
-  --color-background: #080808;
-  --color-card: #111111;
-  --color-border: #1F1F1F;
-  --color-text-primary: #F2F2F0;
-  --color-text-muted: #6B7280;
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8C96A;
-  --color-purple: #7B2FBE;
-  --color-purple-light: #A855F7;
+  /* === COLORS === */
+  --color-bg:        #0B0907;
+  --color-bg-warm:   #0F0C09;
+  --color-card:      #131008;
+  --color-card-hover:#1A1510;
+  --color-border:    #2A2218;
+  --color-border-gold: #C9A84C30;
 
-  /* Fonts */
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
-  --font-mono: var(--font-jetbrains-mono);
+  --color-cream:     #F0E8D5;
+  --color-cream-muted: #A89B84;
+  --color-muted:     #6B6054;
+
+  --color-gold:      #C9A84C;
+  --color-gold-light:#E8C96A;
+  --color-gold-dim:  #C9A84C60;
+  --color-copper:    #C4783E;
+  --color-teal:      #2DD4BF;
+  --color-purple:    #8B5CF6;
+
+  /* === FONTS === */
+  --font-sans:    var(--font-dm-sans);
+  --font-display: var(--font-syne);
+  --font-mono:    var(--font-space-mono);
 }
 
-:root {
-  --background: #080808;
-  --foreground: #F2F2F0;
-}
-
-* {
+/* ============================================
+   BASE
+   ============================================ */
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background-color: #0B0907;
+  color: #F0E8D5;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #111111;
-}
-::-webkit-scrollbar-thumb {
-  background: #C9A84C;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #E8C96A;
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-syne), sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-/* Selection color */
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0B0907; }
+::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #E8C96A; }
+
+/* ============================================
+   SELECTION
+   ============================================ */
 ::selection {
-  background-color: #7B2FBE;
-  color: #F2F2F0;
+  background-color: #C9A84C30;
+  color: #E8C96A;
 }
 
-/* RTL support */
-[dir="rtl"] {
-  font-family: var(--font-inter), "Noto Sans Arabic", system-ui, sans-serif;
+/* ============================================
+   GEOMETRIC ORNAMENT — used as background texture
+   This SVG pattern is the key differentiator.
+   It's a subtle Islamic-style 8-point star grid.
+   ============================================ */
+.geometric-bg {
+  position: relative;
+}
+.geometric-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23C9A84C' stroke-width='0.4' opacity='0.08'%3E%3Cpath d='M30 0 L30 60 M0 30 L60 30 M0 0 L60 60 M60 0 L0 60'/%3E%3Crect x='20' y='20' width='20' height='20' transform='rotate(45 30 30)'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.font-display {
+  font-family: var(--font-syne), sans-serif;
+}
+.font-mono {
+  font-family: var(--font-space-mono), monospace;
+}
+
+/* Section number backdrop — huge gold number behind title */
+.section-number {
+  position: absolute;
+  font-family: var(--font-syne), sans-serif;
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: 800;
+  color: #C9A84C;
+  opacity: 0.04;
+  top: -2rem;
+  left: -1rem;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Gold horizontal rule */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, #C9A84C, transparent);
+  border: none;
+}
+
+/* RTL adjustments */
+[dir="rtl"] .section-number {
+  left: auto;
+  right: -1rem;
+}
+[dir="rtl"] .gold-rule {
+  background: linear-gradient(270deg, #C9A84C, transparent);
+}
+[dir="rtl"] body {
+  font-family: var(--font-dm-sans), "Noto Sans Arabic", system-ui, sans-serif;
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   All components should be mobile-first
+   ============================================ */
+
+/* Fluid type scale */
+.text-display {
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+
+.text-section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+   FOCUS STYLES (accessibility)
+   ============================================ */
+:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 3px;
+  border-radius: 3px;
 }

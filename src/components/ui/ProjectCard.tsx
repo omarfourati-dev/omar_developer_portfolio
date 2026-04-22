@@ -125,7 +125,7 @@ export default function ProjectCard({ project, locale, translations }: ProjectCa
       <h3
         className="text-xl font-bold mb-3 group-hover:text-white transition-colors"
         style={{
-          fontFamily: "var(--font-space-grotesk)",
+          fontFamily: "var(--font-syne)",
           color: "#F2F2F0",
         }}
       >
