@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SkillBadge from "@/components/ui/SkillBadge";
 import { skillCategories } from "@/data/skills";
@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   const t = useTranslations("skills");
+  const locale = useLocale();
 
   return (
     <section id="skills" className="relative py-32 sm:py-40 px-[5%] overflow-hidden">
@@ -81,7 +82,7 @@ export default function Skills() {
                     className="text-sm font-semibold tracking-[0.15em] uppercase"
                     style={{ fontFamily: "var(--font-space-mono)", color: category.color }}
                   >
-                    {category.label.de}
+                    {category.label[locale as keyof typeof category.label] ?? category.label.de}
                   </h3>
                 </div>
 

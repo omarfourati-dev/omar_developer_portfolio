@@ -162,7 +162,7 @@ export default function Contact() {
                     required
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all portfolio-input"
                     style={{
                       backgroundColor: "#0B0907",
                       border: "1px solid #2A2218",
@@ -183,7 +183,7 @@ export default function Contact() {
                     required
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all portfolio-input"
                     style={{
                       backgroundColor: "#0B0907",
                       border: "1px solid #2A2218",
@@ -205,7 +205,7 @@ export default function Contact() {
                   rows={5}
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all resize-none portfolio-input"
                   style={{
                     backgroundColor: "#0B0907",
                     border: "1px solid #2A2218",

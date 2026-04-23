@@ -93,6 +93,34 @@ export default function Hero() {
       />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
+        {/* Availability badge */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="flex justify-center mb-5"
+        >
+          <span
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium"
+            style={{
+              backgroundColor: "rgba(16,185,129,0.1)",
+              border: "1px solid rgba(16,185,129,0.3)",
+              color: "#10B981",
+              fontFamily: "var(--font-space-mono)",
+            }}
+          >
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{
+                backgroundColor: "#10B981",
+                boxShadow: "0 0 6px rgba(16,185,129,0.8)",
+                animation: "pulse 2s infinite",
+              }}
+            />
+            Available for new projects
+          </span>
+        </motion.div>
+
         {/* Eyebrow label */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -121,7 +149,10 @@ export default function Hero() {
         >
           <LetterByLetter text="OMAR" />
           <br />
-          <LetterByLetter text="FOURATI" className="relative" />
+          <LetterByLetter
+            text="FOURATI"
+            className="relative text-gold-gradient"
+          />
         </h1>
 
         {/* Gold rule */}
@@ -177,7 +208,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_24px_rgba(201,168,76,0.35)]"
             style={{
               backgroundColor: "#C9A84C",
               color: "#0B0907",
@@ -187,11 +218,29 @@ export default function Hero() {
             {t("cta")}
           </a>
           <a
-            href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)]"
+            href="/Lebenslauf.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)] flex items-center justify-center gap-2"
             style={{
               border: "1px solid rgba(201,168,76,0.4)",
               color: "#C9A84C",
+              fontFamily: "var(--font-syne)",
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Lebenslauf
+          </a>
+          <a
+            href="#contact"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)]"
+            style={{
+              border: "1px solid rgba(201,168,76,0.2)",
+              color: "#A89B84",
               fontFamily: "var(--font-syne)",
             }}
           >

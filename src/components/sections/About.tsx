@@ -1,10 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useInView, animate } from "framer-motion";
 import { useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true });
+  const count = useMotionValue(0);
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, value, {
+        duration: 1.6,
+        ease: "easeOut",
+        onUpdate(latest) {
+          if (ref.current) {
+            ref.current.textContent = Math.round(latest) + suffix;
+          }
+        },
+      });
+      return controls.stop;
+    }
+  }, [inView, value, suffix, count]);
+
+  return <span ref={ref}>0{suffix}</span>;
+}
 
 const languages = [
   { flag: "🇩🇪", name: "Deutsch", level: "C1" },
@@ -27,10 +50,10 @@ export default function About() {
   const [imgError, setImgError] = useState(false);
 
   const highlights = [
-    { value: "10+", label: t("highlights.projects") },
-    { value: "4+", label: t("highlights.experience") },
-    { value: "4", label: t("highlights.languages") },
-    { value: "2", label: t("highlights.clients") },
+    { value: 10, suffix: "+", label: t("highlights.projects") },
+    { value: 4,  suffix: "+", label: t("highlights.experience") },
+    { value: 4,  suffix: "",  label: t("highlights.languages") },
+    { value: 2,  suffix: "",  label: t("highlights.clients") },
   ];
 
   return (
@@ -78,7 +101,7 @@ export default function About() {
                   className="text-3xl font-bold mb-1"
                   style={{ fontFamily: "var(--font-syne)", color: "#C9A84C" }}
                 >
-                  {item.value}
+                  <AnimatedCounter value={item.value} suffix={item.suffix} />
                 </p>
                 <p className="text-xs" style={{ color: "#A89B84" }}>
                   {item.label}
@@ -142,11 +165,25 @@ export default function About() {
               </div>
             </div>
 
-            {/* Location */}
-            <div className="flex items-center gap-2 mt-4 justify-center">
-              <span style={{ color: "#C9A84C" }}>📍</span>
-              <span className="text-sm" style={{ color: "#A89B84" }}>
-                Köln, Deutschland
+            {/* Location + Status */}
+            <div className="flex flex-col items-center gap-2 mt-4">
+              <div className="flex items-center gap-2">
+                <span style={{ color: "#C9A84C" }}>📍</span>
+                <span className="text-sm" style={{ color: "#A89B84" }}>
+                  Köln, Deutschland
+                </span>
+              </div>
+              <span
+                className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full"
+                style={{
+                  backgroundColor: "rgba(201,168,76,0.08)",
+                  border: "1px solid rgba(201,168,76,0.2)",
+                  color: "#C9A84C",
+                  fontFamily: "var(--font-space-mono)",
+                }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#10B981", boxShadow: "0 0 5px rgba(16,185,129,0.8)" }} />
+                @ Keravonos GmbH
               </span>
             </div>
           </ScrollReveal>
@@ -217,6 +254,29 @@ export default function About() {
                   </span>
                 ))}
               </div>
+            </ScrollReveal>
+
+            {/* CV Download */}
+            <ScrollReveal delay={0.4} className="flex justify-center pt-2">
+              <a
+                href="/Lebenslauf.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(201,168,76,0.2)]"
+                style={{
+                  backgroundColor: "rgba(201,168,76,0.1)",
+                  border: "1px solid rgba(201,168,76,0.35)",
+                  color: "#C9A84C",
+                  fontFamily: "var(--font-syne)",
+                }}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Lebenslauf herunterladen
+              </a>
             </ScrollReveal>
           </div>
 

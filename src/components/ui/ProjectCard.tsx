@@ -116,7 +116,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
           }}
         />
 
-        {/* Category + GitHub row */}
+        {/* Category + action buttons row */}
         <div className="flex items-center justify-between mb-5">
           <span
             className="text-[10px] px-2.5 py-1 rounded-full tracking-[0.12em] uppercase"
@@ -129,24 +129,48 @@ export default function ProjectCard({ project, locale, index = 0, translations }
             {project.category}
           </span>
 
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
-              style={{
-                color: "#A89B84",
-                backgroundColor: "#1A1510",
-                border: "1px solid #2A2218",
-                fontFamily: "var(--font-space-mono)",
-              }}
-              aria-label={translations.view_github}
-            >
-              <GitHubIcon size={13} />
-              Code
-            </a>
-          )}
+          <div className="flex items-center gap-2">
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
+                style={{
+                  color: accentColor,
+                  backgroundColor: `${accentColor}12`,
+                  border: `1px solid ${accentColor}35`,
+                  fontFamily: "var(--font-space-mono)",
+                }}
+                aria-label={translations.view_demo}
+              >
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Live
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
+                style={{
+                  color: "#A89B84",
+                  backgroundColor: "#1A1510",
+                  border: "1px solid #2A2218",
+                  fontFamily: "var(--font-space-mono)",
+                }}
+                aria-label={translations.view_github}
+              >
+                <GitHubIcon size={13} />
+                Code
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Title */}

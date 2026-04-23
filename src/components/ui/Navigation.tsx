@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -17,11 +17,33 @@ export default function Navigation({ locale }: NavigationProps) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ["hero", "about", "skills", "projects", "experience", "contact"];
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { threshold: 0.3 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   const navLinks = [
@@ -41,11 +63,20 @@ export default function Navigation({ locale }: NavigationProps) {
 
   return (
     <>
+      {/* Scroll progress bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-[60] h-[2px] origin-left"
+        style={{
+          scaleX,
+          background: "linear-gradient(90deg, #C9A84C, #E8C96A, #C4783E)",
+        }}
+      />
+
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        className="fixed top-[2px] left-0 right-0 z-50 transition-all duration-500"
         style={{
           backgroundColor: scrolled ? "rgba(11,9,7,0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(20px) saturate(1.5)" : "none",
@@ -75,16 +106,28 @@ export default function Navigation({ locale }: NavigationProps) {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[#C9A84C]"
-                style={{ color: "#A89B84" }}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId = link.href.replace("#", "");
+              const isActive = activeSection === sectionId;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="relative text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[#C9A84C] py-1"
+                  style={{ color: isActive ? "#C9A84C" : "#A89B84" }}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className="absolute -bottom-0.5 left-0 right-0 h-px"
+                      style={{ background: "linear-gradient(90deg, #C9A84C, transparent)" }}
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </a>
+              );
+            })}
           </div>
 
           {/* Right: language switcher + hamburger */}

@@ -9,6 +9,7 @@ export interface Project {
   };
   tags: string[];
   github?: string;
+  demo?: string;
   featured: boolean;
   category: "ai" | "fullstack" | "security" | "ml" | "saas";
 }
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       ar: "توقعات الذكاء الاصطناعي لكأس العالم 2026 باستخدام 4 نماذج ذكاء اصطناعي بشفافية كاملة.",
     },
     tags: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Prisma", "Docker", "OpenAI", "Gemini", "Claude"],
+    demo: "https://ki-wm.omarfourati.de",
     featured: true,
     category: "ai",
   },
