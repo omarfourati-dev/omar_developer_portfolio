@@ -25,189 +25,17 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://omarfourati.de";
-
-const metaByLocale: Record<string, { title: string; description: string; keywords: string[] }> = {
-  de: {
-    title: "Omar Fourati — Full-Stack Developer & KI-Spezialist | Köln",
-    description:
-      "Full-Stack Developer & KI-Spezialist aus Köln. Spezialisiert auf React, Next.js, FastAPI, Python und KI-Integrationen. Verfügbar für Freelance-Projekte, SaaS-Entwicklung und Web-Apps.",
-    keywords: [
-      "Full-Stack Developer Köln",
-      "Freelance Webentwickler Deutschland",
-      "React Entwickler Köln",
-      "Next.js Entwickler",
-      "FastAPI Python Entwickler",
-      "KI Integration Freelancer",
-      "LLM Integration Developer",
-      "OpenAI GPT Entwickler",
-      "SaaS Entwicklung Köln",
-      "TypeScript Entwickler",
-      "Webentwicklung Köln NRW",
-      "AI Developer Germany",
-      "Omar Fourati",
-      "Freelance Developer NRW",
-      "Machine Learning Entwickler",
-      "Softwareentwickler Köln",
-    ],
-  },
-  en: {
-    title: "Omar Fourati — Full-Stack Developer & AI Specialist | Cologne, Germany",
-    description:
-      "Full-Stack Developer & AI specialist based in Cologne, Germany. Expert in React, Next.js, FastAPI, Python and LLM integrations. Available for freelance projects and SaaS development.",
-    keywords: [
-      "Full-Stack Developer Germany",
-      "Freelance Web Developer Cologne",
-      "React Next.js Developer",
-      "FastAPI Python Developer",
-      "AI Integration Freelancer",
-      "LLM Developer Germany",
-      "OpenAI GPT Developer",
-      "SaaS Development Germany",
-      "TypeScript Developer",
-      "Omar Fourati",
-      "AI Developer Germany",
-      "Machine Learning Developer",
-      "Software Engineer Cologne",
-      "Remote Developer Germany",
-    ],
-  },
-  fr: {
-    title: "Omar Fourati — Développeur Full-Stack & Spécialiste IA | Cologne, Allemagne",
-    description:
-      "Développeur Full-Stack & spécialiste IA basé à Cologne, Allemagne. Expert en React, Next.js, FastAPI, Python et intégrations LLM. Disponible pour projets freelance et développement SaaS.",
-    keywords: [
-      "Développeur Full-Stack Allemagne",
-      "Freelance Développeur Web Cologne",
-      "Développeur React Next.js",
-      "Développeur Python FastAPI",
-      "Intégration IA LLM",
-      "Intégration OpenAI GPT",
-      "Développeur TypeScript",
-      "Développement SaaS Allemagne",
-      "Développeur Machine Learning",
-      "Expert Intelligence Artificielle",
-      "Développeur Web Freelance Europe",
-      "Omar Fourati",
-    ],
-  },
-  ar: {
-    title: "Omar Fourati — Full-Stack Developer & AI Specialist | Cologne",
-    description:
-      "Full-Stack Developer and AI specialist in Cologne, Germany. Specialized in React, Next.js, FastAPI, Python and LLM integrations. Available for freelance projects.",
-    keywords: [
-      "Freelance Developer Germany Arabic",
-      "Full-Stack Developer Cologne",
-      "React Next.js Developer",
-      "Python FastAPI Developer",
-      "AI Integration LLM",
-      "OpenAI GPT Developer",
-      "SaaS Development",
-      "TypeScript Developer",
-      "Machine Learning Germany",
-      "Omar Fourati",
-    ],
+export const metadata: Metadata = {
+  title: "Omar Fourati — Developer Portfolio",
+  description: "Full-Stack Developer & AI Builder | Next.js, Python, AI/ML",
+  keywords: ["Developer", "Portfolio", "React", "Next.js", "AI", "Full-Stack"],
+  authors: [{ name: "Omar Fourati" }],
+  openGraph: {
+    title: "Omar Fourati — Developer Portfolio",
+    description: "Full-Stack Developer & AI Builder",
+    type: "website",
   },
 };
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const meta = metaByLocale[locale] ?? metaByLocale.de;
-  return {
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
-    authors: [{ name: "Omar Fourati", url: BASE_URL }],
-    creator: "Omar Fourati",
-    metadataBase: new URL(BASE_URL),
-    alternates: {
-      canonical: `${BASE_URL}/${locale}`,
-      languages: {
-        de: `${BASE_URL}/de`,
-        en: `${BASE_URL}/en`,
-        fr: `${BASE_URL}/fr`,
-        ar: `${BASE_URL}/ar`,
-        "x-default": `${BASE_URL}/de`,
-      },
-    },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `${BASE_URL}/${locale}`,
-      siteName: "Omar Fourati — Developer Portfolio",
-      type: "website",
-      locale: locale === "de" ? "de_DE" : locale === "fr" ? "fr_FR" : locale === "ar" ? "ar_SA" : "en_US",
-      alternateLocale: ["de_DE", "en_US", "fr_FR", "ar_SA"],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: meta.title,
-      description: meta.description,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
-  };
-}
-
-function StructuredData({ locale }: { locale: string }) {
-  const isDE = locale === "de";
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Omar Fourati",
-    url: BASE_URL,
-    image: `${BASE_URL}/images/omar.JPG`,
-    jobTitle: isDE ? "Full-Stack Developer & KI-Spezialist" : "Full-Stack Developer & AI Specialist",
-    description: isDE
-      ? "Full-Stack Developer aus Koeln. 4+ Jahre Erfahrung. React, Next.js, FastAPI, Python, KI. Freelance verfuegbar."
-      : "Full-Stack Developer from Cologne. 4+ years experience. React, Next.js, FastAPI, Python, AI. Available for freelance.",
-    address: { "@type": "PostalAddress", addressLocality: "Koeln", addressRegion: "NRW", addressCountry: "DE" },
-    email: "info@omarfourati.de",
-    sameAs: ["https://github.com/omarfourati55", "https://www.linkedin.com/in/omar-fourati-63a9b11ba/", BASE_URL],
-    knowsAbout: ["React","Next.js","TypeScript","FastAPI","Python","Vue 3","TensorFlow","PyTorch","OpenAI API","Claude API","LangChain","PostgreSQL","Docker","WebSockets","Tailwind CSS","Machine Learning","LLM Integration"],
-    knowsLanguage: [{ "@type": "Language", name: "German" },{ "@type": "Language", name: "English" },{ "@type": "Language", name: "French" },{ "@type": "Language", name: "Arabic" }],
-    worksFor: { "@type": "Organization", name: "Keravonos GmbH" },
-  };
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Omar Fourati — Developer Portfolio",
-    url: BASE_URL,
-    author: { "@type": "Person", name: "Omar Fourati" },
-    inLanguage: ["de", "en", "fr", "ar"],
-  };
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: isDE ? "Freelance Webentwicklung & KI-Integration" : "Freelance Web Development & AI Integration",
-    provider: { "@type": "Person", name: "Omar Fourati", url: BASE_URL },
-    areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }],
-    description: isDE
-      ? "Full-Stack Entwicklung mit React/Next.js und Python/FastAPI. KI-Integration mit OpenAI, Claude und Gemini. Freelance DACH und remote."
-      : "Full-Stack development with React/Next.js and Python/FastAPI. AI integration with OpenAI, Claude and Gemini. Freelance DACH and remote.",
-    offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
-  };
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-    </>
-  );
-}
 
 export default async function LocaleLayout({
   children,
@@ -219,11 +47,13 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
   const isRTL = locale === "ar";
+
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={`${dmSans.variable} ${syne.variable} ${spaceMono.variable}`}>
-      <head>
-        <StructuredData locale={locale} />
-      </head>
+    <html
+      lang={locale}
+      dir={isRTL ? "rtl" : "ltr"}
+      className={`${dmSans.variable} ${syne.variable} ${spaceMono.variable}`}
+    >
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

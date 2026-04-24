@@ -152,7 +152,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label
-                    className="block text-xs tracking-[0.15em] uppercase mb-2"
+                    className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                     style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                   >
                     Name
@@ -162,7 +162,7 @@ export default function Contact() {
                     required
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all portfolio-input"
+                    className="w-full px-4 py-3.5 rounded-lg text-base outline-none transition-all portfolio-input"
                     style={{
                       backgroundColor: "#0B0907",
                       border: "1px solid #2A2218",
@@ -173,7 +173,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <label
-                    className="block text-xs tracking-[0.15em] uppercase mb-2"
+                    className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                     style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                   >
                     Email
@@ -183,7 +183,7 @@ export default function Contact() {
                     required
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all portfolio-input"
+                    className="w-full px-4 py-3.5 rounded-lg text-base outline-none transition-all portfolio-input"
                     style={{
                       backgroundColor: "#0B0907",
                       border: "1px solid #2A2218",
@@ -195,7 +195,7 @@ export default function Contact() {
               </div>
               <div>
                 <label
-                  className="block text-xs tracking-[0.15em] uppercase mb-2"
+                  className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                   style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                 >
                   Nachricht
@@ -205,7 +205,7 @@ export default function Contact() {
                   rows={5}
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all resize-none portfolio-input"
+                  className="w-full px-4 py-3.5 rounded-lg text-base outline-none transition-all resize-none portfolio-input"
                   style={{
                     backgroundColor: "#0B0907",
                     border: "1px solid #2A2218",
@@ -218,7 +218,7 @@ export default function Contact() {
                 type="submit"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all"
+                className="w-full py-4 rounded-lg text-base font-semibold tracking-wide transition-all"
                 style={{
                   backgroundColor: sent ? "#2A2218" : "#C9A84C",
                   color: sent ? "#6B6054" : "#0B0907",

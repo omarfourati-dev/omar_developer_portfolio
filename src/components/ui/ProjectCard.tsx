@@ -119,7 +119,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
         {/* Category + action buttons row */}
         <div className="flex items-center justify-between mb-5">
           <span
-            className="text-[10px] px-2.5 py-1 rounded-full tracking-[0.12em] uppercase"
+            className="text-xs px-3 py-1.5 rounded-full tracking-[0.12em] uppercase"
             style={{
               color: accentColor,
               backgroundColor: `${accentColor}18`,
@@ -135,7 +135,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
                 style={{
                   color: accentColor,
                   backgroundColor: `${accentColor}12`,
@@ -157,7 +157,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
+                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 hover:scale-105"
                 style={{
                   color: "#A89B84",
                   backgroundColor: "#1A1510",
@@ -182,7 +182,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
         </h3>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed mb-5" style={{ color: "#A89B84" }}>
+        <p className="text-base leading-relaxed mb-6" style={{ color: "#A89B84" }}>
           {description}
         </p>
 
@@ -191,7 +191,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
           {project.tags.slice(0, 5).map((tag) => (
             <span
               key={tag}
-              className="text-[11px] px-2 py-0.5 rounded"
+              className="text-xs px-2.5 py-1 rounded"
               style={{
                 backgroundColor: "#1A1510",
                 border: "1px solid #2A2218",
@@ -204,7 +204,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
           ))}
           {project.tags.length > 5 && (
             <span
-              className="text-[11px] px-2 py-0.5 rounded"
+              className="text-xs px-2.5 py-1 rounded"
               style={{ color: "#6B6054", fontFamily: "var(--font-space-mono)" }}
             >
               +{project.tags.length - 5}

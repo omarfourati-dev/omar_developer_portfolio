@@ -70,26 +70,26 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="p-4 rounded-xl"
+                className="p-6 rounded-xl"
                 style={{
                   backgroundColor: "#131008",
                   border: "1px solid #2A2218",
                 }}
               >
                 <h4
-                  className="text-sm font-bold mb-2"
+                  className="text-base font-bold mb-3"
                   style={{ fontFamily: "var(--font-syne)", color: "#F0E8D5" }}
                 >
                   {project.title}
                 </h4>
-                <p className="text-xs leading-relaxed mb-3" style={{ color: "#6B6054" }}>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#6B6054" }}>
                   {project.description[locale as keyof typeof project.description] ?? project.description.de}
                 </p>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-1.5">
                   {project.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-1.5 py-0.5 rounded"
+                      className="text-xs px-2.5 py-1 rounded"
                       style={{
                         backgroundColor: "#1A1510",
                         color: "#6B6054",

@@ -208,7 +208,7 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_24px_rgba(201,168,76,0.35)]"
+            className="w-full sm:w-auto px-10 py-4 rounded-lg text-base font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_24px_rgba(201,168,76,0.35)]"
             style={{
               backgroundColor: "#C9A84C",
               color: "#0B0907",
@@ -221,7 +221,7 @@ export default function Hero() {
             href="/Lebenslauf.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-10 py-4 rounded-lg text-base font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)] flex items-center justify-center gap-2"
             style={{
               border: "1px solid rgba(201,168,76,0.4)",
               color: "#C9A84C",
@@ -237,7 +237,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)]"
+            className="w-full sm:w-auto px-10 py-4 rounded-lg text-base font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.08)]"
             style={{
               border: "1px solid rgba(201,168,76,0.2)",
               color: "#A89B84",

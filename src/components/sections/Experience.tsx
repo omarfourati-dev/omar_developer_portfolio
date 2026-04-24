@@ -92,15 +92,15 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
             )}
           </div>
         </div>
-        <p className="text-sm leading-relaxed" style={{ color: "#A89B84" }}>
+        <p className="text-base leading-relaxed" style={{ color: "#A89B84" }}>
           {description}
         </p>
         {entry.tags && entry.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mt-3">
+          <div className="flex flex-wrap gap-2 mt-4">
             {entry.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-0.5 rounded"
+                className="text-xs px-2.5 py-1 rounded"
                 style={{
                   backgroundColor: "#1A1510",
                   color: "#6B6054",
@@ -194,16 +194,16 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-4 rounded-xl"
+                className="p-5 rounded-xl"
                 style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
               >
                 <p
-                  className="text-sm font-bold mb-1"
+                  className="text-base font-bold mb-1.5"
                   style={{ fontFamily: "var(--font-syne)", color: "#F0E8D5" }}
                 >
                   {cert.role[locale as keyof typeof cert.role] ?? cert.role.de}
                 </p>
-                <p className="text-xs mb-2" style={{ color: "#A89B84" }}>
+                <p className="text-sm mb-2" style={{ color: "#A89B84" }}>
                   {cert.company}
                 </p>
                 <span

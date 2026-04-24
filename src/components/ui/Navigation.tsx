@@ -141,7 +141,7 @@ export default function Navigation({ locale }: NavigationProps) {
                 <button
                   key={loc}
                   onClick={() => switchLocale(loc)}
-                  className="px-1.5 py-0.5 rounded text-xs font-medium transition-all duration-200"
+                  className="px-2.5 py-1 rounded text-xs font-medium transition-all duration-200"
                   style={{
                     fontFamily: "var(--font-space-mono)",
                     color: loc === locale ? "#C9A84C" : "#6B6054",
