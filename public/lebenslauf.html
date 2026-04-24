@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Omar Fourati — Lebenslauf</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold:    #C9A84C;
+    --gold-dim:#C9A84C55;
+    --cream:   #F0E8D5;
+    --muted:   #A89B84;
+    --dim:     #6B6054;
+    --card:    #131008;
+    --border:  #2A2218;
+    --bg:      #0B0907;
+  }
+
+  html { font-size: 10.5pt; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── PAGE WRAPPER ──────────────────────────────────── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background glow blobs */
+  .bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+    opacity: 0.18;
+  }
+  .blob-1 { width: 280px; height: 280px; top: -60px; right: -40px; background: #C9A84C; }
+  .blob-2 { width: 200px; height: 200px; bottom: 80px; left: -60px; background: #C4783E; opacity: 0.12; }
+
+  /* ── HEADER ────────────────────────────────────────── */
+  .header {
+    padding: 28px 32px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: start;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), #C4783E, transparent);
+  }
+
+  .header-left .badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 7pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-dim);
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  .header-left h1 {
+    font-size: 28pt;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .header-left .subtitle {
+    font-size: 10pt;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .header-left .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-top: 8px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 8pt;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+  }
+  .contact-item svg { opacity: 0.6; flex-shrink: 0; }
+  .contact-item a { color: var(--muted); text-decoration: none; }
+  .contact-item a:hover { color: var(--gold); }
+
+  /* Photo */
+  .photo-wrap {
+    width: 90px;
+    height: 108px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--gold-dim);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, transparent 60%, rgba(11,9,7,0.4));
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* ── BODY LAYOUT ───────────────────────────────────── */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.3fr;
+    gap: 0;
+  }
+
+  /* ── LEFT SIDEBAR ──────────────────────────────────── */
+  .sidebar {
+    background: #0F0C09;
+    border-right: 1px solid var(--border);
+    padding: 20px 16px 24px;
+  }
+
+  .sidebar-section { margin-bottom: 20px; }
+
+  .sidebar-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--gold-dim);
+  }
+
+  /* Skills grid */
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skill-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 7pt;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* Languages */
+  .lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(42,34,24,0.6);
+    font-size: 8.5pt;
+  }
+  .lang-item:last-child { border-bottom: none; }
+  .lang-name { color: var(--cream); font-weight: 500; }
+  .lang-level {
+    font-family: 'Space Mono', monospace;
+    font-size: 7pt;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  /* Certs in sidebar */
+  .cert-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(42,34,24,0.5);
+  }
+  .cert-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .cert-name { font-size: 8pt; color: var(--cream); font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
+  .cert-meta { font-size: 7pt; color: var(--dim); font-family: 'Space Mono', monospace; }
+
+  /* Interests */
+  .interests { display: flex; flex-wrap: wrap; gap: 5px; }
+  .interest-tag {
+    font-size: 7.5pt;
+    padding: 3px 8px;
+    border-radius: 100px;
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.15);
+    color: var(--muted);
+  }
+
+  /* Volunteer */
+  .volunteer-item { margin-bottom: 8px; }
+  .volunteer-item:last-child { margin-bottom: 0; }
+  .volunteer-name { font-size: 8pt; color: var(--cream); font-weight: 500; }
+  .volunteer-meta { font-size: 7.5pt; color: var(--dim); font-family: 'Space Mono', monospace; }
+
+  /* ── MAIN CONTENT ──────────────────────────────────── */
+  .main { padding: 20px 24px 24px; }
+
+  .section { margin-bottom: 20px; }
+
+  .section-title {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0;
+    width: 36px; height: 2px;
+    background: var(--gold);
+  }
+
+  /* Experience card */
+  .exp-card {
+    margin-bottom: 16px;
+    padding-left: 14px;
+    border-left: 2px solid var(--border);
+    position: relative;
+  }
+  .exp-card.current { border-left-color: var(--gold); }
+  .exp-card::before {
+    content: '';
+    position: absolute;
+    left: -5px; top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 1.5px solid var(--dim);
+  }
+  .exp-card.current::before {
+    background: var(--gold);
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(201,168,76,0.5);
+  }
+  .exp-card:last-child { margin-bottom: 0; }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .exp-title { font-size: 10pt; font-weight: 700; color: var(--cream); line-height: 1.2; }
+  .exp-period {
+    font-family: 'Space Mono', monospace;
+    font-size: 7pt;
+    color: var(--dim);
+    white-space: nowrap;
+    background: #1A1510;
+    padding: 2px 7px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .exp-card.current .exp-period { color: var(--gold); background: rgba(201,168,76,0.1); }
+
+  .exp-company { font-size: 8.5pt; color: var(--gold); font-weight: 500; margin-bottom: 6px; }
+
+  .exp-bullets { list-style: none; margin: 0; padding: 0; }
+  .exp-bullets li {
+    font-size: 8.5pt;
+    color: var(--muted);
+    padding: 1.5px 0;
+    padding-left: 12px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .exp-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 7pt;
+    top: 2px;
+  }
+
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
+  .exp-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 6.5pt;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(201,168,76,0.07);
+    border: 1px solid rgba(201,168,76,0.18);
+    color: var(--dim);
+  }
+
+  /* Education card */
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .edu-card {
+    padding: 10px 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .edu-degree { font-size: 9pt; font-weight: 700; color: var(--cream); margin-bottom: 2px; line-height: 1.2; }
+  .edu-school { font-size: 8pt; color: var(--gold); margin-bottom: 3px; }
+  .edu-period { font-family: 'Space Mono', monospace; font-size: 7pt; color: var(--dim); }
+  .edu-note { font-size: 7.5pt; color: var(--muted); margin-top: 3px; }
+
+  /* ── PRINT ─────────────────────────────────────────── */
+  @media print {
+    html { font-size: 9.5pt; }
+    body { background: var(--bg); }
+    .page { width: 100%; }
+    .bg-blob { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Background blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+
+  <!-- ── HEADER ─────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-left">
+      <span class="badge">Full-Stack Developer &amp; KI-Spezialist</span>
+      <h1>Omar Fourati</h1>
+      <div class="subtitle">Keravonos GmbH · Köln, Deutschland</div>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          fourati.omar55@gmail.com
+        </span>
+        <span class="contact-item">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Köln, Deutschland
+        </span>
+        <span class="contact-item">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          omarfourati.de
+        </span>
+        <span class="contact-item">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/omarfourati55
+        </span>
+        <span class="contact-item">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          linkedin.com/in/omar-fourati-63a9b11ba
+        </span>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <img src="images/omar.JPG" alt="Omar Fourati" />
+    </div>
+  </header>
+
+  <!-- ── BODY ───────────────────────────────────────── -->
+  <div class="body-grid">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Tech Stack</div>
+        <div class="skills-grid">
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">Next.js</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">Vue 3</span>
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">FastAPI</span>
+          <span class="skill-badge">PostgreSQL</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">OpenAI API</span>
+          <span class="skill-badge">Claude API</span>
+          <span class="skill-badge">TensorFlow</span>
+          <span class="skill-badge">PyTorch</span>
+          <span class="skill-badge">LangChain</span>
+          <span class="skill-badge">WebSockets</span>
+          <span class="skill-badge">OAuth 2.0</span>
+          <span class="skill-badge">GitHub Actions</span>
+          <span class="skill-badge">Tailwind CSS</span>
+          <span class="skill-badge">Nginx</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Sprachen</div>
+        <div class="lang-item"><span class="lang-name">Arabisch</span><span class="lang-level">Muttersprache</span></div>
+        <div class="lang-item"><span class="lang-name">Deutsch</span><span class="lang-level">C1</span></div>
+        <div class="lang-item"><span class="lang-name">Französisch</span><span class="lang-level">C1</span></div>
+        <div class="lang-item"><span class="lang-name">Englisch</span><span class="lang-level">B2</span></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Zertifikate</div>
+        <div class="cert-item">
+          <div class="cert-name">JavaScript: From Zero to Expert</div>
+          <div class="cert-meta">Udemy · 2023</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Python: Complete Pro Bootcamp</div>
+          <div class="cert-meta">Udemy · 2021–2023</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Software Qualitätssicherung</div>
+          <div class="cert-meta">German Testing Board / TH Köln · 2022–2023</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Interessen</div>
+        <div class="interests">
+          <span class="interest-tag">Sport</span>
+          <span class="interest-tag">Reisen</span>
+          <span class="interest-tag">Filme</span>
+          <span class="interest-tag">Kochen</span>
+          <span class="interest-tag">Videogames</span>
+          <span class="interest-tag">Kartenspiele</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Ehrenamtliches</div>
+        <div class="volunteer-item">
+          <div class="volunteer-name">Freiwillige Nachbarschaftshilfe</div>
+          <div class="volunteer-meta">2018–2020 · Heidelberg</div>
+        </div>
+        <div class="volunteer-item">
+          <div class="volunteer-name">Stressmanagement & Persönlichkeitsentwicklung</div>
+          <div class="volunteer-meta">2022–2023 · TH Köln</div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- BERUFSERFAHRUNG -->
+      <section class="section">
+        <div class="section-title">Berufserfahrung</div>
+
+        <div class="exp-card current">
+          <div class="exp-header">
+            <div class="exp-title">Software Developer (Vollzeit)</div>
+            <span class="exp-period">Okt 2025 – heute</span>
+          </div>
+          <div class="exp-company">Keravonos GmbH · Köln</div>
+          <ul class="exp-bullets">
+            <li>Entwicklung moderner Web-Applikationen und KI-Plattformen</li>
+            <li>Projekte: KerChat (Echtzeit-Chat), Pronto (B2B Sales AI), RentGate (Immobilien-Plattform)</li>
+            <li>Kundenprojekte für ABUS Kransysteme GmbH</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Vue 3</span><span class="exp-tag">FastAPI</span>
+            <span class="exp-tag">TypeScript</span><span class="exp-tag">PostgreSQL</span>
+            <span class="exp-tag">OpenAI API</span><span class="exp-tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-title">Werkstudent Softwareentwicklung</div>
+            <span class="exp-period">März 2023 – Sept 2025</span>
+          </div>
+          <div class="exp-company">Keravonos GmbH · Köln</div>
+          <ul class="exp-bullets">
+            <li>Entwicklung von KerChat (Slack-Clone mit WebSockets) und Pronto (B2B Intent-Signal-Plattform)</li>
+            <li>Kundenprojekte für ABUS Kransysteme GmbH: interne Web-Applikationen für industrielle Prozesse</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="exp-tag">Vue 3</span><span class="exp-tag">FastAPI</span>
+            <span class="exp-tag">WebSockets</span><span class="exp-tag">OAuth 2.0</span>
+            <span class="exp-tag">TypeScript</span><span class="exp-tag">MariaDB</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUSBILDUNG -->
+      <section class="section">
+        <div class="section-title">Ausbildung</div>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-degree">B.Sc. Informatik</div>
+            <div class="edu-school">TH Köln, Campus Gummersbach</div>
+            <div class="edu-period">2020 – September 2025</div>
+            <div class="edu-note">Softwareentwicklung, Algorithmen, KI-Systeme</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">DSH-Prüfung, Note 2</div>
+            <div class="edu-school">F+U Academy Heidelberg / TH Köln</div>
+            <div class="edu-period">2018 – 2020</div>
+            <div class="edu-note">Deutsche Sprachprüfung für den Hochschulzugang</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Mathematik Abitur</div>
+            <div class="edu-school">L.A.K.C Gymnasium, Sfax (Tunesien)</div>
+            <div class="edu-period">2013 – 2017</div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Realschulabschluss</div>
+            <div class="edu-school">Am Chihia Realschule, Sfax (Tunesien)</div>
+            <div class="edu-period">2011 – 2013</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div><!-- /body-grid -->
+
+</div><!-- /page -->
+</body>
+</html>
