@@ -10,127 +10,111 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --gold:    #C9A84C;
-    --gold-dim:#C9A84C55;
-    --cream:   #F0E8D5;
-    --muted:   #A89B84;
-    --dim:     #6B6054;
-    --card:    #131008;
-    --border:  #2A2218;
-    --bg:      #0B0907;
+    --gold:       #B8922A;
+    --gold-light: #D4A843;
+    --gold-bg:    #FDF8EE;
+    --gold-border:#E8D5A0;
+    --dark:       #1A1510;
+    --body:       #2C2416;
+    --muted:      #6B5E4A;
+    --subtle:     #9E8E76;
+    --sidebar-bg: #1C1710;
+    --sidebar-txt:#E8DFD0;
+    --sidebar-muted: #A89B84;
+    --sidebar-dim:   #6B6054;
+    --white:      #FFFFFF;
+    --light-bg:   #FAFAF8;
+    --border:     #E5DDD0;
   }
 
-  html { font-size: 10.5pt; }
+  html { font-size: 10.2pt; }
 
   body {
-    background: var(--bg);
-    color: var(--cream);
+    background: #e5e5e5;
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.55;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  /* ── PAGE WRAPPER ──────────────────────────────────── */
   .page {
     width: 210mm;
     min-height: 297mm;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
   }
-
-  /* Background glow blobs */
-  .bg-blob {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    filter: blur(80px);
-    opacity: 0.18;
-  }
-  .blob-1 { width: 280px; height: 280px; top: -60px; right: -40px; background: #C9A84C; }
-  .blob-2 { width: 200px; height: 200px; bottom: 80px; left: -60px; background: #C4783E; opacity: 0.12; }
 
   /* ── HEADER ────────────────────────────────────────── */
   .header {
-    padding: 28px 32px 24px;
+    background: var(--sidebar-bg);
+    padding: 24px 28px 22px;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 20px;
     align-items: start;
     position: relative;
-    border-bottom: 1px solid var(--border);
   }
   .header::after {
     content: '';
     position: absolute;
-    bottom: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--gold), #C4783E, transparent);
+    bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold-light), #C4783E 50%, transparent);
   }
 
-  .header-left .badge {
+  .header-badge {
     display: inline-block;
     font-family: 'Space Mono', monospace;
-    font-size: 7pt;
-    letter-spacing: 0.18em;
+    font-size: 6.5pt;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--gold-dim);
+    color: var(--gold-light);
+    border: 1px solid rgba(201,168,76,0.35);
     border-radius: 100px;
     padding: 3px 10px;
     margin-bottom: 10px;
   }
 
-  .header-left h1 {
-    font-size: 28pt;
+  .header h1 {
+    font-size: 26pt;
     font-weight: 800;
     letter-spacing: -0.03em;
-    color: var(--cream);
+    color: #F0E8D5;
     line-height: 1;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
-  .header-left .subtitle {
-    font-size: 10pt;
-    color: var(--gold);
+  .header-sub {
+    font-size: 9.5pt;
+    color: var(--gold-light);
     font-weight: 500;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
-  .header-left .contact-row {
+  .contact-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 16px;
-    margin-top: 8px;
+    gap: 5px 14px;
   }
   .contact-item {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 8pt;
-    color: var(--muted);
+    font-size: 7.5pt;
+    color: var(--sidebar-muted);
     font-family: 'Space Mono', monospace;
   }
-  .contact-item svg { opacity: 0.6; flex-shrink: 0; }
-  .contact-item a { color: var(--muted); text-decoration: none; }
-  .contact-item a:hover { color: var(--gold); }
+  .contact-item svg { opacity: 0.55; flex-shrink: 0; }
 
-  /* Photo */
   .photo-wrap {
-    width: 90px;
-    height: 108px;
-    border-radius: 10px;
+    width: 86px;
+    height: 104px;
+    border-radius: 8px;
     overflow: hidden;
-    border: 2px solid var(--gold-dim);
+    border: 2px solid rgba(201,168,76,0.3);
     flex-shrink: 0;
-    position: relative;
-  }
-  .photo-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 10px;
-    background: linear-gradient(180deg, transparent 60%, rgba(11,9,7,0.4));
   }
   .photo-wrap img {
     width: 100%;
@@ -139,106 +123,103 @@
     object-position: center top;
   }
 
-  /* ── BODY LAYOUT ───────────────────────────────────── */
+  /* ── BODY ──────────────────────────────────────────── */
   .body-grid {
     display: grid;
-    grid-template-columns: 1fr 2.3fr;
-    gap: 0;
+    grid-template-columns: 62mm 1fr;
+    flex: 1;
   }
 
-  /* ── LEFT SIDEBAR ──────────────────────────────────── */
+  /* ── SIDEBAR ───────────────────────────────────────── */
   .sidebar {
-    background: #0F0C09;
+    background: #F7F3EC;
     border-right: 1px solid var(--border);
     padding: 20px 16px 24px;
   }
 
-  .sidebar-section { margin-bottom: 20px; }
+  .sidebar-section { margin-bottom: 18px; }
 
   .sidebar-title {
     font-family: 'Space Mono', monospace;
-    font-size: 7pt;
+    font-size: 6.5pt;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 9px;
     padding-bottom: 5px;
-    border-bottom: 1px solid var(--gold-dim);
+    border-bottom: 1.5px solid var(--gold-border);
   }
 
-  /* Skills grid */
-  .skills-grid { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 4px; }
   .skill-badge {
     font-family: 'Space Mono', monospace;
-    font-size: 7pt;
-    padding: 3px 8px;
+    font-size: 6.5pt;
+    padding: 2px 7px;
     border-radius: 4px;
-    background: rgba(201,168,76,0.08);
-    border: 1px solid rgba(201,168,76,0.2);
+    background: #fff;
+    border: 1px solid var(--border);
     color: var(--muted);
     white-space: nowrap;
   }
 
-  /* Languages */
   .lang-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
-    border-bottom: 1px solid rgba(42,34,24,0.6);
+    border-bottom: 1px solid var(--border);
     font-size: 8.5pt;
   }
   .lang-item:last-child { border-bottom: none; }
-  .lang-name { color: var(--cream); font-weight: 500; }
+  .lang-name { color: var(--dark); font-weight: 600; }
   .lang-level {
     font-family: 'Space Mono', monospace;
-    font-size: 7pt;
+    font-size: 6.5pt;
     color: var(--gold);
-    background: rgba(201,168,76,0.1);
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-border);
     padding: 1px 6px;
     border-radius: 3px;
   }
 
-  /* Certs in sidebar */
   .cert-item {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(42,34,24,0.5);
+    margin-bottom: 9px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border);
   }
   .cert-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .cert-name { font-size: 8pt; color: var(--cream); font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
-  .cert-meta { font-size: 7pt; color: var(--dim); font-family: 'Space Mono', monospace; }
+  .cert-name { font-size: 8pt; color: var(--dark); font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
+  .cert-meta { font-size: 7pt; color: var(--subtle); font-family: 'Space Mono', monospace; }
 
-  /* Interests */
-  .interests { display: flex; flex-wrap: wrap; gap: 5px; }
+  .interests { display: flex; flex-wrap: wrap; gap: 4px; }
   .interest-tag {
-    font-size: 7.5pt;
-    padding: 3px 8px;
+    font-size: 7pt;
+    padding: 2px 7px;
     border-radius: 100px;
-    background: rgba(201,168,76,0.06);
-    border: 1px solid rgba(201,168,76,0.15);
+    background: #fff;
+    border: 1px solid var(--border);
     color: var(--muted);
   }
 
-  /* Volunteer */
   .volunteer-item { margin-bottom: 8px; }
   .volunteer-item:last-child { margin-bottom: 0; }
-  .volunteer-name { font-size: 8pt; color: var(--cream); font-weight: 500; }
-  .volunteer-meta { font-size: 7.5pt; color: var(--dim); font-family: 'Space Mono', monospace; }
+  .volunteer-name { font-size: 8pt; color: var(--dark); font-weight: 600; }
+  .volunteer-meta { font-size: 7pt; color: var(--subtle); font-family: 'Space Mono', monospace; margin-top: 1px; }
 
-  /* ── MAIN CONTENT ──────────────────────────────────── */
-  .main { padding: 20px 24px 24px; }
+  /* ── MAIN ──────────────────────────────────────────── */
+  .main { background: var(--white); padding: 20px 22px 24px; }
 
-  .section { margin-bottom: 20px; }
+  .section { margin-bottom: 18px; }
 
   .section-title {
-    font-size: 9pt;
+    font-size: 8pt;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--cream);
+    color: var(--dark);
     margin-bottom: 12px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     border-bottom: 1px solid var(--border);
     position: relative;
   }
@@ -246,13 +227,13 @@
     content: '';
     position: absolute;
     bottom: -1px; left: 0;
-    width: 36px; height: 2px;
+    width: 32px; height: 2px;
     background: var(--gold);
   }
 
-  /* Experience card */
+  /* Experience */
   .exp-card {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     padding-left: 14px;
     border-left: 2px solid var(--border);
     position: relative;
@@ -261,16 +242,15 @@
   .exp-card::before {
     content: '';
     position: absolute;
-    left: -5px; top: 6px;
+    left: -5px; top: 5px;
     width: 8px; height: 8px;
     border-radius: 50%;
     background: var(--border);
-    border: 1.5px solid var(--dim);
+    border: 1.5px solid var(--subtle);
   }
   .exp-card.current::before {
     background: var(--gold);
     border-color: var(--gold);
-    box-shadow: 0 0 8px rgba(201,168,76,0.5);
   }
   .exp-card:last-child { margin-bottom: 0; }
 
@@ -281,57 +261,59 @@
     gap: 8px;
     margin-bottom: 2px;
   }
-  .exp-title { font-size: 10pt; font-weight: 700; color: var(--cream); line-height: 1.2; }
+  .exp-title { font-size: 10pt; font-weight: 700; color: var(--dark); line-height: 1.2; }
   .exp-period {
     font-family: 'Space Mono', monospace;
-    font-size: 7pt;
-    color: var(--dim);
+    font-size: 6.5pt;
+    color: var(--subtle);
     white-space: nowrap;
-    background: #1A1510;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
     padding: 2px 7px;
     border-radius: 3px;
     flex-shrink: 0;
   }
-  .exp-card.current .exp-period { color: var(--gold); background: rgba(201,168,76,0.1); }
+  .exp-card.current .exp-period {
+    color: var(--gold);
+    background: var(--gold-bg);
+    border-color: var(--gold-border);
+  }
 
-  .exp-company { font-size: 8.5pt; color: var(--gold); font-weight: 500; margin-bottom: 6px; }
+  .exp-company { font-size: 8.5pt; color: var(--gold); font-weight: 600; margin-bottom: 5px; }
 
-  .exp-bullets { list-style: none; margin: 0; padding: 0; }
+  .exp-bullets { list-style: none; }
   .exp-bullets li {
     font-size: 8.5pt;
     color: var(--muted);
     padding: 1.5px 0;
-    padding-left: 12px;
+    padding-left: 11px;
     position: relative;
     line-height: 1.45;
   }
   .exp-bullets li::before {
     content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--gold);
-    font-size: 7pt;
-    top: 2px;
+    position: absolute; left: 0;
+    color: var(--gold); font-size: 7pt; top: 2px;
   }
 
-  .exp-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
   .exp-tag {
     font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
+    font-size: 6pt;
     padding: 2px 6px;
     border-radius: 3px;
-    background: rgba(201,168,76,0.07);
-    border: 1px solid rgba(201,168,76,0.18);
-    color: var(--dim);
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
   }
 
-  /* Education card */
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  /* Education */
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .edu-card {
-    padding: 10px 12px;
-    background: var(--card);
+    padding: 9px 11px;
+    background: var(--light-bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 7px;
     position: relative;
     overflow: hidden;
   }
@@ -341,65 +323,58 @@
     top: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, var(--gold), transparent);
   }
-  .edu-degree { font-size: 9pt; font-weight: 700; color: var(--cream); margin-bottom: 2px; line-height: 1.2; }
-  .edu-school { font-size: 8pt; color: var(--gold); margin-bottom: 3px; }
-  .edu-period { font-family: 'Space Mono', monospace; font-size: 7pt; color: var(--dim); }
+  .edu-degree { font-size: 9pt; font-weight: 700; color: var(--dark); margin-bottom: 2px; line-height: 1.2; }
+  .edu-school { font-size: 7.5pt; color: var(--gold); font-weight: 500; margin-bottom: 2px; }
+  .edu-period { font-family: 'Space Mono', monospace; font-size: 6.5pt; color: var(--subtle); }
   .edu-note { font-size: 7.5pt; color: var(--muted); margin-top: 3px; }
 
-  /* ── PRINT ─────────────────────────────────────────── */
   @media print {
-    html { font-size: 9.5pt; }
-    body { background: var(--bg); }
-    .page { width: 100%; }
-    .bg-blob { display: none; }
+    body { background: white; }
+    .page { box-shadow: none; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- Background blobs -->
-  <div class="bg-blob blob-1"></div>
-  <div class="bg-blob blob-2"></div>
-
-  <!-- ── HEADER ─────────────────────────────────────── -->
+  <!-- HEADER -->
   <header class="header">
     <div class="header-left">
-      <span class="badge">Full-Stack Developer &amp; KI-Spezialist</span>
+      <span class="header-badge">Full-Stack Developer &amp; KI-Spezialist</span>
       <h1>Omar Fourati</h1>
-      <div class="subtitle">Keravonos GmbH · Köln, Deutschland</div>
+      <div class="header-sub">Keravonos GmbH · Köln, Deutschland</div>
       <div class="contact-row">
         <span class="contact-item">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           fourati.omar55@gmail.com
         </span>
         <span class="contact-item">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           Köln, Deutschland
         </span>
         <span class="contact-item">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           omarfourati.de
         </span>
         <span class="contact-item">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
           github.com/omarfourati55
         </span>
         <span class="contact-item">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           linkedin.com/in/omar-fourati-63a9b11ba
         </span>
       </div>
     </div>
     <div class="photo-wrap">
-      <img src="images/omar.JPG" alt="Omar Fourati" />
+      <img src="images/omar-cv.jpg" alt="Omar Fourati" />
     </div>
   </header>
 
-  <!-- ── BODY ───────────────────────────────────────── -->
+  <!-- BODY -->
   <div class="body-grid">
 
-    <!-- LEFT SIDEBAR -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
 
       <div class="sidebar-section">
@@ -469,17 +444,16 @@
           <div class="volunteer-meta">2018–2020 · Heidelberg</div>
         </div>
         <div class="volunteer-item">
-          <div class="volunteer-name">Stressmanagement & Persönlichkeitsentwicklung</div>
+          <div class="volunteer-name">Stressmanagement &amp; Persönlichkeitsentwicklung</div>
           <div class="volunteer-meta">2022–2023 · TH Köln</div>
         </div>
       </div>
 
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <main class="main">
 
-      <!-- BERUFSERFAHRUNG -->
       <section class="section">
         <div class="section-title">Berufserfahrung</div>
 
@@ -519,7 +493,6 @@
         </div>
       </section>
 
-      <!-- AUSBILDUNG -->
       <section class="section">
         <div class="section-title">Ausbildung</div>
         <div class="edu-grid">
@@ -549,8 +522,8 @@
       </section>
 
     </main>
-  </div><!-- /body-grid -->
+  </div>
 
-</div><!-- /page -->
+</div>
 </body>
 </html>
