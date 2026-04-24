@@ -16,7 +16,7 @@
   "about": {
     "title": "Über mich",
     "subtitle": "Leidenschaft für intelligente Anwendungen",
-    "bio": "Omar Fourati ist ein Full-Stack Developer und KI-Spezialist aus Köln. Seit März 2023 arbeitet er bei Keravonos GmbH — als Werkstudent neben dem Studium, seit Oktober 2025 in Vollzeit. Er hat Projekte wie KerChat (Echtzeit-Chat), Pronto (B2B Sales AI) und RentGate (Immobilien-Plattform) entwickelt. Sein Stack: React, Next.js, FastAPI, Python und LLM-Integrationen mit OpenAI, Claude und Gemini. Im September 2025 schloss er sein B.Sc. Informatik-Studium an der TH Köln ab. Er ist verfügbar für Freelance-Projekte im DACH-Raum und remote weltweit.",
+    "bio": "Omar Fourati ist ein Full-Stack Developer und KI-Spezialist aus Köln. Seit März 2023 arbeitet er bei Keravonos GmbH — als Werkstudent neben dem Studium, seit Oktober 2025 in Vollzeit. Er hat Projekte wie KerChat (Echtzeit-Chat), Pronto (B2B Sales AI) und RentGate (Vermietungssoftware) entwickelt. Sein Stack: React, Next.js, FastAPI, Python und LLM-Integrationen mit OpenAI, Claude und Gemini. Im September 2025 schloss er sein B.Sc. Informatik-Studium an der TH Köln ab. Er ist verfügbar für Freelance-Projekte im DACH-Raum und remote weltweit.",
     "highlights": {
       "projects": "Projekte",
       "experience": "Jahre Erfahrung",

@@ -16,7 +16,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Passionate about building intelligent applications",
-    "bio": "Omar Fourati is a Full-Stack Developer and AI Specialist based in Cologne, Germany. Since March 2023 he works at Keravonos GmbH — as a working student alongside his studies, full-time since October 2025. He has built projects like KerChat (real-time chat), Pronto (B2B sales AI) and RentGate (real estate platform). His stack: React, Next.js, FastAPI, Python and LLM integrations with OpenAI, Claude and Gemini. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
+    "bio": "Omar Fourati is a Full-Stack Developer and AI Specialist based in Cologne, Germany. Since March 2023 he works at Keravonos GmbH — as a working student alongside his studies, full-time since October 2025. He has built projects like KerChat (real-time chat), Pronto (B2B sales AI) and RentGate (rental software). His stack: React, Next.js, FastAPI, Python and LLM integrations with OpenAI, Claude and Gemini. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
     "highlights": {
       "projects": "Projects",
       "experience": "Years Experience",
