@@ -46,6 +46,20 @@ export default function Navigation({ locale }: NavigationProps) {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [mobileOpen]);
+
   const navLinks = [
     { href: "#about", label: t("about") },
     { href: "#skills", label: t("skills") },
@@ -160,6 +174,8 @@ export default function Navigation({ locale }: NavigationProps) {
               className="md:hidden w-9 h-9 flex flex-col justify-center items-center gap-[5px] rounded-lg"
               style={{ backgroundColor: "rgba(201,168,76,0.06)" }}
               aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               <motion.span
                 animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
@@ -191,6 +207,9 @@ export default function Navigation({ locale }: NavigationProps) {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-40 md:hidden flex flex-col pt-20 px-8"
             style={{ backgroundColor: "#0B0907" }}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
           >
             {/* Geometric texture */}
             <div className="absolute inset-0 geometric-bg opacity-50" />

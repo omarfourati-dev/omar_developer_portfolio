@@ -3,8 +3,18 @@ import { MetadataRoute } from "next";
 const BASE_URL = "https://omarfourati.de";
 const locales = ["de", "en", "fr", "ar"];
 
+function languageAlternates() {
+  const languages: Record<string, string> = {};
+  for (const locale of locales) {
+    languages[locale] = `${BASE_URL}/${locale}`;
+  }
+  languages["x-default"] = `${BASE_URL}/de`;
+  return languages;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const languages = languageAlternates();
 
   // Root redirect
   const root: MetadataRoute.Sitemap[0] = {
@@ -12,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     priority: 1,
+    alternates: { languages },
   };
 
   // One entry per locale
@@ -20,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: locale === "de" ? 1.0 : 0.9,
+    alternates: { languages },
   }));
 
   return [root, ...localeEntries];

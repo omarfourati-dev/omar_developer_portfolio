@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import { Syne, DM_Sans, Space_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Syne, DM_Sans, Space_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
+import MotionProvider from "@/components/ui/MotionProvider";
 import "../globals.css";
 
 const dmSans = DM_Sans({
@@ -22,6 +23,13 @@ const spaceMono = Space_Mono({
   variable: "--font-space-mono",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: "swap",
+});
+
+const notoArabic = Noto_Sans_Arabic({
+  variable: "--font-noto-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -110,6 +118,14 @@ const metaByLocale: Record<string, { title: string; description: string; keyword
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0B0907",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -121,9 +137,18 @@ export async function generateMetadata({
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
+    applicationName: "Omar Fourati — Developer Portfolio",
+    category: "technology",
     authors: [{ name: "Omar Fourati", url: BASE_URL }],
     creator: "Omar Fourati",
+    publisher: "Omar Fourati",
     metadataBase: new URL(BASE_URL),
+    appleWebApp: {
+      capable: true,
+      title: "Omar Fourati",
+      statusBarStyle: "black-translucent",
+    },
+    formatDetection: { telephone: false },
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
       languages: {
@@ -200,11 +225,19 @@ function StructuredData({ locale }: { locale: string }) {
       : "Full-Stack development with React/Next.js and Python/FastAPI. AI integration with OpenAI, Claude and Gemini. Freelance DACH and remote.",
     offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
   };
+  const profilePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${BASE_URL}/${locale}`,
+    inLanguage: locale,
+    mainEntity: { "@type": "Person", name: "Omar Fourati", url: BASE_URL },
+  };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }} />
     </>
   );
 }
@@ -218,15 +251,19 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "common" });
   const isRTL = locale === "ar";
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={`${dmSans.variable} ${syne.variable} ${spaceMono.variable}`}>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} className={`${dmSans.variable} ${syne.variable} ${spaceMono.variable} ${notoArabic.variable}`}>
       <head>
         <StructuredData locale={locale} />
       </head>
       <body>
+        <a href="#main" className="skip-link">
+          {t("skip_to_content")}
+        </a>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

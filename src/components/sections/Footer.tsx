@@ -64,13 +64,13 @@ export default function Footer() {
           </div>
 
           {/* Built with */}
-          <p className="text-xs text-center order-3 sm:order-2" style={{ color: "#4A4038" }}>
-            <span style={{ color: "#4A4038" }}>Built with </span>
-            <span style={{ color: "#C9A84C80" }}>Next.js</span>
-            <span style={{ color: "#4A4038" }}> + </span>
-            <span style={{ color: "#C9A84C80" }}>Framer Motion</span>
-            <span style={{ color: "#4A4038" }}> + </span>
-            <span style={{ color: "#C9A84C80" }}>Tailwind CSS</span>
+          <p className="text-xs text-center order-3 sm:order-2" style={{ color: "#8A7D68" }}>
+            <span style={{ color: "#8A7D68" }}>Built with </span>
+            <span style={{ color: "#C9A84C" }}>Next.js</span>
+            <span style={{ color: "#8A7D68" }}> + </span>
+            <span style={{ color: "#C9A84C" }}>Framer Motion</span>
+            <span style={{ color: "#8A7D68" }}> + </span>
+            <span style={{ color: "#C9A84C" }}>Tailwind CSS</span>
           </p>
 
           {/* Social links */}
@@ -145,6 +145,8 @@ export default function Footer() {
         whileHover={{ scale: 1.1, borderColor: "rgba(201,168,76,0.7)" }}
         whileTap={{ scale: 0.95 }}
         aria-label="Back to top"
+        aria-hidden={!showBackToTop}
+        tabIndex={showBackToTop ? 0 : -1}
       >
         {ARROW_UP_SVG}
       </motion.button>
