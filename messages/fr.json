@@ -11,7 +11,11 @@
     "greeting": "Bonjour, je suis Omar Fourati",
     "title": "Développeur Fullstack & Spécialiste IA",
     "description": "Je crée des applications web intelligentes et scalables avec une stack moderne: React, Next.js, FastAPI et Machine Learning.",
-    "cta": "Découvrir Mon Travail"
+    "cta": "Découvrir Mon Travail",
+    "available": "Disponible pour de nouveaux projets",
+    "eyebrow": "Portfolio Développeur",
+    "scroll": "défiler",
+    "resume": "CV"
   },
   "about": {
     "title": "À Propos De Moi",
@@ -22,7 +26,13 @@
       "experience": "Ans d'Expérience",
       "languages": "Langues",
       "clients": "Entreprises"
-    }
+    },
+    "languages_title": "Langues",
+    "interests_title": "Intérêts",
+    "location": "Cologne, Allemagne",
+    "download_cv": "Télécharger le CV",
+    "native_level": "Langue maternelle",
+    "interests_list": ["Sport", "Voyages", "Films", "Cuisine", "Jeux vidéo", "Cartes"]
   },
   "skills": {
     "title": "Compétences",
@@ -59,7 +69,12 @@
     "location": "Localisation",
     "message": "Message",
     "send": "Envoyer",
-    "social": "Médias Sociaux"
+    "social": "Médias Sociaux",
+    "name": "Nom",
+    "name_placeholder": "Votre nom",
+    "email_placeholder": "vous@email.com",
+    "message_placeholder": "Votre message...",
+    "sent": "Envoyé"
   },
   "footer": {
     "copyright": "© 2024 Omar Fourati. Tous droits réservés.",
@@ -74,6 +89,7 @@
     "error": "Erreur",
     "success": "Succès",
     "back": "Retour",
-    "next": "Suivant"
+    "next": "Suivant",
+    "skip_to_content": "Aller au contenu"
   }
 }

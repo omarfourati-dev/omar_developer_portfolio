@@ -29,25 +29,22 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
   return <span ref={ref}>0{suffix}</span>;
 }
 
-const languages = [
+const languageList = [
   { flag: "🇩🇪", name: "Deutsch", level: "C1" },
   { flag: "🇬🇧", name: "English", level: "B2" },
   { flag: "🇫🇷", name: "Français", level: "C1" },
-  { flag: "🇸🇦", name: "العربية", level: "Muttersprache" },
-];
-
-const interests = [
-  "Sport",
-  "Reisen",
-  "Filme",
-  "Kochen",
-  "Videogames",
-  "Karten",
+  { flag: "🇸🇦", name: "العربية", level: null },
 ];
 
 export default function About() {
   const t = useTranslations("about");
   const [imgError, setImgError] = useState(false);
+
+  const languages = languageList.map((lang) => ({
+    ...lang,
+    level: lang.level ?? t("native_level"),
+  }));
+  const interests = t.raw("interests_list") as string[];
 
   const highlights = [
     { value: 10, suffix: "+", label: t("highlights.projects") },
@@ -136,6 +133,7 @@ export default function About() {
                     src="/images/omar.JPG"
                     alt="Omar Fourati"
                     fill
+                    sizes="(max-width: 640px) 220px, 220px"
                     className="object-cover"
                     onError={() => setImgError(true)}
                   />
@@ -170,7 +168,7 @@ export default function About() {
               <div className="flex items-center gap-2">
                 <span style={{ color: "#C9A84C" }}>📍</span>
                 <span className="text-sm" style={{ color: "#A89B84" }}>
-                  Köln, Deutschland
+                  {t("location")}
                 </span>
               </div>
               <span
@@ -205,7 +203,7 @@ export default function About() {
                 className="text-sm tracking-[0.2em] uppercase mb-4 text-center"
                 style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
               >
-                Sprachen
+                {t("languages_title")}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {languages.map((lang) => (
@@ -237,7 +235,7 @@ export default function About() {
                 className="text-sm tracking-[0.2em] uppercase mb-4 text-center"
                 style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
               >
-                Interessen
+                {t("interests_title")}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 {interests.map((interest) => (
@@ -275,7 +273,7 @@ export default function About() {
                   <polyline points="7 10 12 15 17 10"/>
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
-                Lebenslauf herunterladen
+                {t("download_cv")}
               </a>
             </ScrollReveal>
           </div>

@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
   background: linear-gradient(270deg, #C9A84C, transparent);
 }
 [dir="rtl"] body {
-  font-family: var(--font-dm-sans), "Noto Sans Arabic", system-ui, sans-serif;
+  font-family: var(--font-noto-arabic), var(--font-dm-sans), "Segoe UI", system-ui, sans-serif;
 }
 
 /* ============================================
@@ -236,4 +236,56 @@ h1, h2, h3, h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* ============================================
+   SKIP TO CONTENT (accessibility)
+   ============================================ */
+.skip-link {
+  position: fixed;
+  left: 50%;
+  top: 0.75rem;
+  transform: translate(-50%, -160%);
+  z-index: 100;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: #C9A84C;
+  color: #0B0907;
+  font-family: var(--font-syne), sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translate(-50%, 0);
+  outline: 2px solid #0B0907;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   REDUCED MOTION (accessibility)
+   Respect users who prefer less motion: neutralize
+   CSS keyframe + transition driven animation.
+   Framer Motion reveals are handled via MotionConfig.
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ticker-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  .dot-pulse {
+    animation: none !important;
+  }
 }

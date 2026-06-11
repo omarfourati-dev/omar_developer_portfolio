@@ -20,6 +20,7 @@ const LINKEDIN_SVG = (
 
 export default function Contact() {
   const t = useTranslations("contact");
+  const tAbout = useTranslations("about");
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
 
@@ -80,7 +81,7 @@ export default function Contact() {
                 <Mail size={18} style={{ color: "#C9A84C" }} />
               </div>
               <div>
-                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>Email</p>
+                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>{t("email")}</p>
                 <p
                   className="text-sm font-medium group-hover:text-[#C9A84C] transition-colors"
                   style={{ color: "#F0E8D5" }}
@@ -102,9 +103,9 @@ export default function Contact() {
                 <MapPin size={18} style={{ color: "#C9A84C" }} />
               </div>
               <div>
-                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>Location</p>
+                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>{t("location")}</p>
                 <p className="text-sm font-medium" style={{ color: "#F0E8D5" }}>
-                  Köln, Deutschland
+                  {tAbout("location")}
                 </p>
               </div>
             </div>
@@ -155,7 +156,7 @@ export default function Contact() {
                     className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                     style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                   >
-                    Name
+                    {t("name")}
                   </label>
                   <input
                     type="text"
@@ -168,7 +169,7 @@ export default function Contact() {
                       border: "1px solid #2A2218",
                       color: "#F0E8D5",
                     }}
-                    placeholder="Dein Name"
+                    placeholder={t("name_placeholder")}
                   />
                 </div>
                 <div>
@@ -176,7 +177,7 @@ export default function Contact() {
                     className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                     style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                   >
-                    Email
+                    {t("email")}
                   </label>
                   <input
                     type="email"
@@ -189,7 +190,7 @@ export default function Contact() {
                       border: "1px solid #2A2218",
                       color: "#F0E8D5",
                     }}
-                    placeholder="deine@email.de"
+                    placeholder={t("email_placeholder")}
                   />
                 </div>
               </div>
@@ -198,7 +199,7 @@ export default function Contact() {
                   className="block text-sm tracking-[0.12em] uppercase mb-2.5"
                   style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
                 >
-                  Nachricht
+                  {t("message")}
                 </label>
                 <textarea
                   required
@@ -211,7 +212,7 @@ export default function Contact() {
                     border: "1px solid #2A2218",
                     color: "#F0E8D5",
                   }}
-                  placeholder="Deine Nachricht..."
+                  placeholder={t("message_placeholder")}
                 />
               </div>
               <motion.button
@@ -225,7 +226,7 @@ export default function Contact() {
                   fontFamily: "var(--font-syne)",
                 }}
               >
-                {sent ? "✓ Gesendet" : t("send")}
+                {sent ? `✓ ${t("sent")}` : t("send")}
               </motion.button>
             </form>
           </ScrollReveal>

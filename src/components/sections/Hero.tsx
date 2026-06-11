@@ -117,7 +117,7 @@ export default function Hero() {
                 animation: "pulse 2s infinite",
               }}
             />
-            Available for new projects
+            {t("available")}
           </span>
         </motion.div>
 
@@ -136,7 +136,7 @@ export default function Hero() {
               color: "#C9A84C",
             }}
           >
-            Developer Portfolio
+            {t("eyebrow")}
           </span>
           <span className="h-px w-8" style={{ backgroundColor: "#C9A84C" }} />
         </motion.div>
@@ -233,7 +233,7 @@ export default function Hero() {
               <polyline points="7 10 12 15 17 10"/>
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            Lebenslauf
+            {t("resume")}
           </a>
           <a
             href="#contact"
@@ -294,7 +294,7 @@ export default function Hero() {
             color: "#6B6054",
           }}
         >
-          scroll
+          {t("scroll")}
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}

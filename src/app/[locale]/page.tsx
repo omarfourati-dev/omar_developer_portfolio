@@ -17,7 +17,7 @@ export default async function HomePage({
   return (
     <>
       <Navigation locale={locale} />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Skills />
