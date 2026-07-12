@@ -5,34 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Omar Fourati — Lebenslauf</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --gold:       #B8922A;
-    --gold-light: #D4A843;
-    --gold-bg:    #FDF8EE;
-    --gold-border:#E8D5A0;
-    --dark:       #1A1510;
-    --body:       #2C2416;
-    --muted:      #6B5E4A;
-    --subtle:     #9E8E76;
-    --sidebar-bg: #1C1710;
-    --sidebar-txt:#E8DFD0;
-    --sidebar-muted: #A89B84;
-    --sidebar-dim:   #6B6054;
-    --white:      #FFFFFF;
-    --light-bg:   #FAFAF8;
-    --border:     #E5DDD0;
+    --ink:       #000000;
+    --body-text: #000000;
+    --muted:     #1A1A1A;
+    --subtle:    #444444;
+    --accent:    #1F4E79;
+    --rule:      #D9D9D9;
+    --chip-bg:   #F5F5F5;
+    --white:     #FFFFFF;
   }
 
-  html { font-size: 10.2pt; }
+  @page { size: A4; margin: 25mm 0; }
+
+  html { font-size: 10pt; }
 
   body {
     background: #e5e5e5;
     font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.55;
+    line-height: 1.5;
+    color: var(--body-text);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -43,78 +39,62 @@
     margin: 0 auto;
     background: var(--white);
     box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    padding: 25mm 0;
     display: flex;
     flex-direction: column;
   }
 
   /* ── HEADER ────────────────────────────────────────── */
   .header {
-    background: var(--sidebar-bg);
-    padding: 24px 28px 22px;
+    background: var(--white);
+    border-bottom: 2.5px solid var(--accent);
+    padding: 0 20mm 18px 25mm;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 20px;
+    gap: 24px;
     align-items: start;
-    position: relative;
-  }
-  .header::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--gold-light), #C4783E 50%, transparent);
   }
 
-  .header-badge {
-    display: inline-block;
-    font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
-    letter-spacing: 0.2em;
+  .header-role {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--gold-light);
-    border: 1px solid rgba(201,168,76,0.35);
-    border-radius: 100px;
-    padding: 3px 10px;
-    margin-bottom: 10px;
+    color: var(--accent);
+    margin-bottom: 6px;
   }
 
   .header h1 {
-    font-size: 26pt;
+    font-size: 25pt;
     font-weight: 800;
     letter-spacing: -0.03em;
-    color: #F0E8D5;
+    color: var(--ink);
     line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .header-sub {
-    font-size: 9.5pt;
-    color: var(--gold-light);
-    font-weight: 500;
-    margin-bottom: 14px;
+    margin-bottom: 6px;
   }
 
   .contact-row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px 14px;
+    flex-direction: column;
+    gap: 4px;
   }
   .contact-item {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 7.5pt;
-    color: var(--sidebar-muted);
-    font-family: 'Space Mono', monospace;
+    gap: 6px;
+    font-size: 8.5pt;
+    color: var(--muted);
   }
-  .contact-item svg { opacity: 0.55; flex-shrink: 0; }
+  .contact-item svg { opacity: 0.7; flex-shrink: 0; }
 
   .photo-wrap {
-    width: 86px;
-    height: 104px;
-    border-radius: 8px;
+    width: 118px;
+    height: 144px;
+    border-radius: 4px;
     overflow: hidden;
-    border: 2px solid rgba(201,168,76,0.3);
+    border: 1px solid var(--rule);
     flex-shrink: 0;
+    align-self: center;
   }
   .photo-wrap img {
     width: 100%;
@@ -123,214 +103,104 @@
     object-position: center top;
   }
 
-  /* ── BODY ──────────────────────────────────────────── */
-  .body-grid {
-    display: grid;
-    grid-template-columns: 62mm 1fr;
-    flex: 1;
-  }
+  /* ── MAIN (einspaltig) ─────────────────────────────── */
+  .main { background: var(--white); padding: 5mm 20mm 0 25mm; flex: 1; }
 
-  /* ── SIDEBAR ───────────────────────────────────────── */
-  .sidebar {
-    background: #F7F3EC;
-    border-right: 1px solid var(--border);
-    padding: 20px 16px 24px;
-  }
-
-  .sidebar-section { margin-bottom: 18px; }
-
-  .sidebar-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 700;
-    margin-bottom: 9px;
-    padding-bottom: 5px;
-    border-bottom: 1.5px solid var(--gold-border);
-  }
-
-  .skills-grid { display: flex; flex-wrap: wrap; gap: 4px; }
-  .skill-badge {
-    font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: #fff;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    white-space: nowrap;
-  }
-
-  .lang-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 8.5pt;
-  }
-  .lang-item:last-child { border-bottom: none; }
-  .lang-name { color: var(--dark); font-weight: 600; }
-  .lang-level {
-    font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
-    color: var(--gold);
-    background: var(--gold-bg);
-    border: 1px solid var(--gold-border);
-    padding: 1px 6px;
-    border-radius: 3px;
-  }
-
-  .cert-item {
-    margin-bottom: 9px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid var(--border);
-  }
-  .cert-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .cert-name { font-size: 8pt; color: var(--dark); font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
-  .cert-meta { font-size: 7pt; color: var(--subtle); font-family: 'Space Mono', monospace; }
-
-  .interests { display: flex; flex-wrap: wrap; gap: 4px; }
-  .interest-tag {
-    font-size: 7pt;
-    padding: 2px 7px;
-    border-radius: 100px;
-    background: #fff;
-    border: 1px solid var(--border);
-    color: var(--muted);
-  }
-
-  .volunteer-item { margin-bottom: 8px; }
-  .volunteer-item:last-child { margin-bottom: 0; }
-  .volunteer-name { font-size: 8pt; color: var(--dark); font-weight: 600; }
-  .volunteer-meta { font-size: 7pt; color: var(--subtle); font-family: 'Space Mono', monospace; margin-top: 1px; }
-
-  /* ── MAIN ──────────────────────────────────────────── */
-  .main { background: var(--white); padding: 20px 22px 24px; }
-
-  .section { margin-bottom: 18px; }
+  .section { margin-bottom: 5.5mm; }
+  .section:last-child { margin-bottom: 0; }
 
   .section-title {
-    font-size: 8pt;
+    font-size: 8.5pt;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--dark);
-    margin-bottom: 12px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--border);
-    position: relative;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    margin-bottom: 2.5mm;
+    border-bottom: 1px solid var(--rule);
   }
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -1px; left: 0;
-    width: 32px; height: 2px;
-    background: var(--gold);
+  .section-title span {
+    display: inline-block;
+    padding-bottom: 3px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid var(--accent);
   }
 
-  /* Experience */
-  .exp-card {
-    margin-bottom: 14px;
-    padding-left: 14px;
-    border-left: 2px solid var(--border);
-    position: relative;
+  /* ── EINTRAGS-ZEILE: Datum links, Inhalt rechts ────── */
+  .entry {
+    display: grid;
+    grid-template-columns: 33mm 1fr;
+    column-gap: 3.5mm;
+    break-inside: avoid;
+    margin-bottom: 2mm;
   }
-  .exp-card.current { border-left-color: var(--gold); }
-  .exp-card::before {
-    content: '';
-    position: absolute;
-    left: -5px; top: 5px;
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--border);
-    border: 1.5px solid var(--subtle);
-  }
-  .exp-card.current::before {
-    background: var(--gold);
-    border-color: var(--gold);
-  }
-  .exp-card:last-child { margin-bottom: 0; }
+  .entry:last-child { margin-bottom: 0; }
 
-  .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 2px;
+  .entry-date {
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--body-text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.45;
+    padding-top: 1.5px;
   }
-  .exp-title { font-size: 10pt; font-weight: 700; color: var(--dark); line-height: 1.2; }
-  .exp-period {
-    font-family: 'Space Mono', monospace;
-    font-size: 6.5pt;
+  .entry.current .entry-date { color: var(--accent); font-weight: 700; }
+
+  .entry-title { font-size: 9.5pt; font-weight: 700; color: var(--ink); line-height: 1.25; }
+  .entry-org   { font-size: 8.5pt; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
+  .entry-note  { font-size: 8pt; color: var(--muted); margin-top: 1px; }
+
+  /* Einzeiler-Variante (Zertifikate, Ehrenamt) */
+  .entry-line .entry-title, .entry-line .entry-org { display: inline; }
+  .entry-line .entry-org::before {
+    content: '—';
     color: var(--subtle);
-    white-space: nowrap;
-    background: var(--light-bg);
-    border: 1px solid var(--border);
-    padding: 2px 7px;
-    border-radius: 3px;
-    flex-shrink: 0;
-  }
-  .exp-card.current .exp-period {
-    color: var(--gold);
-    background: var(--gold-bg);
-    border-color: var(--gold-border);
+    font-weight: 400;
+    margin-right: 5px;
   }
 
-  .exp-company { font-size: 8.5pt; color: var(--gold); font-weight: 600; margin-bottom: 5px; }
-
-  .exp-bullets { list-style: none; }
-  .exp-bullets li {
+  .entry-bullets { list-style: none; margin-top: 1px; }
+  .entry-bullets li {
     font-size: 8.5pt;
     color: var(--muted);
-    padding: 1.5px 0;
-    padding-left: 11px;
+    padding: 1px 0 1px 10px;
     position: relative;
-    line-height: 1.45;
+    line-height: 1.35;
   }
-  .exp-bullets li::before {
-    content: '▸';
+  .entry-bullets li::before {
+    content: '–';
     position: absolute; left: 0;
-    color: var(--gold); font-size: 7pt; top: 2px;
+    color: var(--accent);
   }
 
-  .exp-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-  .exp-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 6pt;
-    padding: 2px 6px;
+  /* ── CHIPS & LISTEN ────────────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; align-items: center; }
+  .section > .tag-row { margin-top: 0; }
+  .tag-label {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: var(--subtle);
+    margin-right: 2px;
+  }
+  .tag {
+    font-size: 7pt;
+    padding: 2px 7px;
     border-radius: 3px;
-    background: var(--gold-bg);
-    border: 1px solid var(--gold-border);
-    color: var(--gold);
+    background: var(--chip-bg);
+    border: 1px solid var(--rule);
+    color: var(--muted);
+    white-space: nowrap;
   }
 
-  /* Education */
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .edu-card {
-    padding: 9px 11px;
-    background: var(--light-bg);
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    position: relative;
-    overflow: hidden;
-  }
-  .edu-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-  }
-  .edu-degree { font-size: 9pt; font-weight: 700; color: var(--dark); margin-bottom: 2px; line-height: 1.2; }
-  .edu-school { font-size: 7.5pt; color: var(--gold); font-weight: 500; margin-bottom: 2px; }
-  .edu-period { font-family: 'Space Mono', monospace; font-size: 6.5pt; color: var(--subtle); }
-  .edu-note { font-size: 7.5pt; color: var(--muted); margin-top: 3px; }
+  .inline-list { font-size: 8.5pt; color: var(--muted); line-height: 1.6; }
+  .inline-list span { white-space: nowrap; }
+  .inline-list span + span::before { content: '·'; margin: 0 7px; color: var(--subtle); }
+  .inline-list strong { color: var(--ink); font-weight: 600; }
 
   @media print {
     body { background: white; }
-    .page { box-shadow: none; }
+    .page { box-shadow: none; min-height: auto; padding: 0; }
+    .section-title { break-after: avoid; }
+    .entry, .section { break-inside: avoid; }
   }
 </style>
 </head>
@@ -340,17 +210,16 @@
   <!-- HEADER -->
   <header class="header">
     <div class="header-left">
-      <span class="header-badge">Full-Stack Developer &amp; KI-Spezialist</span>
+      <div class="header-role">Full-Stack Developer</div>
       <h1>Omar Fourati</h1>
-      <div class="header-sub">Keravonos GmbH · Köln, Deutschland</div>
       <div class="contact-row">
         <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          fourati.omar55@gmail.com
+          info@omarfourati.de
         </span>
         <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Köln, Deutschland
+          Gummersbach, Deutschland
         </span>
         <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -371,158 +240,185 @@
     </div>
   </header>
 
-  <!-- BODY -->
-  <div class="body-grid">
+  <!-- MAIN (einspaltig, oben das Neueste) -->
+  <main class="main">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <section class="section">
+      <div class="section-title"><span>Berufserfahrung</span></div>
 
-      <div class="sidebar-section">
-        <div class="sidebar-title">Tech Stack</div>
-        <div class="skills-grid">
-          <span class="skill-badge">React</span>
-          <span class="skill-badge">Next.js</span>
-          <span class="skill-badge">TypeScript</span>
-          <span class="skill-badge">Vue 3</span>
-          <span class="skill-badge">Python</span>
-          <span class="skill-badge">FastAPI</span>
-          <span class="skill-badge">PostgreSQL</span>
-          <span class="skill-badge">Docker</span>
-          <span class="skill-badge">OpenAI API</span>
-          <span class="skill-badge">Claude API</span>
-          <span class="skill-badge">TensorFlow</span>
-          <span class="skill-badge">PyTorch</span>
-          <span class="skill-badge">LangChain</span>
-          <span class="skill-badge">WebSockets</span>
-          <span class="skill-badge">OAuth 2.0</span>
-          <span class="skill-badge">GitHub Actions</span>
-          <span class="skill-badge">Tailwind CSS</span>
-          <span class="skill-badge">Nginx</span>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <div class="sidebar-title">Sprachen</div>
-        <div class="lang-item"><span class="lang-name">Arabisch</span><span class="lang-level">Muttersprache</span></div>
-        <div class="lang-item"><span class="lang-name">Deutsch</span><span class="lang-level">C1</span></div>
-        <div class="lang-item"><span class="lang-name">Französisch</span><span class="lang-level">C1</span></div>
-        <div class="lang-item"><span class="lang-name">Englisch</span><span class="lang-level">B2</span></div>
-      </div>
-
-      <div class="sidebar-section">
-        <div class="sidebar-title">Zertifikate</div>
-        <div class="cert-item">
-          <div class="cert-name">JavaScript: From Zero to Expert</div>
-          <div class="cert-meta">Udemy · 2023</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-name">Python: Complete Pro Bootcamp</div>
-          <div class="cert-meta">Udemy · 2021–2023</div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-name">Software Qualitätssicherung</div>
-          <div class="cert-meta">German Testing Board / TH Köln · 2022–2023</div>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <div class="sidebar-title">Interessen</div>
-        <div class="interests">
-          <span class="interest-tag">Sport</span>
-          <span class="interest-tag">Reisen</span>
-          <span class="interest-tag">Filme</span>
-          <span class="interest-tag">Kochen</span>
-          <span class="interest-tag">Videogames</span>
-          <span class="interest-tag">Kartenspiele</span>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <div class="sidebar-title">Ehrenamtliches</div>
-        <div class="volunteer-item">
-          <div class="volunteer-name">Freiwillige Nachbarschaftshilfe</div>
-          <div class="volunteer-meta">2018–2020 · Heidelberg</div>
-        </div>
-        <div class="volunteer-item">
-          <div class="volunteer-name">Stressmanagement &amp; Persönlichkeitsentwicklung</div>
-          <div class="volunteer-meta">2022–2023 · TH Köln</div>
-        </div>
-      </div>
-
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-
-      <section class="section">
-        <div class="section-title">Berufserfahrung</div>
-
-        <div class="exp-card current">
-          <div class="exp-header">
-            <div class="exp-title">Software Developer (Vollzeit)</div>
-            <span class="exp-period">Okt 2025 – heute</span>
-          </div>
-          <div class="exp-company">Keravonos GmbH · Köln</div>
-          <ul class="exp-bullets">
+      <div class="entry current">
+        <div class="entry-date">Okt&nbsp;2025 – heute</div>
+        <div class="entry-body">
+          <div class="entry-title">Software Developer (Vollzeit)</div>
+          <div class="entry-org">KERAVONOS GmbH · Gummersbach</div>
+          <ul class="entry-bullets">
             <li>Entwicklung moderner Web-Applikationen und KI-Plattformen</li>
-            <li>Projekte: KerChat (Echtzeit-Chat), Pronto (B2B Sales AI), RentGate (Vermietungssoftware)</li>
+            <li>Entwicklung eines unternehmensinternen Echtzeit-Chats</li>
+            <li>Projekt Pronto (B2B Sales AI)</li>
             <li>Kundenprojekte für ABUS Kransysteme GmbH</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">Vue 3</span><span class="exp-tag">FastAPI</span>
-            <span class="exp-tag">TypeScript</span><span class="exp-tag">PostgreSQL</span>
-            <span class="exp-tag">OpenAI API</span><span class="exp-tag">Docker</span>
+          <div class="tag-row">
+            <span class="tag-label">Erfahrung mit:</span>
+            <span class="tag">Vue 3</span><span class="tag">FastAPI</span>
+            <span class="tag">TypeScript</span><span class="tag">PostgreSQL</span>
+            <span class="tag">OpenAI API</span><span class="tag">Docker</span>
           </div>
         </div>
+      </div>
 
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-title">Werkstudent Softwareentwicklung</div>
-            <span class="exp-period">März 2023 – Sept 2025</span>
-          </div>
-          <div class="exp-company">Keravonos GmbH · Köln</div>
-          <ul class="exp-bullets">
-            <li>Entwicklung von KerChat (Slack-Clone mit WebSockets) und Pronto (B2B Intent-Signal-Plattform)</li>
+      <div class="entry">
+        <div class="entry-date">März&nbsp;2023 – Sept&nbsp;2025</div>
+        <div class="entry-body">
+          <div class="entry-title">Werkstudent Softwareentwicklung</div>
+          <div class="entry-org">KERAVONOS GmbH · Gummersbach</div>
+          <ul class="entry-bullets">
+            <li>Entwicklung eines unternehmensinternen Echtzeit-Chats und der B2B-Intent-Signal-Plattform Pronto</li>
+            <li>Mitarbeit an rentgate (Vermietungssoftware)</li>
             <li>Kundenprojekte für ABUS Kransysteme GmbH: interne Web-Applikationen für industrielle Prozesse</li>
           </ul>
-          <div class="exp-tags">
-            <span class="exp-tag">Vue 3</span><span class="exp-tag">FastAPI</span>
-            <span class="exp-tag">WebSockets</span><span class="exp-tag">OAuth 2.0</span>
-            <span class="exp-tag">TypeScript</span><span class="exp-tag">MariaDB</span>
+          <div class="tag-row">
+            <span class="tag-label">Erfahrung mit:</span>
+            <span class="tag">Vue 3</span><span class="tag">FastAPI</span>
+            <span class="tag">WebSockets</span><span class="tag">OAuth 2.0</span>
+            <span class="tag">TypeScript</span><span class="tag">MariaDB</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="section-title">Ausbildung</div>
-        <div class="edu-grid">
-          <div class="edu-card">
-            <div class="edu-degree">B.Sc. Informatik</div>
-            <div class="edu-school">TH Köln, Campus Gummersbach</div>
-            <div class="edu-period">2020 – September 2025</div>
-            <div class="edu-note">Softwareentwicklung, Algorithmen, KI-Systeme</div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-degree">DSH-Prüfung, Note 2</div>
-            <div class="edu-school">F+U Academy Heidelberg / TH Köln</div>
-            <div class="edu-period">2018 – 2020</div>
-            <div class="edu-note">Deutsche Sprachprüfung für den Hochschulzugang</div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-degree">Mathematik Abitur</div>
-            <div class="edu-school">L.A.K.C Gymnasium, Sfax (Tunesien)</div>
-            <div class="edu-period">2013 – 2017</div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-degree">Realschulabschluss</div>
-            <div class="edu-school">Am Chihia Realschule, Sfax (Tunesien)</div>
-            <div class="edu-period">2011 – 2013</div>
-          </div>
+    <section class="section">
+      <div class="section-title"><span>Ausbildung</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2020 – Sept&nbsp;2025</div>
+        <div class="entry-body">
+          <div class="entry-title">B.Sc. Informatik</div>
+          <div class="entry-org">TH Köln, Campus Gummersbach</div>
+          <div class="entry-note">Softwareentwicklung, Algorithmen, KI-Systeme</div>
         </div>
-      </section>
+      </div>
 
-    </main>
-  </div>
+      <div class="entry">
+        <div class="entry-date">2018 – 2020</div>
+        <div class="entry-body">
+          <div class="entry-title">DSH-Prüfung, Note 2</div>
+          <div class="entry-org">F+U Academy Heidelberg / TH Köln</div>
+          <div class="entry-note">Deutsche Sprachprüfung für den Hochschulzugang</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2013 – 2017</div>
+        <div class="entry-body">
+          <div class="entry-title">Mathematik Abitur</div>
+          <div class="entry-org">L.A.K.C Gymnasium, Sfax (Tunesien)</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2011 – 2013</div>
+        <div class="entry-body">
+          <div class="entry-title">Realschulabschluss</div>
+          <div class="entry-org">Am Chihia Realschule, Sfax (Tunesien)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>Zertifikate</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">JavaScript: From Zero to Expert</div>
+          <div class="entry-org">Udemy</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">Software Qualitätssicherung</div>
+          <div class="entry-org">German Testing Board / TH Köln</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2021 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">Python: Complete Pro Bootcamp</div>
+          <div class="entry-org">Udemy</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>Tech Stack</span></div>
+      <div class="tag-row">
+        <span class="tag">React</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Vue 3</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">WebSockets</span>
+        <span class="tag">OAuth 2.0</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Nginx</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>Sprachen</span></div>
+      <div class="inline-list">
+        <span><strong>Arabisch</strong> — Muttersprache</span>
+        <span><strong>Deutsch</strong> — C1</span>
+        <span><strong>Französisch</strong> — C1</span>
+        <span><strong>Englisch</strong> — B2</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>Ehrenamt &amp; Sonstiges</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">Stressmanagement &amp; Persönlichkeitsentwicklung</div>
+          <div class="entry-org">TH Köln</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2018 – 2020</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">Freiwillige Nachbarschaftshilfe</div>
+          <div class="entry-org">Heidelberg</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>Interessen</span></div>
+      <div class="tag-row">
+        <span class="tag">Sport</span>
+        <span class="tag">Reisen</span>
+        <span class="tag">Filme</span>
+        <span class="tag">Kochen</span>
+        <span class="tag">Videogames</span>
+        <span class="tag">Kartenspiele</span>
+      </div>
+    </section>
+
+  </main>
 
 </div>
 </body>
