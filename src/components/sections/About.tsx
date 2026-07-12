@@ -254,8 +254,8 @@ export default function About() {
               </div>
             </ScrollReveal>
 
-            {/* CV Download */}
-            <ScrollReveal delay={0.4} className="flex justify-center pt-2">
+            {/* CV & Cover Letter Download */}
+            <ScrollReveal delay={0.4} className="flex flex-wrap justify-center gap-3 pt-2">
               <a
                 href="/Lebenslauf.pdf"
                 target="_blank"
@@ -274,6 +274,25 @@ export default function About() {
                   <line x1="12" y1="15" x2="12" y2="3"/>
                 </svg>
                 {t("download_cv")}
+              </a>
+              <a
+                href="/Anschreiben.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(201,168,76,0.2)]"
+                style={{
+                  backgroundColor: "rgba(201,168,76,0.1)",
+                  border: "1px solid rgba(201,168,76,0.35)",
+                  color: "#C9A84C",
+                  fontFamily: "var(--font-syne)",
+                }}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                {t("download_cover_letter")}
               </a>
             </ScrollReveal>
           </div>

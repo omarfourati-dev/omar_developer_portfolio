@@ -15,7 +15,8 @@
     "available": "Disponible pour de nouveaux projets",
     "eyebrow": "Portfolio Développeur",
     "scroll": "défiler",
-    "resume": "CV"
+    "resume": "CV",
+    "cover_letter": "Lettre de motivation"
   },
   "about": {
     "title": "À Propos De Moi",
@@ -31,6 +32,7 @@
     "interests_title": "Intérêts",
     "location": "Cologne, Allemagne",
     "download_cv": "Télécharger le CV",
+    "download_cover_letter": "Télécharger la lettre de motivation",
     "native_level": "Langue maternelle",
     "interests_list": ["Sport", "Voyages", "Films", "Cuisine", "Jeux vidéo", "Cartes"]
   },

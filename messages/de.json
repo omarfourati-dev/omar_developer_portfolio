@@ -15,7 +15,8 @@
     "available": "Verfügbar für neue Projekte",
     "eyebrow": "Entwickler-Portfolio",
     "scroll": "scrollen",
-    "resume": "Lebenslauf"
+    "resume": "Lebenslauf",
+    "cover_letter": "Anschreiben"
   },
   "about": {
     "title": "Über mich",
@@ -31,6 +32,7 @@
     "interests_title": "Interessen",
     "location": "Köln, Deutschland",
     "download_cv": "Lebenslauf herunterladen",
+    "download_cover_letter": "Anschreiben herunterladen",
     "native_level": "Muttersprache",
     "interests_list": ["Sport", "Reisen", "Filme", "Kochen", "Videogames", "Karten"]
   },

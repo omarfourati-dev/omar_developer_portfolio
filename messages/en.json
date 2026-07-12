@@ -15,7 +15,8 @@
     "available": "Available for new projects",
     "eyebrow": "Developer Portfolio",
     "scroll": "scroll",
-    "resume": "Resume"
+    "resume": "Resume",
+    "cover_letter": "Cover Letter"
   },
   "about": {
     "title": "About Me",
@@ -31,6 +32,7 @@
     "interests_title": "Interests",
     "location": "Cologne, Germany",
     "download_cv": "Download Resume",
+    "download_cover_letter": "Download Cover Letter",
     "native_level": "Native",
     "interests_list": ["Sports", "Travel", "Movies", "Cooking", "Video Games", "Cards"]
   },
