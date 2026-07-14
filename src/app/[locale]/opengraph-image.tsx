@@ -1,17 +1,17 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Omar Fourati — Full-Stack Developer & AI Specialist";
+export const alt = "Omar Fourati — Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const copy: Record<string, { role: string; tag: string }> = {
-  de: { role: "Full-Stack Developer & KI-Spezialist", tag: "Köln · Freelance verfügbar" },
-  en: { role: "Full-Stack Developer & AI Specialist", tag: "Cologne · Available for freelance" },
-  fr: { role: "Développeur Full-Stack & Spécialiste IA", tag: "Cologne · Disponible en freelance" },
-  ar: { role: "Full-Stack Developer & AI Specialist", tag: "Cologne · Available for freelance" },
+  de: { role: "Full-Stack Developer", tag: "Gummersbach · Freelance verfügbar" },
+  en: { role: "Full-Stack Developer", tag: "Gummersbach · Available for freelance" },
+  fr: { role: "Développeur Full-Stack", tag: "Gummersbach · Disponible en freelance" },
+  ar: { role: "Full-Stack Developer", tag: "Gummersbach · Available for freelance" },
 };
 
-const tech = ["React", "Next.js", "TypeScript", "FastAPI", "Python", "OpenAI", "Docker"];
+const tech = ["Python", "FastAPI", "Vue 3", "TypeScript", "React", "OpenAI", "Docker"];
 
 export default async function OgImage({
   params,

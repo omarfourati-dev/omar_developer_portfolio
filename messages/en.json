@@ -9,8 +9,8 @@
   },
   "hero": {
     "greeting": "Hi, I'm Omar Fourati",
-    "title": "Fullstack Developer & AI Specialist",
-    "description": "I build intelligent, scalable web applications with modern stack: React, Next.js, FastAPI, and Machine Learning.",
+    "title": "Full-Stack Developer",
+    "description": "I build intelligent, scalable web applications with modern stack: Python, FastAPI, Vue 3, and Machine Learning.",
     "cta": "Explore My Work",
     "available": "Available for new projects",
     "eyebrow": "Developer Portfolio",
@@ -21,7 +21,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Passionate about building intelligent applications",
-    "bio": "Omar Fourati is a Full-Stack Developer and AI Specialist based in Cologne, Germany. Since March 2023 he works at Keravonos GmbH — as a working student alongside his studies, full-time since October 2025. He has built projects like KerChat (real-time chat), Pronto (B2B sales AI) and RentGate (rental software). His stack: React, Next.js, FastAPI, Python and LLM integrations with OpenAI, Claude and Gemini. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
+    "bio": "Omar Fourati is a Full-Stack Developer based in Gummersbach, Germany. Since March 2023 he has been working at KERAVONOS GmbH, first as a working student alongside his studies and full-time since October 2025. He has built an internal real-time chat platform, Pronto (B2B sales AI) and rentgate (rental software). His stack: Python, FastAPI, Vue 3, TypeScript and LLM integrations with OpenAI, Claude and Gemini. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
     "highlights": {
       "projects": "Projects",
       "experience": "Years Experience",
@@ -30,7 +30,7 @@
     },
     "languages_title": "Languages",
     "interests_title": "Interests",
-    "location": "Cologne, Germany",
+    "location": "Gummersbach, Germany",
     "download_cv": "Download Resume",
     "download_cover_letter": "Download Cover Letter",
     "native_level": "Native",

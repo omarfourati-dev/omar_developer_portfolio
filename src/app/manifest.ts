@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Omar Fourati — Developer Portfolio",
     short_name: "Omar Fourati",
     description:
-      "Full-Stack Developer & AI Specialist based in Cologne. React, Next.js, FastAPI, Python and LLM integrations. Available for freelance.",
+      "Full-Stack Developer based in Gummersbach. Python, FastAPI, Vue 3, TypeScript and LLM integrations. Available for freelance.",
     start_url: "/de",
     scope: "/",
     display: "standalone",

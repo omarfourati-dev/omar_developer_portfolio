@@ -181,7 +181,7 @@ export default function About() {
                 }}
               >
                 <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#10B981", boxShadow: "0 0 5px rgba(16,185,129,0.8)" }} />
-                @ Keravonos GmbH
+                @ KERAVONOS GmbH
               </span>
             </div>
           </ScrollReveal>

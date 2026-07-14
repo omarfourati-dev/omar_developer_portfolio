@@ -9,8 +9,8 @@
   },
   "hero": {
     "greeting": "Bonjour, je suis Omar Fourati",
-    "title": "Développeur Fullstack & Spécialiste IA",
-    "description": "Je crée des applications web intelligentes et scalables avec une stack moderne: React, Next.js, FastAPI et Machine Learning.",
+    "title": "Développeur Full-Stack",
+    "description": "Je crée des applications web intelligentes et scalables avec une stack moderne: Python, FastAPI, Vue 3 et Machine Learning.",
     "cta": "Découvrir Mon Travail",
     "available": "Disponible pour de nouveaux projets",
     "eyebrow": "Portfolio Développeur",
@@ -21,7 +21,7 @@
   "about": {
     "title": "À Propos De Moi",
     "subtitle": "Passionné par la création d'applications intelligentes",
-    "bio": "Omar Fourati est un développeur Full-Stack et spécialiste IA basé à Cologne, Allemagne. Depuis mars 2023, il travaille chez Keravonos GmbH — d'abord en tant qu'étudiant salarié, à temps plein depuis octobre 2025. Il a développé des projets tels que KerChat (chat en temps réel), Pronto (sales AI B2B) et RentGate (logiciel de location). Sa stack : React, Next.js, FastAPI, Python et intégrations LLM avec OpenAI, Claude et Gemini. Il est titulaire d'un B.Sc. en informatique de la TH Köln (septembre 2025) et disponible pour des missions freelance en DACH et à distance.",
+    "bio": "Omar Fourati est un développeur Full-Stack basé à Gummersbach, en Allemagne. Depuis mars 2023, il travaille chez KERAVONOS GmbH, d'abord comme étudiant salarié puis à temps plein depuis octobre 2025. Il a développé une plateforme de chat interne en temps réel, Pronto (sales AI B2B) et rentgate (logiciel de location). Sa stack : Python, FastAPI, Vue 3, TypeScript et intégrations LLM avec OpenAI, Claude et Gemini. Il est titulaire d'un B.Sc. en informatique de la TH Köln (septembre 2025) et disponible pour des missions freelance en DACH et à distance.",
     "highlights": {
       "projects": "Projets",
       "experience": "Ans d'Expérience",
@@ -30,7 +30,7 @@
     },
     "languages_title": "Langues",
     "interests_title": "Intérêts",
-    "location": "Cologne, Allemagne",
+    "location": "Gummersbach, Allemagne",
     "download_cv": "Télécharger le CV",
     "download_cover_letter": "Télécharger la lettre de motivation",
     "native_level": "Langue maternelle",
