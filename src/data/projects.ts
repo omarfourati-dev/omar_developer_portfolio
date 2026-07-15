@@ -51,6 +51,7 @@ export const projects: Project[] = [
       ar: "مشروع داخلي لشركة KERAVONOS GmbH: منصة ذكاء مبيعات B2B تجمع إشارات النية وتولد رسائل تواصل مخصصة بالذكاء الاصطناعي.",
     },
     tags: ["Vue 3", "FastAPI", "OpenAI", "TypeScript", "Tailwind", "Playwright", "MariaDB"],
+    demo: "https://pronto.keravonos.com/",
     featured: true,
     category: "saas",
   },
