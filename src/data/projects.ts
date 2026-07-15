@@ -67,7 +67,7 @@ export const projects: Project[] = [
     tags: ["Vue 3", "FastAPI", "TypeScript", "Tailwind", "MariaDB"],
     demo: "https://rentgate.de/",
     featured: true,
-    category: "saas",
+    category: "fullstack",
   },
   {
     id: "private-key-manager",
