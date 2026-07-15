@@ -56,6 +56,20 @@ export const projects: Project[] = [
     category: "saas",
   },
   {
+    id: "rentgate",
+    title: "rentgate",
+    description: {
+      de: "Projekt der KERAVONOS GmbH: digitale Vermietungs- und Buchungssoftware für Verleiher, mit der sich Mietobjekte, Verfügbarkeiten und Buchungen zentral verwalten und automatisieren lassen.",
+      en: "KERAVONOS GmbH project: digital rental and booking software for landlords that centralizes and automates the management of rental units, availability, and bookings.",
+      fr: "Projet de KERAVONOS GmbH : logiciel de location et de réservation numérique pour les loueurs, qui centralise et automatise la gestion des biens, des disponibilités et des réservations.",
+      ar: "مشروع لشركة KERAVONOS GmbH: برنامج تأجير وحجز رقمي للمؤجرين يوحّد ويؤتمت إدارة الوحدات المؤجّرة والتوافر والحجوزات.",
+    },
+    tags: ["Vue 3", "FastAPI", "TypeScript", "Tailwind", "MariaDB"],
+    demo: "https://rentgate.de/",
+    featured: true,
+    category: "saas",
+  },
+  {
     id: "private-key-manager",
     title: "Private-Key-Manager",
     description: {
