@@ -93,6 +93,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-java-ai",
+    company: "Udemy",
+    role: {
+      de: "Learn Java and Artificial Intelligence Programming Tools",
+      en: "Learn Java and Artificial Intelligence Programming Tools",
+      fr: "Learn Java and Artificial Intelligence Programming Tools",
+      ar: "Learn Java and Artificial Intelligence Programming Tools",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Java-Programmierung in Kombination mit KI-gestützten Entwicklungswerkzeugen.",
+      en: "Java programming combined with AI-assisted development tools.",
+      fr: "Programmation Java combinée à des outils de développement assistés par IA.",
+      ar: "برمجة Java مع أدوات تطوير مدعومة بالذكاء الاصطناعي.",
+    },
+    tags: ["Java", "AI", "Programming Tools"],
+  },
+  {
     id: "cert-django",
     company: "Udemy",
     role: {

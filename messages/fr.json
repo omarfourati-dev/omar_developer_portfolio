@@ -35,6 +35,8 @@
     "download_cover_letter": "Télécharger la lettre de motivation",
     "download_reference": "Télécharger le certificat de travail",
     "download_certificate": "Certificat Django",
+    "download_stressmanagement": "Certificat Gestion du stress",
+    "download_java_ai": "Certificat Java & IA",
     "native_level": "Langue maternelle",
     "interests_list": ["Sport", "Voyages", "Films", "Cuisine", "Jeux vidéo", "Cartes"]
   },
