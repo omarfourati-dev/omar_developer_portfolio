@@ -34,6 +34,7 @@
     "download_cv": "Download Resume",
     "download_cover_letter": "Download Cover Letter",
     "download_reference": "Download Reference Letter",
+    "download_certificate": "Django Certificate",
     "native_level": "Native",
     "interests_list": ["Sports", "Travel", "Movies", "Cooking", "Video Games", "Cards"]
   },

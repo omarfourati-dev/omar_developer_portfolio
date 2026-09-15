@@ -34,6 +34,7 @@
     "download_cv": "Lebenslauf herunterladen",
     "download_cover_letter": "Anschreiben herunterladen",
     "download_reference": "Arbeitszeugnis herunterladen",
+    "download_certificate": "Django-Zertifikat",
     "native_level": "Muttersprache",
     "interests_list": ["Sport", "Reisen", "Filme", "Kochen", "Videogames", "Karten"]
   },

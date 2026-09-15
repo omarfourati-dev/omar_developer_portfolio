@@ -34,6 +34,7 @@
     "download_cv": "تحميل السيرة الذاتية",
     "download_cover_letter": "تحميل خطاب التقديم",
     "download_reference": "تحميل شهادة العمل",
+    "download_certificate": "شهادة Django",
     "native_level": "اللغة الأم",
     "interests_list": ["رياضة", "سفر", "أفلام", "طبخ", "ألعاب فيديو", "ورق اللعب"]
   },

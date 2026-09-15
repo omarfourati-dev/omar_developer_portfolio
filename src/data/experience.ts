@@ -93,6 +93,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-django",
+    company: "Udemy",
+    role: {
+      de: "Build a Backend REST API with Python & Django",
+      en: "Build a Backend REST API with Python & Django",
+      fr: "Build a Backend REST API with Python & Django",
+      ar: "Build a Backend REST API with Python & Django",
+    },
+    period: "2023",
+    type: "certificate",
+    description: {
+      de: "Aufbau einer produktionsnahen REST-API mit Python, Django und dem Django REST Framework.",
+      en: "Building a production-style REST API with Python, Django and the Django REST Framework.",
+      fr: "Création d'une API REST avec Python, Django et le Django REST Framework.",
+      ar: "بناء واجهة برمجة تطبيقات REST باستخدام Python و Django و Django REST Framework.",
+    },
+    tags: ["Python", "Django", "REST API"],
+  },
+  {
     id: "cert-js",
     company: "Udemy",
     role: {
