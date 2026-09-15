@@ -36,3 +36,8 @@ yarn-error.log*
 next-env.d.ts
 .playwright-mcp/
 *.png
+
+# lokale Agent-/Tooling-Zustandsdateien (nicht Teil des Projekts)
+.claude-flow/
+.claude/proven-config.json
+.claude/.proven-config-version
