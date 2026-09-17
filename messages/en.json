@@ -37,6 +37,7 @@
     "download_certificate": "Django Certificate",
     "download_stressmanagement": "Stress Management Certificate",
     "download_java_ai": "Java & AI Certificate",
+    "download_react": "React Certificate",
     "native_level": "Native",
     "interests_list": ["Sports", "Travel", "Movies", "Cooking", "Video Games", "Cards"]
   },

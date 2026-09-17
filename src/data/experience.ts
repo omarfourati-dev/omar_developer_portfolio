@@ -93,6 +93,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-react-ecommerce",
+    company: "Udemy",
+    role: {
+      de: "Build a Custom E-Commerce Site in React + JavaScript Basics",
+      en: "Build a Custom E-Commerce Site in React + JavaScript Basics",
+      fr: "Build a Custom E-Commerce Site in React + JavaScript Basics",
+      ar: "Build a Custom E-Commerce Site in React + JavaScript Basics",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Entwicklung einer individuellen E-Commerce-Website mit React und JavaScript.",
+      en: "Building a custom e-commerce website with React and JavaScript.",
+      fr: "Création d'un site e-commerce sur mesure avec React et JavaScript.",
+      ar: "بناء موقع تجارة إلكترونية مخصص باستخدام React و JavaScript.",
+    },
+    tags: ["React", "JavaScript", "E-Commerce"],
+  },
+  {
     id: "cert-java-ai",
     company: "Udemy",
     role: {

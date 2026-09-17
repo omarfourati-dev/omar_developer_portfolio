@@ -37,6 +37,7 @@
     "download_certificate": "شهادة Django",
     "download_stressmanagement": "شهادة إدارة الإجهاد",
     "download_java_ai": "شهادة Java والذكاء الاصطناعي",
+    "download_react": "شهادة React",
     "native_level": "اللغة الأم",
     "interests_list": ["رياضة", "سفر", "أفلام", "طبخ", "ألعاب فيديو", "ورق اللعب"]
   },
