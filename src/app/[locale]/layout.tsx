@@ -199,7 +199,7 @@ function StructuredData({ locale }: { locale: string }) {
       : "Full-Stack Developer from Gummersbach. 4+ years experience. Python, FastAPI, Vue 3, TypeScript, AI. Available for freelance.",
     address: { "@type": "PostalAddress", addressLocality: "Gummersbach", addressRegion: "NRW", addressCountry: "DE" },
     email: "info@omarfourati.de",
-    sameAs: ["https://github.com/omarfourati-dev", "https://www.linkedin.com/in/omar-fourati-63a9b11ba/", BASE_URL],
+    sameAs: ["https://github.com/omarfourati-dev", "https://www.linkedin.com/in/omarfourati/", BASE_URL],
     knowsAbout: ["React","Next.js","TypeScript","FastAPI","Python","Vue 3","TensorFlow","PyTorch","OpenAI API","Claude API","LangChain","PostgreSQL","Docker","WebSockets","Tailwind CSS","Machine Learning","LLM Integration"],
     knowsLanguage: [{ "@type": "Language", name: "German" },{ "@type": "Language", name: "English" },{ "@type": "Language", name: "French" },{ "@type": "Language", name: "Arabic" }],
     worksFor: { "@type": "Organization", name: "KERAVONOS GmbH" },

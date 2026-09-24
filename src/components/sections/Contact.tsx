@@ -113,7 +113,7 @@ export default function Contact() {
             {/* Social links */}
             <div className="flex gap-3">
               <a
-                href="https://www.linkedin.com/in/omar-fourati-63a9b11ba/"
+                href="https://www.linkedin.com/in/omarfourati/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl text-sm font-medium transition-all hover:border-[rgba(201,168,76,0.4)]"

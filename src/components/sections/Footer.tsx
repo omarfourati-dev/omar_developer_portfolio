@@ -92,7 +92,7 @@ export default function Footer() {
               {GITHUB_SVG}
             </a>
             <a
-              href="https://www.linkedin.com/in/omar-fourati-63a9b11ba/"
+              href="https://www.linkedin.com/in/omarfourati/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-9 h-9 rounded-lg transition-all duration-200 hover:scale-110"
