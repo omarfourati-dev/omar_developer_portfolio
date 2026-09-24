@@ -39,7 +39,7 @@ export const experiences: ExperienceEntry[] = [
       fr: "Étudiant Salarié, Développement Logiciel",
       ar: "طالب عامل، تطوير البرمجيات",
     },
-    period: "März 2023 – September 2025",
+    period: "Juni 2023 – September 2025",
     type: "work",
     description: {
       de: "Neben dem Studium: Entwicklung eines unternehmensinternen Echtzeit-Chats und der B2B-Plattform Pronto, Mitarbeit an rentgate (Vermietungssoftware) sowie Kundenprojekte für ABUS Kransysteme.",
@@ -48,6 +48,24 @@ export const experiences: ExperienceEntry[] = [
       ar: "بجانب الدراسة: تطوير منصة دردشة فورية داخلية ومنصة Pronto والمساهمة في rentgate (برنامج تأجير) ومشاريع عميل ABUS Kransysteme.",
     },
     tags: ["Vue 3", "FastAPI", "WebSockets", "OAuth 2.0", "MariaDB", "JavaScript"],
+  },
+  {
+    id: "keravonos-praktikum",
+    company: "KERAVONOS GmbH",
+    role: {
+      de: "Freiwilliges Praktikum Softwareentwicklung",
+      en: "Voluntary Internship, Software Development",
+      fr: "Stage volontaire, Développement Logiciel",
+      ar: "تدريب تطوعي، تطوير البرمجيات",
+    },
+    period: "März 2023 – Mai 2023",
+    type: "work",
+    description: {
+      de: "Einstieg bei KERAVONOS: erste Mitarbeit an internen Web-Applikationen, bevor es als Werkstudent weiterging.",
+      en: "Joined KERAVONOS: first contributions to internal web applications before continuing as a working student.",
+      fr: "Arrivée chez KERAVONOS : premières contributions aux applications web internes avant de poursuivre comme étudiant salarié.",
+      ar: "بداية العمل في KERAVONOS: أولى المساهمات في تطبيقات الويب الداخلية قبل الاستمرار كطالب عامل.",
+    },
   },
 ];
 

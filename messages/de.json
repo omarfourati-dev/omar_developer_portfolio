@@ -21,7 +21,7 @@
   "about": {
     "title": "Über mich",
     "subtitle": "Leidenschaft für intelligente Anwendungen",
-    "bio": "Omar Fourati ist ein Full-Stack Developer aus Gummersbach. Seit März 2023 arbeitet er bei der KERAVONOS GmbH, zunächst als Werkstudent neben dem Studium und seit Oktober 2025 in Vollzeit. Er hat einen unternehmensinternen Echtzeit-Chat, Pronto (B2B Sales AI) und rentgate (Vermietungssoftware) mitentwickelt. Sein Stack: Python, FastAPI, Vue 3, TypeScript und LLM-Integrationen mit OpenAI, Claude und Gemini. Im September 2025 schloss er sein B.Sc. Informatik-Studium an der TH Köln ab. Er ist verfügbar für Freelance-Projekte im DACH-Raum und remote weltweit.",
+    "bio": "Omar Fourati ist ein Full-Stack Developer aus Gummersbach. Seit März 2023 arbeitet er bei der KERAVONOS GmbH, zunächst als Praktikant, ab Juni 2023 als Werkstudent neben dem Studium und seit Oktober 2025 in Vollzeit. Er hat einen unternehmensinternen Echtzeit-Chat, Pronto (B2B Sales AI) und rentgate (Vermietungssoftware) mitentwickelt. Sein Stack: Python, FastAPI, Vue 3, TypeScript und LLM-Integrationen mit OpenAI, Claude und Gemini. Im September 2025 schloss er sein B.Sc. Informatik-Studium an der TH Köln ab. Er ist verfügbar für Freelance-Projekte im DACH-Raum und remote weltweit.",
     "highlights": {
       "projects": "Projekte",
       "experience": "Jahre Erfahrung",
