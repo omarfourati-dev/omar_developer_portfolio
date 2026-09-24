@@ -16,6 +16,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "paint-ball-game",
+    title: "Paint-Ball Game",
+    description: {
+      de: "Aktuelles Projekt: Online-Multiplayer-Paintball direkt im Browser – server-autoritativer C#/.NET-Gameserver über WSS, eigener WebGL2-Client mit Client-Side-Prediction, Bots, Matchmaking (MMR), mehreren Spielmodi und Progression.",
+      en: "Current project: online multiplayer paintball right in the browser – server-authoritative C#/.NET game server over WSS, custom WebGL2 client with client-side prediction, bots, matchmaking (MMR), multiple game modes, and progression.",
+      fr: "Projet actuel : paintball multijoueur en ligne directement dans le navigateur – serveur de jeu C#/.NET autoritaire via WSS, client WebGL2 maison avec prédiction côté client, bots, matchmaking (MMR), plusieurs modes de jeu et progression.",
+      ar: "مشروع حالي: لعبة بينت بول جماعية عبر الإنترنت مباشرة في المتصفح – خادم ألعاب C#/.NET موثوق عبر WSS وعميل WebGL2 مخصص مع التنبؤ من جانب العميل وروبوتات ونظام مطابقة (MMR) وأوضاع لعب متعددة ونظام تقدّم.",
+    },
+    tags: ["C#", ".NET 10", "ASP.NET Core", "WebSockets", "WebGL2", "JavaScript", "Unity", "Docker", "GitHub Actions"],
+    github: "https://github.com/omarfourati-dev/paint-ball-game",
+    demo: "https://paint-ball-game.omarfourati.de/",
+    featured: true,
+    category: "fullstack",
+  },
+  {
     id: "trading-bot",
     title: "Trading-Bot",
     description: {
@@ -79,6 +94,8 @@ export const projects: Project[] = [
       ar: "تطبيق PWA لإدارة كلمات المرور مع تشفير AES-256-GCM من جانب العميل وبنية عدم المعرفة.",
     },
     tags: ["React", "Node.js", "AES-256-GCM", "Docker", "Nginx", "PostgreSQL", "JWT"],
+    github: "https://github.com/omarfourati-dev/private-key-and-account-manager",
+    demo: "https://securevault.omarfourati.de/",
     featured: true,
     category: "security",
   },
