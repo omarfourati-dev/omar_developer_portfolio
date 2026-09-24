@@ -76,7 +76,7 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-3 order-2 sm:order-3">
             <a
-              href="https://github.com/omarfourati55"
+              href="https://github.com/omarfourati-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-9 h-9 rounded-lg transition-all duration-200 hover:scale-110"

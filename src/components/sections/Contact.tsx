@@ -127,7 +127,7 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/omarfourati55"
+                href="https://github.com/omarfourati-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl text-sm font-medium transition-all hover:border-[rgba(201,168,76,0.4)]"
