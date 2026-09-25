@@ -3,6 +3,7 @@ import { Syne, DM_Sans, Space_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import MotionProvider from "@/components/ui/MotionProvider";
+import { ADSENSE_META } from "@/lib/seo";
 import "../globals.css";
 
 const dmSans = DM_Sans({
@@ -182,6 +183,7 @@ export async function generateMetadata({
         "max-snippet": -1,
       },
     },
+    other: ADSENSE_META,
   };
 }
 

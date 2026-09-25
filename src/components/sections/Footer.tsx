@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 const GITHUB_SVG = (
@@ -23,6 +24,8 @@ const ARROW_UP_SVG = (
 );
 
 export default function Footer() {
+  const locale = useLocale();
+  const t = useTranslations("footer.links");
   const { scrollYProgress } = useScroll();
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -125,6 +128,29 @@ export default function Footer() {
               </svg>
             </a>
           </div>
+        </div>
+
+        {/* Legal links */}
+        <div className="max-w-7xl mx-auto mt-6 pt-6 flex items-center justify-center gap-4 text-xs" style={{ borderTop: "1px solid rgba(201,168,76,0.08)" }}>
+          <a
+            href={`/${locale}/impressum`}
+            className="transition-colors duration-200"
+            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+          >
+            {t("imprint")}
+          </a>
+          <span aria-hidden="true" style={{ color: "#2A2218" }}>•</span>
+          <a
+            href={`/${locale}/datenschutz`}
+            className="transition-colors duration-200"
+            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+          >
+            {t("privacy")}
+          </a>
         </div>
       </footer>
 
