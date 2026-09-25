@@ -73,6 +73,7 @@ export default function Contact() {
               href="mailto:info@omarfourati.de"
               className="flex items-center gap-4 p-5 rounded-xl group transition-colors"
               style={{ backgroundColor: "#131008", border: "1px solid #2A2218" }}
+              data-umami-event="contact_email_click"
             >
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -122,6 +123,7 @@ export default function Contact() {
                   border: "1px solid #2A2218",
                   color: "#A89B84",
                 }}
+                data-umami-event="contact_linkedin_click"
               >
                 <span style={{ color: "#C9A84C" }}>{LINKEDIN_SVG}</span>
                 LinkedIn
@@ -136,6 +138,7 @@ export default function Contact() {
                   border: "1px solid #2A2218",
                   color: "#A89B84",
                 }}
+                data-umami-event="contact_github_click"
               >
                 <span style={{ color: "#C9A84C" }}>{GITHUB_SVG}</span>
                 GitHub
@@ -225,6 +228,7 @@ export default function Contact() {
                   color: sent ? "#6B6054" : "#0B0907",
                   fontFamily: "var(--font-syne)",
                 }}
+                data-umami-event="contact_form_submit"
               >
                 {sent ? `✓ ${t("sent")}` : t("send")}
               </motion.button>

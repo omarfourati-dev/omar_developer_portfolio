@@ -267,6 +267,7 @@ export default function About() {
                   color: "#C9A84C",
                   fontFamily: "var(--font-syne)",
                 }}
+                data-umami-event="resume_download"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -286,6 +287,7 @@ export default function About() {
                   color: "#C9A84C",
                   fontFamily: "var(--font-syne)",
                 }}
+                data-umami-event="cover_letter_download"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>

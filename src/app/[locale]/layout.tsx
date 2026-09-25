@@ -2,9 +2,16 @@ import type { Metadata, Viewport } from "next";
 import { Syne, DM_Sans, Space_Mono, Noto_Sans_Arabic } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
+import Script from "next/script";
 import MotionProvider from "@/components/ui/MotionProvider";
 import { ADSENSE_META } from "@/lib/seo";
 import "../globals.css";
+
+// Reichweitenmessung: selbst gehostetes Umami (Teil 2 der Analyse-Spec), cookie-frei. SRI-Hash zur festgelegten
+// Umami-Version (3.4.0) von analytics.omarfourati.de/s.js; bei einem Versionswechsel neu berechnen.
+const UMAMI_SCRIPT_SRC = "https://analytics.omarfourati.de/s.js";
+const UMAMI_SCRIPT_INTEGRITY = "sha384-Q7LWJ0d79x9/eb2UnZhltUIhfCeHTL11GIX5RfQt0vpmPNfpEhfUDURwgKBLYmg7";
+const UMAMI_WEBSITE_ID = "e1020630-355a-4920-8df0-9c792bef05b1";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -265,6 +272,15 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
+        <Script
+          src={UMAMI_SCRIPT_SRC}
+          strategy="afterInteractive"
+          integrity={UMAMI_SCRIPT_INTEGRITY}
+          crossOrigin="anonymous"
+          data-website-id={UMAMI_WEBSITE_ID}
+          data-domains="omarfourati.de,www.omarfourati.de"
+          data-do-not-track="true"
+        />
       </body>
     </html>
   );

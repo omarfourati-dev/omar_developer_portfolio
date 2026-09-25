@@ -49,8 +49,9 @@ export default async function DatenschutzPage({
         <h2>2. Das Wichtigste in Kürze</h2>
         <ul>
           <li>
-            Diese Website setzt <strong>keine Cookies</strong> und <strong>kein Tracking</strong> ein –
-            es kommen keine Analyse- oder Werbe-Tools zum Einsatz.
+            Diese Website setzt <strong>keine Cookies</strong> und <strong>speichert nichts auf deinem
+            Gerät</strong>. Für die Reichweitenmessung nutze ich das selbst gehostete, cookie-freie
+            Umami (Abschnitt 5) – dafür ist keine Einwilligung nötig.
           </li>
           <li>
             Es werden keine Inhalte von Drittanbietern nachgeladen: Schriftarten sind über next/font
@@ -90,11 +91,31 @@ export default async function DatenschutzPage({
       </section>
 
       <section>
-        <h2>5. Cookies und Tracking</h2>
+        <h2>5. Reichweitenmessung mit Umami</h2>
         <p>
-          Diese Website verwendet keine Cookies und kein Tracking. Es kommen keine Analyse-Tools (z. B.
-          Google Analytics) und keine Werbenetzwerke zum Einsatz. Sollte künftig ein datenschutzkonformes
-          Analyse-Tool eingesetzt werden, wird diese Erklärung vorab entsprechend ergänzt.
+          Um zu sehen, wie diese Website genutzt wird (z. B. Seitenaufrufe und Klicks auf Projekte oder
+          Kontaktmöglichkeiten), setze ich <strong>Umami</strong> ein – eine Open-Source-Analyse-Software,
+          die ich <strong>selbst auf meinem eigenen Server in Deutschland</strong> betreibe. Es fließen
+          keine Daten an Umami als Unternehmen oder an sonstige Dritte.
+        </p>
+        <p>
+          Umami arbeitet <strong>cookie-frei</strong>: Es setzt keinerlei Cookies und speichert nichts auf
+          deinem Gerät. Deine IP-Adresse wird <strong>nicht gespeichert</strong>; sie wird nur kurz
+          herangezogen, um zusammen mit einem täglich wechselnden Zufallswert (Salt) einen Hash-Wert zu
+          bilden, mit dem wiederkehrende Besuche eines Tages erkannt werden, ohne die IP-Adresse selbst
+          abzulegen – so arbeitet Umami standardmäßig. Aus diesem Hash lässt sich die IP-Adresse nicht
+          zurückrechnen.
+        </p>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO – mein berechtigtes Interesse an einer
+          datensparsamen Reichweitenmessung. Da nichts auf deinem Gerät gespeichert und nichts von deinem
+          Gerät ausgelesen wird, ist § 25 TDDDG hier nicht anwendbar und es ist keine Einwilligung nötig.
+        </p>
+        <p>
+          Du kannst der Messung jederzeit widersprechen (Art. 21 DSGVO), indem du einen Werbe- oder
+          Tracking-Blocker nutzt oder „Nicht verfolgen“ (Do Not Track) in deinem Browser aktivierst – das
+          Einbindungs-Skript ist mit <code>data-do-not-track=&quot;true&quot;</code> versehen und beachtet
+          diese Einstellung.
         </p>
       </section>
 
