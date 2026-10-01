@@ -152,10 +152,11 @@
   /* Einzeiler-Variante (Zertifikate, Ehrenamt) */
   .entry-line .entry-title, .entry-line .entry-org { display: inline; }
   .entry-line .entry-org::before {
-    content: '—';
+    content: ' — ';
+    white-space: pre;
     color: var(--subtle);
     font-weight: 400;
-    margin-right: 5px;
+    margin-right: 0;
   }
 
   .entry-bullets { list-style: none; margin-top: 1px; }
@@ -163,12 +164,15 @@
     font-size: 8.5pt;
     color: var(--muted);
     padding: 1px 0 1px 10px;
-    position: relative;
+    text-indent: -10px;
     line-height: 1.35;
   }
+  /* Kein position:absolute – sonst landet der Text im PDF hinter dem restlichen Inhalt (ATS-Lesereihenfolge) */
   .entry-bullets li::before {
     content: '–';
-    position: absolute; left: 0;
+    display: inline-block;
+    width: 10px;
+    text-indent: 0;
     color: var(--accent);
   }
 
