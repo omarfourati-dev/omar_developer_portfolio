@@ -74,9 +74,11 @@
   }
 
   .contact-row {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 18px;
+    row-gap: 4px;
   }
   .contact-item {
     display: flex;
@@ -159,6 +161,8 @@
     margin-right: 0;
   }
 
+  .profile-text { font-size: 8.5pt; color: var(--muted); line-height: 1.45; }
+
   .entry-bullets { list-style: none; margin-top: 1px; }
   .entry-bullets li {
     font-size: 8.5pt;
@@ -199,6 +203,11 @@
   .inline-list span { white-space: nowrap; }
   .inline-list span + span::before { content: '·'; margin: 0 7px; color: var(--subtle); }
   .inline-list strong { color: var(--ink); font-weight: 600; }
+  .two-col { display: grid; grid-template-columns: 3fr 2fr; column-gap: 8mm; break-inside: avoid; }
+  .two-col .inline-list span { white-space: nowrap; }
+  .two-col .inline-list span + span::before { content: none; }
+  .two-col .inline-list span:not(:last-child)::after { content: '·'; margin: 0 7px; color: var(--subtle); }
+  .two-col .inline-list { line-height: 1.5; }
 
   @media print {
     body { background: white; }
@@ -220,6 +229,10 @@
         <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           info@omarfourati.de
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 1577 8709579
         </span>
         <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -248,6 +261,11 @@
   <main class="main">
 
     <section class="section">
+      <div class="section-title"><span>Profil</span></div>
+      <p class="profile-text">Full-Stack Developer mit über drei Jahren Praxis bei der KERAVONOS GmbH. Schwerpunkt: Python/FastAPI, Vue&nbsp;3/TypeScript und die Integration von LLMs (OpenAI, Claude, Gemini) in produktive Web-Anwendungen. Eigene Projekte betreibe ich komplett selbst – von der Entwicklung über CI/CD bis zum Monitoring auf eigenem Server. Offen für Stellen in München und remote.</p>
+    </section>
+
+    <section class="section">
       <div class="section-title"><span>Berufserfahrung</span></div>
 
       <div class="entry current">
@@ -256,10 +274,10 @@
           <div class="entry-title">Software Developer (Vollzeit)</div>
           <div class="entry-org">KERAVONOS GmbH · Gummersbach</div>
           <ul class="entry-bullets">
-            <li>Entwicklung moderner Web-Applikationen und KI-Plattformen</li>
-            <li>Entwicklung eines unternehmensinternen Echtzeit-Chats</li>
-            <li>Projekt Pronto (B2B Sales AI)</li>
-            <li>Kundenprojekte für ABUS Kransysteme GmbH</li>
+            <li>Web-Applikationen und KI-Plattformen mit Vue&nbsp;3, FastAPI und PostgreSQL</li>
+            <li>Pronto: KI-Erkennung von Kaufsignalen und personalisierte Vertriebstexte (OpenAI API)</li>
+            <li>Weiterentwicklung des unternehmensinternen Echtzeit-Chats</li>
+            <li>Umsetzung von Kundenprojekten für die ABUS Kransysteme GmbH</li>
           </ul>
           <div class="tag-row">
             <span class="tag-label">Erfahrung mit:</span>
@@ -276,9 +294,10 @@
           <div class="entry-title">Werkstudent Softwareentwicklung</div>
           <div class="entry-org">KERAVONOS GmbH · Gummersbach</div>
           <ul class="entry-bullets">
-            <li>Entwicklung eines unternehmensinternen Echtzeit-Chats und der B2B-Intent-Signal-Plattform Pronto</li>
-            <li>Mitarbeit an rentgate (Vermietungssoftware)</li>
-            <li>Kundenprojekte für ABUS Kransysteme GmbH: interne Web-Applikationen für industrielle Prozesse</li>
+            <li>Interner Echtzeit-Chat mit WebSockets, Google-OAuth, Channels und Direktnachrichten</li>
+            <li>Aufbau von Pronto: Aggregation öffentlicher Datenquellen, Scraping mit Playwright</li>
+            <li>Mitarbeit an rentgate (Vermietungs- und Buchungssoftware)</li>
+            <li>Interne Web-Apps für industrielle Prozesse bei der ABUS Kransysteme GmbH</li>
           </ul>
           <div class="tag-row">
             <span class="tag-label">Erfahrung mit:</span>
@@ -309,7 +328,7 @@
           <ul class="entry-bullets">
             <li>Browser-Multiplayer mit server-autoritativem C#/.NET-Gameserver über WSS</li>
             <li>Eigener WebGL2-Client mit Prediction, Bots, Matchmaking (MMR), Spielmodi</li>
-            <li>TDD (Unit, Integration, Playwright-E2E), Deployment per Docker &amp; GitHub Actions</li>
+            <li>211 automatisierte Tests + Playwright-E2E, CI/CD mit Docker &amp; GitHub Actions</li>
           </ul>
           <div class="tag-row">
             <span class="tag-label">Erfahrung mit:</span>
@@ -317,31 +336,6 @@
             <span class="tag">ASP.NET Core</span><span class="tag">WebSockets</span>
             <span class="tag">WebGL2</span><span class="tag">JavaScript</span>
             <span class="tag">Unity</span><span class="tag">Docker</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2026</div>
-        <div class="entry-body">
-          <div class="entry-title">Trading-Bot</div>
-          <div class="entry-note">Algorithmisches Handelssystem mit ML-Prognosen, technischer Analyse, Backtesting und Live-Überwachung via MetaTrader5</div>
-          <div class="tag-row">
-            <span class="tag-label">Erfahrung mit:</span>
-            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2026</div>
-        <div class="entry-body entry-line">
-          <div class="entry-title">SecureVault – Private-Key-Manager (live)</div>
-          <div class="entry-org">securevault.omarfourati.de</div>
-          <div class="entry-note">PWA für Passwort-Management mit client-seitiger AES-256-GCM-Verschlüsselung und Zero-Knowledge-Architektur</div>
-          <div class="tag-row">
-            <span class="tag-label">Erfahrung mit:</span>
-            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span><span class="tag">Docker</span><span class="tag">Nginx</span>
           </div>
         </div>
       </div>
@@ -362,12 +356,37 @@
       <div class="entry">
         <div class="entry-date">2026</div>
         <div class="entry-body entry-line">
+          <div class="entry-title">SecureVault – Private-Key-Manager (live)</div>
+          <div class="entry-org">securevault.omarfourati.de</div>
+          <div class="entry-note">PWA für Passwort-Management mit client-seitiger AES-256-GCM-Verschlüsselung und Zero-Knowledge-Architektur</div>
+          <div class="tag-row">
+            <span class="tag-label">Erfahrung mit:</span>
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span><span class="tag">Docker</span><span class="tag">Nginx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
           <div class="entry-title">DayFlow (live)</div>
           <div class="entry-org">tnt.sg-digital.de</div>
           <div class="entry-note">Produktivitäts-App mit Aufgabenplanung, Ideen-Board und Link-Sammlung</div>
           <div class="tag-row">
             <span class="tag-label">Erfahrung mit:</span>
             <span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">TypeScript</span><span class="tag">Zustand</span><span class="tag">Playwright</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body">
+          <div class="entry-title">Trading-Bot</div>
+          <div class="entry-note">Algorithmisches Handelssystem mit ML-Prognosen, technischer Analyse, Backtesting und Live-Überwachung via MetaTrader5</div>
+          <div class="tag-row">
+            <span class="tag-label">Erfahrung mit:</span>
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">XGBoost</span><span class="tag">PostgreSQL</span>
           </div>
         </div>
       </div>
@@ -411,14 +430,6 @@
         <div class="entry-body">
           <div class="entry-title">Mathematik Abitur</div>
           <div class="entry-org">L.A.K.C Gymnasium, Sfax (Tunesien)</div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-date">2011 – 2013</div>
-        <div class="entry-body">
-          <div class="entry-title">Realschulabschluss</div>
-          <div class="entry-org">Am Chihia Realschule, Sfax (Tunesien)</div>
         </div>
       </div>
     </section>
@@ -467,6 +478,14 @@
       </div>
 
       <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">Stressmanagement &amp; Persönlichkeitsentwicklung</div>
+          <div class="entry-org">TH Köln</div>
+        </div>
+      </div>
+
+      <div class="entry">
         <div class="entry-date">2021 – 2023</div>
         <div class="entry-body entry-line">
           <div class="entry-title">Python: Complete Pro Bootcamp</div>
@@ -502,26 +521,7 @@
     </section>
 
     <section class="section">
-      <div class="section-title"><span>Sprachen</span></div>
-      <div class="inline-list">
-        <span><strong>Arabisch</strong> — Muttersprache</span>
-        <span><strong>Deutsch</strong> — C1</span>
-        <span><strong>Französisch</strong> — C1</span>
-        <span><strong>Englisch</strong> — B2</span>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><span>Ehrenamt &amp; Sonstiges</span></div>
-
-      <div class="entry">
-        <div class="entry-date">2022 – 2023</div>
-        <div class="entry-body entry-line">
-          <div class="entry-title">Stressmanagement &amp; Persönlichkeitsentwicklung</div>
-          <div class="entry-org">TH Köln</div>
-        </div>
-      </div>
-
+      <div class="section-title"><span>Ehrenamt</span></div>
       <div class="entry">
         <div class="entry-date">2018 – 2020</div>
         <div class="entry-body entry-line">
@@ -531,17 +531,23 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-title"><span>Interessen</span></div>
-      <div class="tag-row">
-        <span class="tag">Sport</span>
-        <span class="tag">Reisen</span>
-        <span class="tag">Filme</span>
-        <span class="tag">Kochen</span>
-        <span class="tag">Videogames</span>
-        <span class="tag">Kartenspiele</span>
-      </div>
-    </section>
+    <div class="section two-col">
+      <section>
+        <div class="section-title"><span>Sprachen</span></div>
+        <div class="inline-list">
+          <span><strong>Arabisch</strong> — Muttersprache</span>
+          <span><strong>Deutsch</strong> — C1</span>
+          <span><strong>Französisch</strong> — C1</span>
+          <span><strong>Englisch</strong> — B2</span>
+        </div>
+      </section>
+      <section>
+        <div class="section-title"><span>Interessen</span></div>
+        <div class="inline-list">
+          <span>Sport</span><span>Reisen</span><span>Filme</span><span>Kochen</span><span>Videogames</span><span>Kartenspiele</span>
+        </div>
+      </section>
+    </div>
 
   </main>
 
