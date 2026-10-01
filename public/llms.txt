@@ -101,6 +101,10 @@ B.Sc. Computer Science, 2020 – September 2025
 Focus: Software Engineering, Algorithms, AI Systems
 
 ## Certifications
+- The Complete Cyber Security Course: Network Security! (Udemy, 2026)
+- Build a Custom E-Commerce Site in React + JavaScript Basics (Udemy, 2026)
+- Learn Java and Artificial Intelligence Programming Tools (Udemy, 2026)
+- Build a Backend REST API with Python & Django (Udemy, 2023)
 - JavaScript: From Zero to Expert (Udemy, 2023)
 - Python: Complete Pro Bootcamp (Udemy, 2021–2023)
 - Software Quality Assurance (German Testing Board / TH Köln, 2022–2023)

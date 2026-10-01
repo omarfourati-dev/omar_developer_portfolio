@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-cyber-security",
+    company: "Udemy",
+    role: {
+      de: "The Complete Cyber Security Course: Network Security!",
+      en: "The Complete Cyber Security Course: Network Security!",
+      fr: "The Complete Cyber Security Course: Network Security!",
+      ar: "The Complete Cyber Security Course: Network Security!",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Netzwerksicherheit: Firewalls, sichere Netzwerkarchitektur, WLAN-Sicherheit und Netzwerk-Monitoring (12,5 Std.).",
+      en: "Network security: firewalls, secure network architecture, Wi-Fi security and network monitoring (12.5 hrs).",
+      fr: "Sécurité réseau : pare-feu, architecture réseau sécurisée, sécurité Wi-Fi et surveillance réseau (12,5 h).",
+      ar: "أمن الشبكات: الجدران النارية وبنية الشبكات الآمنة وأمن الواي فاي ومراقبة الشبكات (12.5 ساعة).",
+    },
+    tags: ["Netzwerksicherheit", "Firewalls", "Cyber Security"],
+  },
+  {
     id: "cert-react-ecommerce",
     company: "Udemy",
     role: {
