@@ -209,7 +209,7 @@ export const certificates: ExperienceEntry[] = [
     id: "cert-testing",
     company: "German Testing Board / TH Köln",
     role: {
-      de: "Software Qualitätssicherung",
+      de: "Software-Qualitätssicherung",
       en: "Software Quality Assurance",
       fr: "Assurance Qualité Logicielle",
       ar: "ضمان جودة البرمجيات",

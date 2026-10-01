@@ -39,7 +39,7 @@ export const projects: Project[] = [
       fr: "Système de trading algorithmique de production combinant ML, analyse technique, backtesting et surveillance du marché en direct via MetaTrader5.",
       ar: "نظام تداول خوارزمي متكامل يجمع تعلم الآلة والتحليل التقني والاختبار التاريخي ومراقبة السوق المباشرة.",
     },
-    tags: ["Python", "TensorFlow", "PyTorch", "XGBoost", "MetaTrader5", "Dash", "PostgreSQL", "Telegram"],
+    tags: ["Python", "TensorFlow", "PyTorch", "XGBoost", "MetaTrader5", "Dash", "PostgreSQL", "LangChain", "Telegram"],
     featured: true,
     category: "ml",
   },
