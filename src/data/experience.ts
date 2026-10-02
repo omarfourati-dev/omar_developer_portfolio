@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-unity-physics",
+    company: "Udemy",
+    role: {
+      de: "Physics For Unity 6.2 & C#",
+      en: "Physics For Unity 6.2 & C#",
+      fr: "Physics For Unity 6.2 & C#",
+      ar: "Physics For Unity 6.2 & C#",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Physik-Simulation in Unity 6.2 mit C#: Rigidbodies, Kollisionen und Kräfte für Spiele (3,5 Std.).",
+      en: "Physics simulation in Unity 6.2 with C#: rigidbodies, collisions and forces for games (3.5 hrs).",
+      fr: "Simulation physique dans Unity 6.2 avec C# : rigidbodies, collisions et forces pour les jeux (3,5 h).",
+      ar: "محاكاة الفيزياء في Unity 6.2 باستخدام C#: الأجسام الصلبة والتصادمات والقوى للألعاب (3.5 ساعة).",
+    },
+    tags: ["Unity", "C#", "Game Physics"],
+  },
+  {
     id: "cert-cyber-security",
     company: "Udemy",
     role: {

@@ -101,6 +101,7 @@ B.Sc. Computer Science, 2020 – September 2025
 Focus: Software Engineering, Algorithms, AI Systems
 
 ## Certifications
+- Physics For Unity 6.2 & C# (Udemy, 2026)
 - The Complete Cyber Security Course: Network Security! (Udemy, 2026)
 - Build a Custom E-Commerce Site in React + JavaScript Basics (Udemy, 2026)
 - Learn Java and Artificial Intelligence Programming Tools (Udemy, 2026)
