@@ -19,7 +19,7 @@
     --white:     #FFFFFF;
   }
 
-  @page { size: A4; margin: 25mm 0; }
+  @page { size: A4; margin: 20mm 0; }
 
   html { font-size: 10.5pt; }
 
@@ -73,9 +73,11 @@
   }
 
   .contact-row {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 18px;
+    row-gap: 4px;
   }
   .contact-item {
     display: flex;
@@ -103,20 +105,20 @@
   }
 
   /* ── BRIEF ─────────────────────────────────────────── */
-  .letter { padding: 12mm 20mm 0 25mm; flex: 1; }
+  .letter { padding: 9mm 20mm 0 25mm; flex: 1; }
 
   .date {
     text-align: right;
     font-size: 10pt;
     color: var(--muted);
-    margin-bottom: 12mm;
+    margin-bottom: 8mm;
   }
 
   .subject {
     font-size: 11.5pt;
     font-weight: 700;
     color: var(--ink);
-    margin-bottom: 8mm;
+    margin-bottom: 6mm;
   }
 
   .salutation { margin-bottom: 5mm; }
@@ -147,6 +149,10 @@
           info@omarfourati.de
         </span>
         <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +49 1577 8709579
+        </span>
+        <span class="contact-item">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           Gummersbach, Deutschland
         </span>
@@ -172,19 +178,21 @@
   <!-- BRIEF -->
   <div class="letter">
 
-    <div class="date">Gummersbach, 13. Juli 2026</div>
+    <div class="date">Gummersbach, 2. Oktober 2026</div>
 
-    <div class="subject">Bewerbung als Full-Stack Developer</div>
+    <div class="subject">Bewerbung als Full-Stack Developer (Python, Vue&nbsp;3 &amp; KI)</div>
 
     <p class="salutation">Sehr geehrte Damen und Herren,</p>
 
-    <p>als <strong>Full-Stack Developer</strong> entwickle ich Web-Anwendungen und KI-Plattformen, die im Unternehmensalltag tatsächlich im Einsatz sind. Diese Erfahrung aus der professionellen Softwareentwicklung möchte ich bei Ihnen einbringen und gezielt weiter ausbauen.</p>
+    <p>seit über drei Jahren entwickle ich als <strong>Full-Stack Developer</strong> Web-Anwendungen und KI-Plattformen, die im Unternehmensalltag produktiv im Einsatz sind. Diese Erfahrung möchte ich in Ihrem Team einbringen – gerne in München oder remote.</p>
 
-    <p>Nach meinem erfolgreich abgeschlossenen <strong>B.Sc. Informatik</strong> an der TH Köln bin ich aktuell bei der <strong>KERAVONOS GmbH</strong> in Gummersbach tätig. Dort entwickle ich moderne Web-Anwendungen und KI-gestützte Plattformen, darunter einen unternehmensinternen Echtzeit-Chat sowie die B2B-Sales-Plattform Pronto. Mein technischer Schwerpunkt liegt auf <strong>Python, FastAPI, Vue 3 und TypeScript</strong> sowie der Integration von KI-Diensten wie OpenAI und Claude. Erfahrung im direkten Kundenkontakt konnte ich zusätzlich in Projekten für die ABUS Kransysteme GmbH sammeln.</p>
+    <p>Bei der <strong>KERAVONOS GmbH</strong> in Gummersbach bin ich seit März 2023: zunächst im Praktikum, danach als Werkstudent neben meinem Informatikstudium an der TH Köln (<strong>B.Sc., 2025</strong>) und seit Oktober 2025 als Softwareentwickler in Vollzeit. Dort habe ich die B2B-Sales-Plattform <strong>Pronto</strong> mit aufgebaut, die Kaufsignale erkennt und mit KI personalisierte Vertriebstexte erzeugt, einen internen <strong>Echtzeit-Chat</strong> entwickelt und Kundenprojekte für die ABUS Kransysteme GmbH umgesetzt. Mein Schwerpunkt: <strong>Python, FastAPI, Vue&nbsp;3, TypeScript</strong> und die Integration von LLMs wie OpenAI und Claude.</p>
 
-    <p>Ein gutes Miteinander im Team ist mir besonders wichtig. Ich arbeite mich zügig in neue Themen ein und kommuniziere sicher in Deutsch, Französisch, Englisch und Arabisch, im Team ebenso wie im direkten Kundenkontakt. Wissen ist für mich Kapital, in das ich kontinuierlich investiere.</p>
+    <p>Privat entwickle und betreibe ich eigene Projekte komplett selbst, etwa ein <strong>Multiplayer-Spiel im Browser</strong> (C#/.NET, WebGL2, 211 automatisierte Tests) und einen <strong>Passwort-Manager mit Zero-Knowledge-Verschlüsselung</strong> – beide live, mit CI/CD und Monitoring auf eigenem Server.</p>
 
-    <p>Gerne erzähle ich Ihnen in einem persönlichen Gespräch mehr über meine Projekte und meine Arbeitsweise.</p>
+    <p>Mein Arbeitgeber hebt im Arbeitszeugnis meine Einsatzbereitschaft, Eigeninitiative und Zuverlässigkeit hervor. Ich arbeite mich schnell in neue Themen ein, bilde mich laufend weiter – zuletzt in Netzwerksicherheit sowie Unity und C# – und kommuniziere sicher auf Deutsch, Englisch, Französisch und Arabisch.</p>
+
+    <p>Über die Einladung zu einem persönlichen Gespräch freue ich mich sehr.</p>
 
     <div class="closing">
       <p>Mit freundlichen Grüßen</p>
