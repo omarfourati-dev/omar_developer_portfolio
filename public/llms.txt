@@ -26,24 +26,23 @@ in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
 ## Technical Skills
 
 ### Frontend
-- React, Next.js 15, TypeScript, Tailwind CSS, Vue 3, Framer Motion, Zustand, Radix UI
+- Vue 3, TypeScript, Tailwind CSS (expert); React, Next.js, Vite (advanced); WebGL2, Framer Motion
 
 ### Backend
-- Python, FastAPI, Java 21, Spring Boot, Spring AI, Node.js, PostgreSQL, Prisma, Docker, REST APIs, WebSockets
+- Python, FastAPI, REST APIs (expert); WebSockets, Node.js (advanced); Java / Spring Boot, C# / .NET, Server-Sent Events
 
-### AI & Machine Learning
-- TensorFlow, PyTorch, XGBoost, OpenAI API (GPT-4o), Claude API (Anthropic), Gemini API
-- LLM Integration, LangChain, Prompt Engineering, RAG Systems
+### AI & Agentic Coding
+- LLM integration, OpenAI API, Claude API, prompt engineering (expert); Gemini API (advanced); Spring AI, LangChain, TensorFlow / PyTorch
 - Agentic coding with Claude Code (task decomposition, agent steering, code review and automated tests as quality gates)
 
 ### Databases
-- PostgreSQL, MariaDB, Supabase, Prisma ORM, Data Modeling, Query Optimization
+- PostgreSQL (expert); MariaDB, data modeling, Supabase, Prisma, SQLAlchemy (advanced); Flyway
 
-### DevOps
-- Docker, Docker Compose, Nginx, GitHub Actions, Vercel, CI/CD, Linux
+### DevOps & Operations
+- Docker, GitHub Actions, CI/CD, Linux servers (VPS), Caddy (advanced); Nginx, Prometheus & Grafana
 
-### Security
-- AES-256-GCM Encryption, OAuth 2.0, JWT, Zero-Knowledge Architecture, HTTPS/TLS
+### Quality & Security
+- pytest, Playwright E2E, OAuth 2.0 & JWT, AES-256-GCM / zero-knowledge architecture (advanced); JUnit 5 & Testcontainers, Vitest, Spring Security, network security
 
 ## Languages (Human)
 - German (C1), English (B2), French (C1), Arabic (Native)

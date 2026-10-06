@@ -13,9 +13,9 @@ const roles = [
 ];
 
 const TICKER_ITEMS = [
-  "React", "Next.js", "TypeScript", "FastAPI", "Python", "Vue 3",
-  "TensorFlow", "PyTorch", "OpenAI API", "PostgreSQL", "Docker",
-  "WebSockets", "Framer Motion", "LangChain", "SQLAlchemy", "Tailwind CSS",
+  "Python", "FastAPI", "Vue 3", "TypeScript", "Java", "Spring Boot",
+  "OpenAI API", "Claude API", "Agentic Coding", "PostgreSQL", "Docker",
+  "React", "Next.js", "C# / .NET", "GitHub Actions", "Tailwind CSS",
 ];
 
 function LetterByLetter({

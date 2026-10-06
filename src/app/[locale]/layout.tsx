@@ -209,7 +209,7 @@ function StructuredData({ locale }: { locale: string }) {
     address: { "@type": "PostalAddress", addressLocality: "Gummersbach", addressRegion: "NRW", addressCountry: "DE" },
     email: "info@omarfourati.de",
     sameAs: ["https://github.com/omarfourati-dev", "https://www.linkedin.com/in/omarfourati/", BASE_URL],
-    knowsAbout: ["React","Next.js","TypeScript","FastAPI","Python","Vue 3","TensorFlow","PyTorch","OpenAI API","Claude API","LangChain","PostgreSQL","Docker","WebSockets","Tailwind CSS","Machine Learning","LLM Integration"],
+    knowsAbout: ["Python","FastAPI","Vue 3","TypeScript","Java","Spring Boot","Spring AI","React","Next.js","C#",".NET","OpenAI API","Claude API","LLM Integration","Agentic Coding","LangChain","PostgreSQL","Docker","GitHub Actions","WebSockets","Tailwind CSS","Testcontainers","Playwright"],
     knowsLanguage: [{ "@type": "Language", name: "German" },{ "@type": "Language", name: "English" },{ "@type": "Language", name: "French" },{ "@type": "Language", name: "Arabic" }],
     worksFor: { "@type": "Organization", name: "KERAVONOS GmbH" },
   };
