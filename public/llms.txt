@@ -54,8 +54,9 @@ in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
 AI invoice inbox for small businesses: PDF invoices are uploaded and an LLM extracts supplier,
 invoice number, amounts, VAT and IBAN into typed Java records (Spring AI structured output).
 Spring Security with JWT, role hierarchy and a four-eyes approval workflow with audit trail.
+Automatic checks for duplicates, VAT errors and changed IBANs; DATEV-style CSV export; Vue 3 UI with live status (SSE).
 Background processing on virtual threads, tested with Testcontainers, deployed via GitHub Actions.
-Stack: Java 21, Spring Boot 3, Spring AI, Spring Security, PostgreSQL, Flyway, Docker
+Stack: Java 21, Spring Boot 3, Spring AI, Spring Security, PostgreSQL, Flyway, Vue 3, TypeScript, Docker
 Live: https://belegfluss.omarfourati.de · Code: https://github.com/omarfourati-dev/belegfluss
 
 ### KI-WM-Prognosen (AI World Cup Predictions)
