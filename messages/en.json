@@ -21,7 +21,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Passionate about building intelligent applications",
-    "bio": "Omar Fourati is a Full-Stack Developer based in Gummersbach, Germany. Since March 2023 he has been working at KERAVONOS GmbH, first as an intern, then from June 2023 as a working student alongside his studies and full-time since October 2025. He has built an internal real-time chat platform, Pronto (B2B sales AI) and rentgate (rental software). His stack: Python, FastAPI, Vue 3, TypeScript and LLM integrations with OpenAI, Claude and Gemini. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
+    "bio": "Omar Fourati is a Full-Stack Developer based in Gummersbach, Germany. Since March 2023 he has been working at KERAVONOS GmbH, first as an intern, then from June 2023 as a working student alongside his studies and full-time since October 2025. He has built an internal real-time chat platform, Pronto (B2B sales AI) and rentgate (rental software). His stack: Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot and LLM integrations with OpenAI, Claude and Gemini. He works extensively with agentic coding (Claude Code), backed by code review and automated tests. He holds a B.Sc. in Computer Science from TH Köln (September 2025) and is available for freelance projects in the DACH region and remotely worldwide.",
     "highlights": {
       "projects": "Projects",
       "experience": "Years Experience",

@@ -34,6 +34,7 @@ in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
 ### AI & Machine Learning
 - TensorFlow, PyTorch, XGBoost, OpenAI API (GPT-4o), Claude API (Anthropic), Gemini API
 - LLM Integration, LangChain, Prompt Engineering, RAG Systems
+- Agentic coding with Claude Code (task decomposition, agent steering, code review and automated tests as quality gates)
 
 ### Databases
 - PostgreSQL, MariaDB, Supabase, Prisma ORM, Data Modeling, Query Optimization
