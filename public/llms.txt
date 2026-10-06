@@ -29,7 +29,7 @@ in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
 - React, Next.js 15, TypeScript, Tailwind CSS, Vue 3, Framer Motion, Zustand, Radix UI
 
 ### Backend
-- Python, FastAPI, Node.js, PostgreSQL, Prisma, Docker, REST APIs, WebSockets
+- Python, FastAPI, Java 21, Spring Boot, Spring AI, Node.js, PostgreSQL, Prisma, Docker, REST APIs, WebSockets
 
 ### AI & Machine Learning
 - TensorFlow, PyTorch, XGBoost, OpenAI API (GPT-4o), Claude API (Anthropic), Gemini API
@@ -48,6 +48,13 @@ in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
 - German (C1), English (B2), French (C1), Arabic (Native)
 
 ## Selected Projects
+
+### Belegfluss (AI Invoice Inbox)
+AI invoice inbox for small businesses: PDF invoices are uploaded and an LLM extracts supplier,
+invoice number, amounts, VAT and IBAN into typed Java records (Spring AI structured output).
+Background processing on virtual threads, tested with Testcontainers, deployed via GitHub Actions.
+Stack: Java 21, Spring Boot 3, Spring AI, PostgreSQL, Flyway, Docker
+Live: https://belegfluss.omarfourati.de · Code: https://github.com/omarfourati-dev/belegfluss
 
 ### KI-WM-Prognosen (AI World Cup Predictions)
 AI predictions for FIFA World Cup 2026 using 4 LLM models (GPT-4o, Gemini, Claude, Grok).

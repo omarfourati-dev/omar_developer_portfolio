@@ -31,6 +31,21 @@ export const projects: Project[] = [
     category: "fullstack",
   },
   {
+    id: "belegfluss",
+    title: "Belegfluss",
+    description: {
+      de: "KI-Rechnungseingang für kleine Firmen: PDF-Rechnungen hochladen, ein LLM liest Lieferant, Rechnungsnummer, Beträge, MwSt. und IBAN per Spring AI Structured Output direkt in typisierte Java-Records aus. Verarbeitung im Hintergrund auf Virtual Threads, getestet mit Testcontainers.",
+      en: "AI invoice inbox for small businesses: upload PDF invoices and an LLM extracts supplier, invoice number, amounts, VAT and IBAN straight into typed Java records via Spring AI structured output. Background processing on virtual threads, tested with Testcontainers.",
+      fr: "Boîte de réception de factures avec IA pour les petites entreprises : téléversez des factures PDF, un LLM extrait fournisseur, numéro, montants, TVA et IBAN directement dans des records Java typés via la sortie structurée de Spring AI. Traitement en arrière-plan sur threads virtuels, testé avec Testcontainers.",
+      ar: "صندوق وارد للفواتير بالذكاء الاصطناعي للشركات الصغيرة: رفع فواتير PDF ليستخرج نموذج لغوي المورّد ورقم الفاتورة والمبالغ وضريبة القيمة المضافة والـ IBAN مباشرةً إلى Java Records عبر المخرجات المنظمة في Spring AI. معالجة في الخلفية على الخيوط الافتراضية ومختبر باستخدام Testcontainers.",
+    },
+    tags: ["Java 21", "Spring Boot", "Spring AI", "PostgreSQL", "Flyway", "Testcontainers", "Docker", "GitHub Actions"],
+    github: "https://github.com/omarfourati-dev/belegfluss",
+    demo: "https://belegfluss.omarfourati.de/",
+    featured: true,
+    category: "ai",
+  },
+  {
     id: "trading-bot",
     title: "Trading-Bot",
     description: {
