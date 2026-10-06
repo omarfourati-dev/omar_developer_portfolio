@@ -47,78 +47,64 @@ const metaByLocale: Record<string, { title: string; description: string; keyword
   de: {
     title: "Omar Fourati — Full-Stack Developer | Gummersbach",
     description:
-      "Full-Stack Developer aus Gummersbach. Spezialisiert auf Python, FastAPI, Vue 3, TypeScript und KI-Integrationen. Verfügbar für Freelance-Projekte, SaaS-Entwicklung und Web-Apps.",
+      "Full-Stack Developer aus Gummersbach: Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot und KI-Integrationen mit OpenAI und Claude. Offen für eine neue Festanstellung – remote oder in München.",
     keywords: [
-      "Full-Stack Developer Gummersbach",
-      "Freelance Webentwickler Deutschland",
+      "Full-Stack Developer",
+      "Full-Stack Entwickler Remote",
       "Python FastAPI Entwickler",
-      "Vue Entwickler NRW",
-      "Next.js Entwickler",
-      "KI Integration Freelancer",
+      "Vue 3 TypeScript Entwickler",
+      "Java Spring Boot Entwickler",
+      "KI Integration Entwickler",
       "LLM Integration Developer",
-      "OpenAI GPT Entwickler",
-      "SaaS Entwicklung NRW",
-      "TypeScript Entwickler",
-      "Webentwicklung Gummersbach NRW",
-      "AI Developer Germany",
+      "Agentic Coding",
+      "Softwareentwickler NRW",
+      "Softwareentwickler München",
+      "Backend Entwickler Python",
       "Omar Fourati",
-      "Freelance Developer NRW",
-      "Machine Learning Entwickler",
-      "Softwareentwickler Gummersbach",
     ],
   },
   en: {
     title: "Omar Fourati — Full-Stack Developer | Gummersbach, Germany",
     description:
-      "Full-Stack Developer based in Gummersbach, Germany. Expert in Python, FastAPI, Vue 3, TypeScript and LLM integrations. Available for freelance projects and SaaS development.",
+      "Full-Stack Developer in Germany: Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot and LLM integrations with OpenAI and Claude. Open to a new full-time role – remote or in Munich.",
     keywords: [
       "Full-Stack Developer Germany",
-      "Freelance Web Developer Gummersbach",
+      "Remote Full-Stack Developer",
       "Python FastAPI Developer",
-      "Vue Developer Germany",
-      "React Next.js Developer",
-      "AI Integration Freelancer",
+      "Vue TypeScript Developer",
+      "Java Spring Boot Developer",
+      "AI Integration Developer",
       "LLM Developer Germany",
-      "OpenAI GPT Developer",
-      "SaaS Development Germany",
-      "TypeScript Developer",
+      "Agentic Coding",
+      "Backend Developer Python",
+      "Software Engineer Munich",
       "Omar Fourati",
-      "AI Developer Germany",
-      "Machine Learning Developer",
-      "Remote Developer Germany",
     ],
   },
   fr: {
     title: "Omar Fourati — Développeur Full-Stack | Gummersbach, Allemagne",
     description:
-      "Développeur Full-Stack basé à Gummersbach, Allemagne. Expert en Python, FastAPI, Vue 3, TypeScript et intégrations LLM. Disponible pour projets freelance et développement SaaS.",
+      "Développeur Full-Stack en Allemagne : Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot et intégrations LLM avec OpenAI et Claude. Ouvert à un nouveau poste en CDI – à distance ou à Munich.",
     keywords: [
       "Développeur Full-Stack Allemagne",
-      "Freelance Développeur Web Allemagne",
+      "Développeur Full-Stack à distance",
       "Développeur Python FastAPI",
       "Développeur Vue TypeScript",
+      "Développeur Java Spring Boot",
       "Intégration IA LLM",
-      "Intégration OpenAI GPT",
-      "Développement SaaS Allemagne",
-      "Développeur Machine Learning",
-      "Expert Intelligence Artificielle",
-      "Développeur Web Freelance Europe",
       "Omar Fourati",
     ],
   },
   ar: {
     title: "Omar Fourati — Full-Stack Developer | Gummersbach",
     description:
-      "Full-Stack Developer in Gummersbach, Germany. Specialized in Python, FastAPI, Vue 3, TypeScript and LLM integrations. Available for freelance projects.",
+      "Full-Stack Developer in Germany: Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot and LLM integrations. Open to a new full-time role – remote or in Munich.",
     keywords: [
-      "Freelance Developer Germany Arabic",
-      "Full-Stack Developer Gummersbach",
+      "Full-Stack Developer Germany",
       "Python FastAPI Developer",
       "Vue TypeScript Developer",
+      "Java Spring Boot Developer",
       "AI Integration LLM",
-      "OpenAI GPT Developer",
-      "SaaS Development",
-      "Machine Learning Germany",
       "Omar Fourati",
     ],
   },
@@ -204,8 +190,8 @@ function StructuredData({ locale }: { locale: string }) {
     image: `${BASE_URL}/images/omar.JPG`,
     jobTitle: "Full-Stack Developer",
     description: isDE
-      ? "Full-Stack Developer aus Gummersbach. 4+ Jahre Erfahrung. Python, FastAPI, Vue 3, TypeScript, KI. Freelance verfuegbar."
-      : "Full-Stack Developer from Gummersbach. 4+ years experience. Python, FastAPI, Vue 3, TypeScript, AI. Available for freelance.",
+      ? "Full-Stack Developer aus Gummersbach. Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot, KI-Integration. Offen für eine neue Festanstellung."
+      : "Full-Stack Developer from Gummersbach, Germany. Python, FastAPI, Vue 3, TypeScript, Java/Spring Boot, AI integration. Open to a new full-time role.",
     address: { "@type": "PostalAddress", addressLocality: "Gummersbach", addressRegion: "NRW", addressCountry: "DE" },
     email: "info@omarfourati.de",
     sameAs: ["https://github.com/omarfourati-dev", "https://www.linkedin.com/in/omarfourati/", BASE_URL],
@@ -221,17 +207,6 @@ function StructuredData({ locale }: { locale: string }) {
     author: { "@type": "Person", name: "Omar Fourati" },
     inLanguage: ["de", "en", "fr", "ar"],
   };
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: isDE ? "Freelance Webentwicklung & KI-Integration" : "Freelance Web Development & AI Integration",
-    provider: { "@type": "Person", name: "Omar Fourati", url: BASE_URL },
-    areaServed: [{ "@type": "Country", name: "Germany" }, { "@type": "Country", name: "Austria" }, { "@type": "Country", name: "Switzerland" }],
-    description: isDE
-      ? "Full-Stack Entwicklung mit React/Next.js und Python/FastAPI. KI-Integration mit OpenAI, Claude und Gemini. Freelance DACH und remote."
-      : "Full-Stack development with React/Next.js and Python/FastAPI. AI integration with OpenAI, Claude and Gemini. Freelance DACH and remote.",
-    offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
-  };
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -243,7 +218,6 @@ function StructuredData({ locale }: { locale: string }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }} />
     </>
   );

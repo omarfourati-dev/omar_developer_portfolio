@@ -5,10 +5,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 const copy: Record<string, { role: string; tag: string }> = {
-  de: { role: "Full-Stack Developer", tag: "Gummersbach · Freelance verfügbar" },
-  en: { role: "Full-Stack Developer", tag: "Gummersbach · Available for freelance" },
-  fr: { role: "Développeur Full-Stack", tag: "Gummersbach · Disponible en freelance" },
-  ar: { role: "Full-Stack Developer", tag: "Gummersbach · Available for freelance" },
+  de: { role: "Full-Stack Developer", tag: "Python · Vue 3 · Java · KI-Integration" },
+  en: { role: "Full-Stack Developer", tag: "Python · Vue 3 · Java · AI Integration" },
+  fr: { role: "Développeur Full-Stack", tag: "Python · Vue 3 · Java · Intégration IA" },
+  ar: { role: "Full-Stack Developer", tag: "Python · Vue 3 · Java · AI Integration" },
 };
 
 const tech = ["Python", "FastAPI", "Vue 3", "TypeScript", "React", "OpenAI", "Docker"];

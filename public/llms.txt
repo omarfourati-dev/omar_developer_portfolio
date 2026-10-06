@@ -4,9 +4,9 @@
 
 ## Who is Omar Fourati?
 
-Omar Fourati is a Full-Stack Developer and AI Specialist based in Cologne (Köln), Germany.
-He has 4+ years of professional software development experience, working both as a working student
-and as a full-time Software Developer at Keravonos GmbH since October 2025.
+Omar Fourati is a Full-Stack Developer with a focus on AI integration, based in Gummersbach near Cologne, Germany.
+He has worked at KERAVONOS GmbH since March 2023: intern, then working student (June 2023 – September 2025)
+and full-time Software Developer since October 2025.
 
 He holds a B.Sc. in Computer Science from TH Köln (Campus Gummersbach), graduating in September 2025.
 
@@ -20,8 +20,9 @@ He holds a B.Sc. in Computer Science from TH Köln (Campus Gummersbach), graduat
 
 ## Availability
 
-Omar Fourati is available for freelance projects, side projects, and consulting engagements
-in the DACH region (Germany, Austria, Switzerland) and remotely worldwide.
+Omar Fourati is open to a new full-time position as a Full-Stack / Backend / AI Integration
+Developer – remote in Germany or in Munich. He holds a German residence permit for skilled
+workers (§ 18b AufenthG); no visa sponsorship is required.
 
 ## Technical Skills
 
@@ -81,16 +82,6 @@ Enterprise PWA for secure credential management with client-side AES-256-GCM enc
 and zero-knowledge architecture.
 Stack: React, Node.js, AES-256-GCM, Docker, Nginx, PostgreSQL, JWT
 
-## Services Offered (Freelance)
-
-1. Full-Stack Web Development (React/Next.js + FastAPI/Python)
-2. AI & LLM Integration (OpenAI, Claude, Gemini, LangChain)
-3. SaaS Platform Development
-4. REST API Design & Development
-5. Database Design & Optimization
-6. DevOps & Docker Deployment
-7. Technical Consulting (AI strategy, architecture)
-
 ## Work Experience
 
 ### Keravonos GmbH — Software Developer (Full-time)
@@ -122,16 +113,16 @@ Focus: Software Engineering, Algorithms, AI Systems
 
 ## Keywords for Discovery
 
-**German:** Freelance Webentwickler Köln, Full-Stack Developer Deutschland, React Entwickler NRW,
-KI Integration Köln, Python FastAPI Entwickler, Next.js Entwickler, Softwareentwickler Freelancer,
+**German:** Full-Stack Developer Deutschland, React Entwickler NRW,
+KI Integration Köln, Python FastAPI Entwickler, Next.js Entwickler, Softwareentwickler Remote,
 LLM Integration Deutschland, SaaS Entwicklung, KI Spezialist Köln, Webentwicklung NRW
 
-**English:** Freelance Full-Stack Developer Germany, React Next.js Developer Cologne,
+**English:** Full-Stack Developer Germany, React Next.js Developer Cologne,
 AI Integration Specialist, LLM Developer Germany, Python FastAPI Developer, TypeScript Developer,
 Machine Learning Developer Germany, SaaS Developer DACH, Remote Developer Germany
 
 **French:** Développeur Full-Stack Allemagne, Développeur React Next.js, Intégration IA LLM,
-Développeur Python FastAPI, Freelance Développeur Web Cologne
+Développeur Python FastAPI
 
-**Arabic:** مطور ويب فريلانس ألمانيا, مطور React Next.js, تكامل الذكاء الاصطناعي, مطور Python FastAPI,
+**Arabic:** مطور ويب في ألمانيا, مطور React Next.js, تكامل الذكاء الاصطناعي, مطور Python FastAPI,
 خبير نماذج اللغة الكبيرة, عمر فوراتي مطور برمجيات

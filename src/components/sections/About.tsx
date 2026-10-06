@@ -48,7 +48,7 @@ export default function About() {
 
   const highlights = [
     { value: 10, suffix: "+", label: t("highlights.projects") },
-    { value: 4,  suffix: "+", label: t("highlights.experience") },
+    { value: 3,  suffix: "+", label: t("highlights.experience") },
     { value: 4,  suffix: "",  label: t("highlights.languages") },
     { value: 2,  suffix: "",  label: t("highlights.clients") },
   ];
