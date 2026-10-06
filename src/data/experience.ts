@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-ai-seo",
+    company: "Udemy",
+    role: {
+      de: "Artificial Intelligence in SEO (Extreme Edition)",
+      en: "Artificial Intelligence in SEO (Extreme Edition)",
+      fr: "Artificial Intelligence in SEO (Extreme Edition)",
+      ar: "Artificial Intelligence in SEO (Extreme Edition)",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Einsatz von Künstlicher Intelligenz und KI-Tools in der Suchmaschinenoptimierung (SEO) (1,5 Std.).",
+      en: "Using artificial intelligence and AI tools for search engine optimization (SEO) (1.5 hrs).",
+      fr: "Utilisation de l'intelligence artificielle et des outils d'IA pour le référencement (SEO) (1,5 h).",
+      ar: "استخدام الذكاء الاصطناعي وأدواته في تحسين محركات البحث (SEO) (1.5 ساعة).",
+    },
+    tags: ["KI", "SEO"],
+  },
+  {
     id: "cert-unity-physics",
     company: "Udemy",
     role: {
