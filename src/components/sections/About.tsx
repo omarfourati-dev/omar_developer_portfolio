@@ -150,7 +150,7 @@ export default function About() {
                     </span>
                     <span
                       className="text-xs tracking-[0.3em] uppercase"
-                      style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                      style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                     >
                       Omar Fourati
                     </span>
@@ -219,7 +219,7 @@ export default function About() {
                       </p>
                       <p
                         className="text-xs"
-                        style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                        style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                       >
                         {lang.level}
                       </p>

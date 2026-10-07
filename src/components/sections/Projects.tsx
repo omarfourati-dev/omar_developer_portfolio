@@ -82,7 +82,7 @@ export default function Projects() {
                 >
                   {project.title}
                 </h4>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "#6B6054" }}>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#938572" }}>
                   {project.description[locale as keyof typeof project.description] ?? project.description.de}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
@@ -92,7 +92,7 @@ export default function Projects() {
                       className="text-xs px-2.5 py-1 rounded"
                       style={{
                         backgroundColor: "#1A1510",
-                        color: "#6B6054",
+                        color: "#938572",
                         fontFamily: "var(--font-space-mono)",
                       }}
                     >

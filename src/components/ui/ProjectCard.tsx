@@ -199,7 +199,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
               style={{
                 backgroundColor: "#1A1510",
                 border: "1px solid #2A2218",
-                color: "#6B6054",
+                color: "#938572",
                 fontFamily: "var(--font-space-mono)",
               }}
             >
@@ -209,7 +209,7 @@ export default function ProjectCard({ project, locale, index = 0, translations }
           {project.tags.length > 5 && (
             <span
               className="text-xs px-2.5 py-1 rounded"
-              style={{ color: "#6B6054", fontFamily: "var(--font-space-mono)" }}
+              style={{ color: "#938572", fontFamily: "var(--font-space-mono)" }}
             >
               +{project.tags.length - 5}
             </span>

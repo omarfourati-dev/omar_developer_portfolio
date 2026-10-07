@@ -46,7 +46,7 @@ export default function LegalArticle({ locale, backLabel, title, updated, childr
             {title}
           </h1>
           {updated && (
-            <p className="text-xs mb-10" style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}>
+            <p className="text-xs mb-10" style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}>
               {updated}
             </p>
           )}

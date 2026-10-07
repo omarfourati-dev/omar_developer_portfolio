@@ -18,16 +18,21 @@ const TICKER_ITEMS = [
   "React", "Next.js", "C# / .NET", "GitHub Actions", "Tailwind CSS",
 ];
 
+const GOLD_GRADIENT = "linear-gradient(90deg, #E8C96A, #C9A84C, #C4783E)";
+
 function LetterByLetter({
   text,
   className,
+  gradient = false,
 }: {
   text: string;
   className?: string;
+  gradient?: boolean;
 }) {
+  const chars = text.split("");
   return (
     <span className={className} aria-label={text}>
-      {text.split("").map((char, i) => (
+      {chars.map((char, i) => (
         <motion.span
           key={i}
           initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -40,6 +45,17 @@ function LetterByLetter({
           style={{
             display: "inline-block",
             whiteSpace: char === " " ? "pre" : "normal",
+            // Each animated letter is its own box, so a gradient on the parent cannot reach it.
+            // Give every letter its slice of one wide gradient: the word still reads as one sweep.
+            ...(gradient && {
+              backgroundImage: GOLD_GRADIENT,
+              backgroundSize: `${chars.length * 100}% 100%`,
+              backgroundPosition: `${chars.length > 1 ? (i / (chars.length - 1)) * 100 : 0}% 0`,
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              color: "transparent",
+            }),
           }}
         >
           {char}
@@ -77,7 +93,7 @@ export default function Hero() {
 
       {/* Corner decorative lines — top left */}
       <div
-        className="absolute top-24 left-8 w-12 h-12 pointer-events-none"
+        className="absolute top-24 left-8 w-12 h-12 pointer-events-none hidden sm:block"
         style={{
           borderTop: "1px solid rgba(201,168,76,0.3)",
           borderLeft: "1px solid rgba(201,168,76,0.3)",
@@ -85,7 +101,7 @@ export default function Hero() {
       />
       {/* Corner decorative lines — top right */}
       <div
-        className="absolute top-24 right-8 w-12 h-12 pointer-events-none"
+        className="absolute top-24 right-8 w-12 h-12 pointer-events-none hidden sm:block"
         style={{
           borderTop: "1px solid rgba(201,168,76,0.3)",
           borderRight: "1px solid rgba(201,168,76,0.3)",
@@ -149,10 +165,7 @@ export default function Hero() {
         >
           <LetterByLetter text="OMAR" />
           <br />
-          <LetterByLetter
-            text="FOURATI"
-            className="relative text-gold-gradient"
-          />
+          <LetterByLetter text="FOURATI" className="relative" gradient />
         </h1>
 
         {/* Gold rule */}
@@ -204,7 +217,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 justify-center items-center max-w-4xl mx-auto"
         >
           <a
             href="#projects"
@@ -274,7 +287,8 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.0 }}
-        className="absolute bottom-20 left-0 right-0 overflow-hidden pointer-events-none"
+        // In the normal flow below the buttons: an absolutely positioned strip overlapped them on short screens
+        className="relative mt-14 w-screen max-w-[100vw] overflow-hidden pointer-events-none"
       >
         <div
           className="py-3 border-y"
@@ -305,13 +319,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="mt-8 hidden sm:flex flex-col items-center gap-2"
       >
         <span
           className="text-xs tracking-[0.2em] uppercase"
           style={{
             fontFamily: "var(--font-space-mono)",
-            color: "#6B6054",
+            color: "#938572",
           }}
         >
           {t("scroll")}

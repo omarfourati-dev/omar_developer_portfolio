@@ -135,7 +135,7 @@ export default async function OgImage({
               {t}
             </div>
           ))}
-          <div style={{ display: "flex", marginLeft: "auto", color: "#6B6054", fontSize: 24 }}>
+          <div style={{ display: "flex", marginLeft: "auto", color: "#938572", fontSize: 24 }}>
             omarfourati.de
           </div>
         </div>

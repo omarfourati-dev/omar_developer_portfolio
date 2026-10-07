@@ -42,7 +42,7 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
         className={`absolute left-[-6px] top-2 w-3 h-3 rounded-full ${isCurrent ? "dot-pulse" : ""}`}
         style={{
           backgroundColor: isCurrent ? "#C9A84C" : "#1A1510",
-          border: `2px solid ${isCurrent ? "#C9A84C" : "#6B6054"}`,
+          border: `2px solid ${isCurrent ? "#C9A84C" : "#938572"}`,
         }}
       />
 
@@ -72,7 +72,7 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
               className="text-xs px-2 py-1 rounded"
               style={{
                 fontFamily: "var(--font-space-mono)",
-                color: "#6B6054",
+                color: "#938572",
                 backgroundColor: "#1A1510",
               }}
             >
@@ -103,7 +103,7 @@ function TimelineItem({ entry, locale, index, isCurrent }: TimelineItemProps) {
                 className="text-xs px-2.5 py-1 rounded"
                 style={{
                   backgroundColor: "#1A1510",
-                  color: "#6B6054",
+                  color: "#938572",
                   fontFamily: "var(--font-space-mono)",
                 }}
               >
@@ -146,7 +146,7 @@ export default function Experience() {
         <ScrollReveal className="mb-12">
           <h3
             className="text-xs tracking-[0.25em] uppercase mb-8"
-            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
           >
             {t("work")}
           </h3>
@@ -167,7 +167,7 @@ export default function Experience() {
         <ScrollReveal className="mb-12">
           <h3
             className="text-xs tracking-[0.25em] uppercase mb-8"
-            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
           >
             {t("education")}
           </h3>
@@ -182,7 +182,7 @@ export default function Experience() {
         <ScrollReveal>
           <h3
             className="text-xs tracking-[0.25em] uppercase mb-6"
-            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
           >
             {t("certificates")}
           </h3>
@@ -208,7 +208,7 @@ export default function Experience() {
                 </p>
                 <span
                   className="text-xs"
-                  style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                  style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                 >
                   {cert.period}
                 </span>

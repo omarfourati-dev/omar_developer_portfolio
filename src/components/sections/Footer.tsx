@@ -60,7 +60,7 @@ export default function Footer() {
             </span>
             <span
               className="text-xs"
-              style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+              style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
             >
               © {new Date().getFullYear()} Omar Fourati
             </span>
@@ -86,11 +86,11 @@ export default function Footer() {
               style={{
                 backgroundColor: "rgba(201,168,76,0.06)",
                 border: "1px solid rgba(201,168,76,0.12)",
-                color: "#6B6054",
+                color: "#938572",
               }}
               aria-label="GitHub"
               onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
               data-umami-event="footer_github_click"
             >
               {GITHUB_SVG}
@@ -103,11 +103,11 @@ export default function Footer() {
               style={{
                 backgroundColor: "rgba(201,168,76,0.06)",
                 border: "1px solid rgba(201,168,76,0.12)",
-                color: "#6B6054",
+                color: "#938572",
               }}
               aria-label="LinkedIn"
               onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
               data-umami-event="footer_linkedin_click"
             >
               {LINKEDIN_SVG}
@@ -118,11 +118,11 @@ export default function Footer() {
               style={{
                 backgroundColor: "rgba(201,168,76,0.06)",
                 border: "1px solid rgba(201,168,76,0.12)",
-                color: "#6B6054",
+                color: "#938572",
               }}
               aria-label="Email"
               onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
               data-umami-event="footer_email_click"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,9 +138,9 @@ export default function Footer() {
           <a
             href={`/${locale}/impressum`}
             className="transition-colors duration-200"
-            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
           >
             {t("imprint")}
           </a>
@@ -148,9 +148,9 @@ export default function Footer() {
           <a
             href={`/${locale}/datenschutz`}
             className="transition-colors duration-200"
-            style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#6B6054")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
           >
             {t("privacy")}
           </a>

@@ -82,7 +82,7 @@ export default function Contact() {
                 <Mail size={18} style={{ color: "#C9A84C" }} />
               </div>
               <div>
-                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>{t("email")}</p>
+                <p className="text-xs mb-1" style={{ color: "#938572" }}>{t("email")}</p>
                 <p
                   className="text-sm font-medium group-hover:text-[#C9A84C] transition-colors"
                   style={{ color: "#F0E8D5" }}
@@ -104,7 +104,7 @@ export default function Contact() {
                 <MapPin size={18} style={{ color: "#C9A84C" }} />
               </div>
               <div>
-                <p className="text-xs mb-1" style={{ color: "#6B6054" }}>{t("location")}</p>
+                <p className="text-xs mb-1" style={{ color: "#938572" }}>{t("location")}</p>
                 <p className="text-sm font-medium" style={{ color: "#F0E8D5" }}>
                   {tAbout("location")}
                 </p>
@@ -157,7 +157,7 @@ export default function Contact() {
                 <div>
                   <label
                     className="block text-sm tracking-[0.12em] uppercase mb-2.5"
-                    style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                    style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                   >
                     {t("name")}
                   </label>
@@ -178,7 +178,7 @@ export default function Contact() {
                 <div>
                   <label
                     className="block text-sm tracking-[0.12em] uppercase mb-2.5"
-                    style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                    style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                   >
                     {t("email")}
                   </label>
@@ -200,7 +200,7 @@ export default function Contact() {
               <div>
                 <label
                   className="block text-sm tracking-[0.12em] uppercase mb-2.5"
-                  style={{ fontFamily: "var(--font-space-mono)", color: "#6B6054" }}
+                  style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
                 >
                   {t("message")}
                 </label>
@@ -225,7 +225,7 @@ export default function Contact() {
                 className="w-full py-4 rounded-lg text-base font-semibold tracking-wide transition-all"
                 style={{
                   backgroundColor: sent ? "#2A2218" : "#C9A84C",
-                  color: sent ? "#6B6054" : "#0B0907",
+                  color: sent ? "#938572" : "#0B0907",
                   fontFamily: "var(--font-syne)",
                 }}
                 data-umami-event="contact_form_submit"

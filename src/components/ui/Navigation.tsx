@@ -112,7 +112,7 @@ export default function Navigation({ locale }: NavigationProps) {
             </span>
             <span
               className="hidden sm:block text-xs tracking-[0.2em] uppercase"
-              style={{ color: "#6B6054" }}
+              style={{ color: "#938572" }}
             >
               Portfolio
             </span>
@@ -127,7 +127,7 @@ export default function Navigation({ locale }: NavigationProps) {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="relative text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[#C9A84C] py-1"
+                  className="relative whitespace-nowrap text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[#C9A84C] py-1"
                   style={{ color: isActive ? "#C9A84C" : "#A89B84" }}
                 >
                   {link.label}
@@ -158,7 +158,7 @@ export default function Navigation({ locale }: NavigationProps) {
                   className="px-2.5 py-1 rounded text-xs font-medium transition-all duration-200"
                   style={{
                     fontFamily: "var(--font-space-mono)",
-                    color: loc === locale ? "#C9A84C" : "#6B6054",
+                    color: loc === locale ? "#C9A84C" : "#938572",
                     backgroundColor: loc === locale ? "rgba(201,168,76,0.15)" : "transparent",
                     borderRight: i < locales.length - 1 ? "1px solid rgba(201,168,76,0.08)" : "none",
                   }}
