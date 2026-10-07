@@ -4,8 +4,7 @@ Allow: /
 # Sitemaps
 Sitemap: https://omarfourati.de/sitemap.xml
 
-# Block build artifacts
-Disallow: /_next/
+# Scripts and styles under /_next/ stay crawlable: Google needs them to render the page
 Disallow: /api/
 
 # AI Crawlers — allowed for GEO (Generative Engine Optimization)

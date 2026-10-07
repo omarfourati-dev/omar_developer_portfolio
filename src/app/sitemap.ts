@@ -16,15 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const languages = languageAlternates();
 
-  // Root redirect
-  const root: MetadataRoute.Sitemap[0] = {
-    url: BASE_URL,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 1,
-    alternates: { languages },
-  };
-
+  // Only final URLs: the root redirects to /de, and redirecting URLs do not belong in a sitemap
   // One entry per locale
   const localeEntries: MetadataRoute.Sitemap = locales.map((locale) => ({
     url: `${BASE_URL}/${locale}`,
@@ -34,5 +26,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: { languages },
   }));
 
-  return [root, ...localeEntries];
+  return localeEntries;
 }
