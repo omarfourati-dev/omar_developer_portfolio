@@ -51,8 +51,9 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 ## Selected Projects
 
 ### Belegfluss (AI Invoice Inbox)
-AI invoice inbox for small businesses: PDF invoices are uploaded and an LLM extracts supplier,
-invoice number, amounts, VAT and IBAN into typed Java records (Spring AI structured output).
+AI invoice inbox for small businesses: German e-invoices (XRechnung UBL/CII, ZUGFeRD/Factur-X) are
+taken over exactly without AI; PDFs and scans are read by an LLM into typed Java records (Spring AI
+structured output and vision). Playwright end-to-end tests run the whole approval process in CI.
 Spring Security with JWT, role hierarchy and a four-eyes approval workflow with audit trail.
 Automatic checks for duplicates, VAT errors and changed IBANs; DATEV-style CSV export; Vue 3 UI with live status (SSE).
 Background processing on virtual threads, tested with Testcontainers, deployed via GitHub Actions.
