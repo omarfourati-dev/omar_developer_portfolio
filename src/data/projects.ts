@@ -31,6 +31,21 @@ export const projects: Project[] = [
     category: "fullstack",
   },
   {
+    id: "briefklar",
+    title: "Briefklar",
+    description: {
+      de: "Erklärt deutsche Behördenbriefe in einfacher Sprache auf Deutsch, Englisch, Französisch und Arabisch – mit Frist als Kalendereintrag, Checkliste und Antwort-Entwurf. Texterkennung (Tesseract) und das Schwärzen persönlicher Daten laufen auf dem Server, bevor die KI den Text sieht; eine Vorschau zeigt exakt, was gesendet wird. Go-Backend mit Standardbibliothek, Angular-Frontend mit Signals, Playwright-Tests in der CI.",
+      en: "Explains German authority letters in plain language in German, English, French and Arabic – with the deadline as a calendar file, a checklist and a reply draft. OCR (Tesseract) and redaction of personal data run on the server before the AI sees the text; a preview shows exactly what is sent. Go backend on the standard library, Angular frontend with signals, Playwright tests in CI.",
+      fr: "Explique les courriers administratifs allemands en langage simple, en allemand, anglais, français et arabe – avec l'échéance en fichier calendrier, une checklist et un brouillon de réponse. La reconnaissance de texte (Tesseract) et le masquage des données personnelles se font sur le serveur avant que l'IA ne voie le texte ; un aperçu montre exactement ce qui est envoyé. Backend Go avec la bibliothèque standard, frontend Angular avec signals, tests Playwright en CI.",
+      ar: "يشرح رسائل الجهات الحكومية الألمانية بلغة بسيطة بالألمانية والإنجليزية والفرنسية والعربية، مع الموعد النهائي كملف تقويم وقائمة مهام ومسودة رد. يتم التعرف على النص (Tesseract) وإخفاء البيانات الشخصية على الخادم قبل أن يرى الذكاء الاصطناعي النص، وتعرض معاينة ما يُرسل بالضبط. واجهة خلفية بلغة Go بالمكتبة القياسية، وواجهة أمامية Angular مع Signals، واختبارات Playwright في CI.",
+    },
+    tags: ["Go", "Angular", "TypeScript", "PostgreSQL", "Tesseract OCR", "OpenAI API", "Docker", "Playwright"],
+    github: "https://github.com/omarfourati-dev/Briefklar",
+    demo: "https://briefklar.omarfourati.de/",
+    featured: true,
+    category: "ai",
+  },
+  {
     id: "belegfluss",
     title: "Belegfluss",
     description: {

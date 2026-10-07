@@ -50,6 +50,15 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 
 ## Selected Projects
 
+### Briefklar (German Authority Letters Explained)
+Explains German authority letters (immigration office, tax office, health insurance, broadcasting fee) in plain
+language in German, English, French and Arabic, with the deadline as a calendar file, a checklist and a reply draft.
+OCR (Tesseract) and redaction of personal data run on the server before the text reaches the LLM; a preview shows
+exactly what is sent, and nothing is stored. Go backend (net/http, pgx, slog, embed), Angular frontend (standalone
+components, signals), Go table tests with testcontainers, Angular unit tests, Playwright end-to-end tests in CI.
+Stack: Go, Angular, TypeScript, PostgreSQL, Tesseract OCR, OpenAI API, Docker, GitHub Actions
+Live: https://briefklar.omarfourati.de · Code: https://github.com/omarfourati-dev/Briefklar
+
 ### Belegfluss (AI Invoice Inbox)
 AI invoice inbox for small businesses: German e-invoices (XRechnung UBL/CII, ZUGFeRD/Factur-X) are
 taken over exactly without AI; PDFs and scans are read by an LLM into typed Java records (Spring AI
