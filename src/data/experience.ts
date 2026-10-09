@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-react-complete",
+    company: "Udemy",
+    role: {
+      de: "React – Complete Developer Course with Hands-On Projects",
+      en: "React – Complete Developer Course with Hands-On Projects",
+      fr: "React – Complete Developer Course with Hands-On Projects",
+      ar: "React – Complete Developer Course with Hands-On Projects",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Umfassender React-Kurs mit praxisnahen Projekten (10,5 Std.).",
+      en: "Comprehensive React course with hands-on projects (10.5 hrs).",
+      fr: "Cours React complet avec des projets pratiques (10,5 h).",
+      ar: "دورة React شاملة مع مشاريع عملية (10.5 ساعة).",
+    },
+    tags: ["React", "JavaScript"],
+  },
+  {
     id: "cert-ai-seo",
     company: "Udemy",
     role: {
