@@ -16,14 +16,20 @@ const LINKEDIN_SVG = (
   </svg>
 );
 
-type GoogleFc = { showRevocationMessage?: () => void; callbackQueue?: Array<() => void> };
+/** Cookies in which Google's consent message (CMP) stores the visitor's ad-consent decision. */
+const CONSENT_COOKIES = ["FCCDCF", "FCNEC"];
 
-/** Opens Google's consent message again, so visitors can change or withdraw their ad consent at any time. */
+/**
+ * "Datenschutzeinstellungen": forget the stored ad-consent decision and reload, so Google shows its consent message
+ * again exactly like on a first visit – visitors can change or withdraw their consent at any time. (Google's own
+ * googlefc.showRevocationMessage() did not reliably bring the message back.)
+ */
 function showPrivacyOptions() {
-  const w = window as unknown as { googlefc?: GoogleFc };
-  w.googlefc = w.googlefc ?? {};
-  w.googlefc.callbackQueue = w.googlefc.callbackQueue ?? [];
-  w.googlefc.callbackQueue.push(() => w.googlefc?.showRevocationMessage?.());
+  const parts = location.hostname.split(".");
+  const domains = [""];
+  for (let k = 0; k < parts.length - 1; k++) domains.push(`; domain=.${parts.slice(k).join(".")}`);
+  for (const name of CONSENT_COOKIES) for (const d of domains) document.cookie = `${name}=; Max-Age=0; path=/${d}`;
+  location.reload();
 }
 
 const ARROW_UP_SVG = (
