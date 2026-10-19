@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import Script from "next/script";
 import AdSenseLoader from "@/components/ui/AdSenseLoader";
+import ConsentDiagnose from "@/components/ui/ConsentDiagnose";
 import MotionProvider from "@/components/ui/MotionProvider";
 import { ADSENSE_META } from "@/lib/seo";
 import "../globals.css";
@@ -258,6 +259,7 @@ export default async function LocaleLayout({
         />
         {/* Google AdSense (auto ads). Consent first: Google's certified consent message (see /datenschutz). */}
         <AdSenseLoader />
+        <ConsentDiagnose />
       </body>
     </html>
   );
