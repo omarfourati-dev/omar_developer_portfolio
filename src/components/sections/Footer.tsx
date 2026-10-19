@@ -16,6 +16,16 @@ const LINKEDIN_SVG = (
   </svg>
 );
 
+type GoogleFc = { showRevocationMessage?: () => void; callbackQueue?: Array<() => void> };
+
+/** Opens Google's consent message again, so visitors can change or withdraw their ad consent at any time. */
+function showPrivacyOptions() {
+  const w = window as unknown as { googlefc?: GoogleFc };
+  w.googlefc = w.googlefc ?? {};
+  w.googlefc.callbackQueue = w.googlefc.callbackQueue ?? [];
+  w.googlefc.callbackQueue.push(() => w.googlefc?.showRevocationMessage?.());
+}
+
 const ARROW_UP_SVG = (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <line x1="12" y1="19" x2="12" y2="5" />
@@ -154,6 +164,17 @@ export default function Footer() {
           >
             {t("privacy")}
           </a>
+          <span aria-hidden="true" style={{ color: "#2A2218" }}>•</span>
+          <button
+            type="button"
+            onClick={showPrivacyOptions}
+            className="transition-colors duration-200"
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#938572")}
+          >
+            {t("privacy_settings")}
+          </button>
         </div>
       </footer>
 

@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import Script from "next/script";
 import MotionProvider from "@/components/ui/MotionProvider";
-import { ADSENSE_META } from "@/lib/seo";
+import { ADSENSE_META, ADSENSE_SCRIPT_SRC } from "@/lib/seo";
 import "../globals.css";
 
 // Reichweitenmessung: selbst gehostetes Umami (Teil 2 der Analyse-Spec), cookie-frei. SRI-Hash zur festgelegten
@@ -255,6 +255,9 @@ export default async function LocaleLayout({
           data-domains="omarfourati.de,www.omarfourati.de"
           data-do-not-track="true"
         />
+        {/* Google AdSense (auto ads), loaded after hydration because it inserts its own scripts into <head>.
+            Consent first: Google's certified consent message from "Privacy & messaging" (see /datenschutz). */}
+        <Script id="adsense" src={ADSENSE_SCRIPT_SRC} strategy="afterInteractive" crossOrigin="anonymous" />
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: "Datenschutzerklärung — Omar Fourati",
     description:
-      "Datenschutzerklärung der Website omarfourati.de: Verantwortlicher, Hosting, Server-Logs, Cookies und Betroffenenrechte.",
+      "Datenschutzerklärung der Website omarfourati.de: Verantwortlicher, Hosting, Server-Logs, Reichweitenmessung, Google AdSense mit Einwilligung und Betroffenenrechte.",
     alternates: { canonical: `${BASE_URL}/${locale}/datenschutz` },
     robots: { index: false, follow: true },
     other: ADSENSE_META,
@@ -34,7 +34,7 @@ export default async function DatenschutzPage({
       locale={locale}
       backLabel={t("back")}
       title="Datenschutzerklärung"
-      updated="Stand: 25. September 2026"
+      updated="Stand: 19. Oktober 2026"
     >
       <section>
         <h2>1. Verantwortlicher</h2>
@@ -49,18 +49,18 @@ export default async function DatenschutzPage({
         <h2>2. Das Wichtigste in Kürze</h2>
         <ul>
           <li>
-            Diese Website setzt <strong>keine Cookies</strong> und <strong>speichert nichts auf deinem
-            Gerät</strong>. Für die Reichweitenmessung nutze ich das selbst gehostete, cookie-freie
-            Umami (Abschnitt 5) – dafür ist keine Einwilligung nötig.
+            Für die Reichweitenmessung nutze ich das selbst gehostete, cookie-freie Umami (Abschnitt 5) –
+            dafür ist keine Einwilligung nötig.
           </li>
           <li>
-            Es werden keine Inhalte von Drittanbietern nachgeladen: Schriftarten sind über next/font
-            lokal eingebunden, Bilder und Dateien liegen auf meinem eigenen Server.
+            Diese Website finanziert sich teilweise über <strong>Werbeanzeigen von Google AdSense</strong>{" "}
+            (Abschnitt 6). Cookies oder vergleichbare Technologien für Werbung werden{" "}
+            <strong>nur mit deiner Einwilligung</strong> eingesetzt, die du über ein Einwilligungsfenster
+            gibst und jederzeit über „Datenschutzeinstellungen“ unten auf jeder Seite ändern kannst.
           </li>
           <li>
-            Diese Website ist mit einem Google-AdSense-Konto zur Verifizierung verknüpft (siehe Abschnitt 6);
-            aktuell werden <strong>keine Werbeanzeigen</strong> ausgespielt und <strong>kein AdSense-Skript</strong>{" "}
-            geladen.
+            Schriftarten sind über next/font lokal eingebunden, Bilder und Dateien liegen auf meinem eigenen
+            Server. Von Dritten wird nur der Code von Google AdSense geladen.
           </li>
           <li>Kontakt ist ausschließlich per E-Mail möglich.</li>
         </ul>
@@ -120,16 +120,53 @@ export default async function DatenschutzPage({
       </section>
 
       <section>
-        <h2>6. Google AdSense (Verifizierung)</h2>
+        <h2>6. Werbung mit Google AdSense</h2>
         <p>
-          Diese Website ist mit einem Google-AdSense-Konto verknüpft, um die Inhaber-Verifizierung
-          gegenüber der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, abzuschließen.
-          Dazu werden lediglich ein Meta-Tag (<code>google-adsense-account</code>) im Quelltext und eine
-          Datei <code>ads.txt</code> bereitgestellt. Es werden aktuell{" "}
-          <strong>keine Werbeanzeigen eingeblendet</strong> und <strong>kein AdSense-Skript oder sonstiger
-          Code von Google geladen</strong>; es findet daher keine Datenverarbeitung durch Google über diese
-          Website statt. Sobald Werbung eingebunden wird, wird diese Datenschutzerklärung vorab entsprechend
-          aktualisiert.
+          Auf dieser Website sowie auf den öffentlichen Startseiten meiner Projekte{" "}
+          <code>belegfluss.omarfourati.de</code> und <code>briefklar.omarfourati.de</code> (nicht in den
+          Anwendungen selbst unter <code>/app/</code>) blende ich Werbeanzeigen über{" "}
+          <strong>Google AdSense</strong> ein. Anbieter ist die Google Ireland Limited, Gordon House, Barrow
+          Street, Dublin 4, Irland („Google“).
+        </p>
+        <p>
+          <strong>Einwilligung:</strong> Beim ersten Besuch zeigt Google in meinem Auftrag ein
+          Einwilligungsfenster (eine von Google zertifizierte Consent-Management-Plattform nach dem IAB
+          Transparency &amp; Consent Framework). Erst wenn du dort einwilligst, setzt Google Cookies bzw.
+          liest Informationen auf deinem Gerät aus und zeigt dir personalisierte Werbung. Ohne Einwilligung
+          werden – soweit Google sie anbietet – nur eingeschränkte, nicht personalisierte Anzeigen ohne
+          Werbe-Cookies ausgespielt. Deine Entscheidung kannst du jederzeit über den Link{" "}
+          <strong>„Datenschutzeinstellungen“</strong> unten auf jeder Seite ändern oder widerrufen; der
+          Widerruf gilt für die Zukunft.
+        </p>
+        <p>
+          <strong>Verarbeitete Daten:</strong> Um Anzeigen auszuliefern und Betrug zu erkennen, verarbeitet
+          Google unter anderem deine IP-Adresse, Browser- und Geräteinformationen, die aufgerufene Seite, den
+          Zeitpunkt sowie – bei Einwilligung – Cookie-Kennungen und Informationen zu Interaktionen mit
+          Anzeigen. Google kann diese Daten auch in den USA verarbeiten; Google LLC ist nach dem EU-US Data
+          Privacy Framework zertifiziert (Angemessenheitsbeschluss der EU-Kommission vom 10. Juli 2023).
+        </p>
+        <p>
+          <strong>Rechtsgrundlage:</strong> Für das Speichern und Auslesen von Informationen auf deinem
+          Gerät deine Einwilligung (§ 25 Abs. 1 TDDDG), für die weitere Verarbeitung zu Werbezwecken Art. 6
+          Abs. 1 lit. a DSGVO. Für die technisch notwendige Auslieferung nicht personalisierter Anzeigen
+          ohne Zugriff auf dein Gerät und für die Betrugserkennung mein berechtigtes Interesse an der
+          Finanzierung dieser Website (Art. 6 Abs. 1 lit. f DSGVO).
+        </p>
+        <p>
+          Weitere Informationen:{" "}
+          <a href="https://policies.google.com/technologies/ads?hl=de" target="_blank" rel="noopener noreferrer">
+            So verwendet Google Daten für Werbung
+          </a>{" "}
+          und die{" "}
+          <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">
+            Datenschutzerklärung von Google
+          </a>
+          . Personalisierte Werbung kannst du außerdem unter{" "}
+          <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
+            adssettings.google.com
+          </a>{" "}
+          abschalten. Zur Verifizierung des AdSense-Kontos stelle ich zusätzlich ein Meta-Tag und eine Datei{" "}
+          <code>ads.txt</code> bereit.
         </p>
       </section>
 
