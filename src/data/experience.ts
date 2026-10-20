@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-devops-ai",
+    company: "Udemy",
+    role: {
+      de: "Decoding DevOps – From Basics to Advanced Projects with AI",
+      en: "Decoding DevOps – From Basics to Advanced Projects with AI",
+      fr: "Decoding DevOps – From Basics to Advanced Projects with AI",
+      ar: "Decoding DevOps – From Basics to Advanced Projects with AI",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "DevOps von den Grundlagen bis zu fortgeschrittenen Projekten mit KI (64 Std.).",
+      en: "DevOps from the basics to advanced projects with AI (64 hrs).",
+      fr: "DevOps, des bases aux projets avancés avec l’IA (64 h).",
+      ar: "DevOps من الأساسيات إلى المشاريع المتقدمة مع الذكاء الاصطناعي (64 ساعة).",
+    },
+    tags: ["DevOps", "CI/CD", "AI"],
+  },
+  {
     id: "cert-react-complete",
     company: "Udemy",
     role: {
