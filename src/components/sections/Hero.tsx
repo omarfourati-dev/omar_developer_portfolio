@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { cvHref } from "@/lib/cv";
+import { coverLetterHref, cvHref } from "@/lib/cv";
 
 const roles = [
   "Full-Stack Developer",
@@ -252,7 +252,7 @@ export default function Hero() {
             {t("resume")}
           </a>
           <a
-            href="/Anschreiben.pdf"
+            href={coverLetterHref(locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-10 py-4 rounded-lg text-base font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)] flex items-center justify-center gap-2"

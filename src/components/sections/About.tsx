@@ -3,7 +3,7 @@
 import { motion, useMotionValue, useInView, animate } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { cvHref } from "@/lib/cv";
+import { coverLetterHref, cvHref } from "@/lib/cv";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
@@ -279,7 +279,7 @@ export default function About() {
                 {t("download_cv")}
               </a>
               <a
-                href="/Anschreiben.pdf"
+                href={coverLetterHref(locale)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(201,168,76,0.2)]"
