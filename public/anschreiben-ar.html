@@ -105,25 +105,25 @@
   }
 
   /* ── BRIEF ─────────────────────────────────────────── */
-  .letter { padding: 9mm 20mm 0 25mm; flex: 1; }
+  .letter { padding: 6mm 20mm 0 25mm; flex: 1; }
 
   .date {
     text-align: right;
     font-size: 10pt;
     color: var(--muted);
-    margin-bottom: 8mm;
+    margin-bottom: 5mm;
   }
 
   .subject {
     font-size: 11.5pt;
     font-weight: 700;
     color: var(--ink);
-    margin-bottom: 6mm;
+    margin-bottom: 5mm;
   }
 
-  .salutation { margin-bottom: 5mm; }
+  .salutation { margin-bottom: 4mm; }
 
-  .letter p { margin-bottom: 3.3mm; text-align: justify; }
+  .letter p { margin-bottom: 2.6mm; text-align: justify; }
   .letter strong { color: var(--ink); font-weight: 600; }
 
   .closing { margin-top: 5mm; }
@@ -137,13 +137,9 @@
   /* ── Arabisch: rechts nach links ───────────────────── */
   html[dir="rtl"] body { font-family: 'Inter', 'Noto Sans Arabic', 'Segoe UI', system-ui, sans-serif; line-height: 1.75; }
   html[dir="rtl"] .header { padding: 0 25mm 18px 20mm; }
-  html[dir="rtl"] .letter { padding: 9mm 25mm 0 20mm; }
+  html[dir="rtl"] .letter { padding: 6mm 25mm 0 20mm; }
   html[dir="rtl"] .date { text-align: left; }
   html[dir="rtl"] .contact-item bdi { unicode-bidi: isolate; direction: ltr; }
-  /* längerer Text: etwas engere Abstände, damit der Brief auf eine Seite passt */
-  .date { margin-bottom: 6mm; }
-  .subject { margin-bottom: 5mm; }
-  .letter p { margin-bottom: 2.6mm; }
 </style>
 </head>
 <body>
@@ -199,11 +195,11 @@
 
     <p>أعمل منذ مارس 2023 لدى شركة <strong><bdi>KERAVONOS GmbH</bdi></strong> في غومرسباخ: في البداية متدرّبًا، ثم طالبًا عاملًا إلى جانب دراستي لعلوم الحاسوب في الجامعة التقنية بكولونيا <bdi>(TH Köln)</bdi> وتخرّجت منها <strong>بشهادة البكالوريوس عام 2025</strong>، ومنذ أكتوبر 2025 مطوّرَ برمجيات بدوام كامل. شاركت هناك في بناء <strong><bdi>Pronto</bdi></strong>، وهي منصة مبيعات بين الشركات ترصد إشارات الشراء وتكتب نصوصًا بيعية مخصّصة بالذكاء الاصطناعي، وطوّرت <strong>نظام دردشة داخليًا فوريًا</strong>، ونفّذت مشاريع لصالح العميل <bdi>ABUS Kransysteme GmbH</bdi>. تخصّصي الأساسي: <strong><bdi>Python</bdi> و<bdi>FastAPI</bdi> و<bdi>Vue&nbsp;3</bdi> و<bdi>TypeScript</bdi></strong>، ودمج النماذج اللغوية الكبيرة مثل <bdi>OpenAI</bdi> و<bdi>Claude</bdi>.</p>
 
-    <p>وإلى جانب عملي أطوّر مشاريعي الخاصة وأشغّلها بنفسي بالكامل، وآخرها <strong><bdi>Belegfluss</bdi></strong>، وهو نظام لاستقبال الفواتير بالذكاء الاصطناعي مبنيّ على <strong><bdi>Java</bdi> و<bdi>Spring Boot</bdi> و<bdi>Spring AI</bdi></strong> (تسجيل دخول <bdi>JWT</bdi>، وأدوار للمستخدمين، واعتماد وفق مبدأ الأعين الأربع)، بالإضافة إلى <strong>لعبة جماعية في المتصفح</strong> (<bdi>C#/.NET</bdi> و<bdi>WebGL2</bdi> و211 اختبارًا آليًا). وكلاهما متاح على الإنترنت، مع <bdi>CI/CD</bdi> ومراقبة على خادمي الخاص.</p>
+    <p>وإلى جانب عملي أطوّر تطبيقاتي الخاصة وأشغّلها بنفسي بالكامل، وجميعها متاحة على الإنترنت مع <bdi>CI/CD</bdi> ومراقبة على خادمي الخاص: <strong><bdi>Belegfluss</bdi></strong>، نظام لاستقبال الفواتير بالذكاء الاصطناعي مبنيّ على <strong><bdi>Java</bdi> و<bdi>Spring Boot</bdi> و<bdi>Spring AI</bdi></strong> يعالج أيضًا الفواتير الإلكترونية الألمانية (<bdi>XRechnung</bdi> و<bdi>ZUGFeRD</bdi>)؛ و<strong><bdi>Briefklar</bdi></strong>، الذي يشرح الرسائل الحكومية الألمانية ويُخفي البيانات الشخصية قبل إرسالها إلى الذكاء الاصطناعي (<strong><bdi>Go</bdi> و<bdi>Angular</bdi></strong>)؛ و<strong><bdi>Redefluss</bdi></strong>، مدرّب ذكي للتحدث يجري محادثات فورية عبر <bdi>WebRTC</bdi> (<strong><bdi>Kotlin</bdi> و<bdi>Svelte</bdi></strong>)؛ بالإضافة إلى <strong>لعبة جماعية في المتصفح</strong> (<bdi>C#/.NET</bdi> و<bdi>WebGL2</bdi> و211 اختبارًا آليًا).</p>
 
     <p>وأعمل بشكل مكثّف بأسلوب <strong>البرمجة الوكيلية (<bdi>Agentic Coding</bdi>)</strong>، ومنها <bdi>Claude Code</bdi>: أقسّم المهام، وأوجّه وكلاء الذكاء الاصطناعي بدقة، وأتحقق من كل نتيجة عبر مراجعة الكود والاختبارات الآلية. وبذلك أُنجز العمل أسرع بكثير دون التنازل عن الجودة أو الأمان.</p>
 
-    <p>أعمل باستقلالية وموثوقية، وأتعلّم المواضيع الجديدة بسرعة، وأواصل تطوير نفسي باستمرار، وآخر ذلك في تحسين محركات البحث بمساعدة الذكاء الاصطناعي، وأمن الشبكات، و<bdi>Unity</bdi> و<bdi>C#</bdi>. أتواصل بثقة بالألمانية والإنجليزية والفرنسية والعربية، وأحمل تصريح إقامة ألمانيًا للعمالة الماهرة وفق المادة <bdi>18b</bdi> من قانون الإقامة، لذلك يمكنني تغيير عملي دون أي إجراءات تأشيرة.</p>
+    <p>أعمل باستقلالية وموثوقية، وأتعلّم التقنيات الجديدة بسرعة ومن خلال التطبيق العملي، فقد تعلّمت مؤخرًا <bdi>Go</bdi> و<bdi>Angular</bdi> و<bdi>Kotlin</bdi> و<bdi>Svelte</bdi> لهذه المشاريع. أتواصل بثقة بالألمانية والإنجليزية والفرنسية والعربية، وأحمل تصريح إقامة ألمانيًا للعمالة الماهرة وفق المادة <bdi>18b</bdi> من قانون الإقامة، لذلك يمكنني تغيير عملي دون أي إجراءات تأشيرة.</p>
 
     <p>ويسعدني كثيرًا أن تتاح لي فرصة مقابلة شخصية معكم.</p>
 
