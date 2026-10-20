@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { cvHref } from "@/lib/cv";
 
 const roles = [
   "Full-Stack Developer",
@@ -68,6 +69,7 @@ function LetterByLetter({
 export default function Hero() {
   const t = useTranslations("hero");
   const tNav = useTranslations("navigation");
+  const locale = useLocale();
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -231,7 +233,7 @@ export default function Hero() {
             {t("cta")}
           </a>
           <a
-            href="/Lebenslauf.pdf"
+            href={cvHref(locale)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-10 py-4 rounded-lg text-base font-semibold tracking-wide transition-all duration-300 hover:bg-[rgba(201,168,76,0.1)] flex items-center justify-center gap-2"
