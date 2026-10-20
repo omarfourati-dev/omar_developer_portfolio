@@ -1,6 +1,13 @@
-/** German page → German CV; every other language (EN, FR, AR) → English CV. */
+const CVS: Record<string, string> = {
+  de: "/Lebenslauf.pdf",
+  en: "/Omar-Fourati_CV_EN.pdf",
+  fr: "/Omar-Fourati_CV_FR.pdf",
+  ar: "/Omar-Fourati_CV_AR.pdf",
+};
+
+/** CV in the page's own language (sources: public/lebenslauf*.html; the English one lives in the application folder). */
 export function cvHref(locale: string): string {
-  return locale === "de" ? "/Lebenslauf.pdf" : "/Omar-Fourati_CV_EN.pdf";
+  return CVS[locale] ?? CVS.en;
 }
 
 const COVER_LETTERS: Record<string, string> = {

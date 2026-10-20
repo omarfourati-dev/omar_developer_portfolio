@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Omar Fourati — السيرة الذاتية</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #000000;
+    --body-text: #000000;
+    --muted:     #1A1A1A;
+    --subtle:    #444444;
+    --accent:    #1F4E79;
+    --rule:      #D9D9D9;
+    --chip-bg:   #F5F5F5;
+    --white:     #FFFFFF;
+  }
+
+  @page { size: A4; margin: 15mm 0; }
+
+  html { font-size: 10pt; }
+
+  body {
+    background: #e5e5e5;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+    color: var(--body-text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.15);
+    padding: 25mm 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ────────────────────────────────────────── */
+  .header {
+    background: var(--white);
+    border-bottom: 2.5px solid var(--accent);
+    padding: 0 20mm 18px 25mm;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .header-role {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .header h1 {
+    font-size: 25pt;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .contact-row {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 18px;
+    row-gap: 4px;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .contact-item svg { opacity: 0.7; flex-shrink: 0; }
+
+  .photo-wrap {
+    width: 118px;
+    height: 144px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* ── MAIN (einspaltig) ─────────────────────────────── */
+  .main { background: var(--white); padding: 5mm 20mm 0 25mm; flex: 1; }
+
+  .section { margin-bottom: 4.5mm; }
+  .section:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+    margin-bottom: 2.5mm;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-title span {
+    display: inline-block;
+    padding-bottom: 3px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  /* ── EINTRAGS-ZEILE: Datum links, Inhalt rechts ────── */
+  .entry {
+    display: grid;
+    grid-template-columns: 33mm 1fr;
+    column-gap: 3.5mm;
+    break-inside: avoid;
+    margin-bottom: 2mm;
+  }
+  .entry:last-child { margin-bottom: 0; }
+  .entry:has(> .entry-line) { margin-bottom: 0.3mm; }
+
+  .entry-date {
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--body-text);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.45;
+    padding-top: 1.5px;
+  }
+  .entry.current .entry-date { color: var(--accent); font-weight: 700; }
+
+  .entry-title { font-size: 9.5pt; font-weight: 700; color: var(--ink); line-height: 1.25; }
+  .entry-org   { font-size: 8.5pt; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
+  .entry-note  { font-size: 8pt; color: var(--muted); margin-top: 1px; }
+
+  /* Einzeiler-Variante (Zertifikate, Ehrenamt) */
+  .entry-line .entry-title, .entry-line .entry-org { display: inline; }
+  .entry-line .entry-org::before {
+    content: ' — ';
+    white-space: pre;
+    color: var(--subtle);
+    font-weight: 400;
+    margin-right: 0;
+  }
+
+  .profile-text { font-size: 8.5pt; color: var(--muted); line-height: 1.45; }
+
+  .entry-bullets { list-style: none; margin-top: 1px; }
+  .entry-bullets li {
+    font-size: 8.5pt;
+    color: var(--muted);
+    padding: 1px 0 1px 10px;
+    text-indent: -10px;
+    line-height: 1.35;
+  }
+  /* Kein position:absolute – sonst landet der Text im PDF hinter dem restlichen Inhalt (ATS-Lesereihenfolge) */
+  .entry-bullets li::before {
+    content: '–';
+    display: inline-block;
+    width: 10px;
+    text-indent: 0;
+    color: var(--accent);
+  }
+
+  /* ── CHIPS & LISTEN ────────────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; align-items: center; }
+  .section > .tag-row { margin-top: 0; }
+  .tag-label {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: var(--subtle);
+    margin-right: 2px;
+  }
+  .tag {
+    font-size: 7pt;
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--chip-bg);
+    border: 1px solid var(--rule);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .inline-list { font-size: 8.5pt; color: var(--muted); line-height: 1.6; }
+  .inline-list span { white-space: nowrap; }
+  .inline-list span + span::before { content: '·'; margin: 0 7px; color: var(--subtle); }
+  .inline-list strong { color: var(--ink); font-weight: 600; }
+  .two-col { display: grid; grid-template-columns: 3fr 2fr; column-gap: 8mm; break-inside: avoid; }
+  .two-col .inline-list span { white-space: nowrap; }
+  .two-col .inline-list span + span::before { content: none; }
+  .two-col .inline-list span:not(:last-child)::after { content: '·'; margin: 0 7px; color: var(--subtle); }
+  .two-col .inline-list { line-height: 1.5; }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; min-height: auto; padding: 0; }
+    .section-title { break-after: avoid; }
+    .entry { break-inside: avoid; }
+  }
+
+  /* ── Arabisch: rechts nach links ───────────────────── */
+  html[dir="rtl"] body { font-family: 'Inter', 'Noto Sans Arabic', 'Segoe UI', system-ui, sans-serif; }
+  html[dir="rtl"] .header { padding: 0 25mm 18px 20mm; }
+  html[dir="rtl"] .main { padding: 5mm 25mm 0 20mm; }
+  html[dir="rtl"] .section-title { letter-spacing: 0; font-size: 9.5pt; }
+  html[dir="rtl"] .entry-bullets li { padding: 1px 10px 1px 0; }
+  html[dir="rtl"] .tag-label { margin-right: 0; margin-left: 2px; }
+  html[dir="rtl"] .tag { direction: ltr; unicode-bidi: isolate; }
+  html[dir="rtl"] .entry-org bdi { white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-role">Full-Stack Developer</div>
+      <h1>Omar Fourati</h1>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <bdi>info@omarfourati.de</bdi>
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <bdi>+49 1577 8709579</bdi>
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          غومرسباخ، ألمانيا
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <bdi>omarfourati.de</bdi>
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <bdi>github.com/omarfourati-dev</bdi>
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <bdi>linkedin.com/in/omarfourati</bdi>
+        </span>
+        <span class="contact-item">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          تصريح عمل وفق المادة 18b، دون الحاجة إلى تأشيرة
+        </span>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <img src="images/omar-cv.jpg" alt="Omar Fourati" />
+    </div>
+  </header>
+
+  <!-- MAIN (einspaltig, oben das Neueste) -->
+  <main class="main">
+
+    <section class="section">
+      <div class="section-title"><span>نبذة مهنية</span></div>
+      <p class="profile-text">مطوّر <bdi>Full-Stack</bdi> لدى <bdi>KERAVONOS GmbH</bdi> بدوام كامل منذ <bdi>10/2025</bdi>، وقبل ذلك عامان ونصف طالبًا عاملًا في الفريق نفسه. مجالات التركيز: <bdi>Python/FastAPI</bdi> و<bdi>Vue&nbsp;3/TypeScript</bdi> و<bdi>Java/Spring Boot</bdi> ودمج النماذج اللغوية الكبيرة (<bdi>OpenAI, Claude, Gemini</bdi>). أعمل بشكل مكثّف بالبرمجة الوكيلية مع <bdi>Claude Code</bdi>، مع مراجعة الكود والاختبارات الآلية. منفتح على العمل عن بُعد وعلى الوظائف في ميونخ.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>الخبرة المهنية</span></div>
+
+      <div class="entry current">
+        <div class="entry-date"><bdi>10/2025</bdi> – حتى الآن</div>
+        <div class="entry-body">
+          <div class="entry-title">مطوّر برمجيات (دوام كامل)</div>
+          <div class="entry-org"><bdi>KERAVONOS GmbH · Gummersbach</bdi></div>
+          <ul class="entry-bullets">
+            <li>تطبيقات ويب ومنصات ذكاء اصطناعي باستخدام <bdi>Vue&nbsp;3</bdi> و<bdi>FastAPI</bdi> و<bdi>PostgreSQL</bdi></li>
+            <li><bdi>Pronto</bdi>: رصد إشارات الشراء بالذكاء الاصطناعي وكتابة نصوص بيعية مخصّصة (<bdi>OpenAI API</bdi>)</li>
+            <li>تطوير نظام الدردشة الداخلي الفوري للشركة</li>
+            <li>مشاريع للعميل <bdi>ABUS Kransysteme GmbH</bdi></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Vue 3</span><span class="tag">FastAPI</span>
+            <span class="tag">TypeScript</span><span class="tag">PostgreSQL</span>
+            <span class="tag">OpenAI API</span><span class="tag">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">06/2023 – 09/2025</div>
+        <div class="entry-body">
+          <div class="entry-title">طالب عامل، تطوير البرمجيات</div>
+          <div class="entry-org"><bdi>KERAVONOS GmbH · Gummersbach</bdi></div>
+          <ul class="entry-bullets">
+            <li>دردشة داخلية فورية باستخدام <bdi>WebSockets</bdi> و<bdi>Google OAuth</bdi> مع قنوات ورسائل مباشرة</li>
+            <li>بناء <bdi>Pronto</bdi>: تجميع مصادر بيانات عامة واستخراجها آليًا باستخدام <bdi>Playwright</bdi></li>
+            <li>المساهمة في <bdi>rentgate</bdi> (برنامج للتأجير والحجز)</li>
+            <li>تطبيقات ويب داخلية للعمليات الصناعية لدى <bdi>ABUS Kransysteme GmbH</bdi></li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Vue 3</span><span class="tag">FastAPI</span>
+            <span class="tag">WebSockets</span><span class="tag">OAuth 2.0</span>
+            <span class="tag">TypeScript</span><span class="tag">MariaDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">03/2023 – 05/2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">تدريب عملي، تطوير البرمجيات</div>
+          <div class="entry-org"><bdi>KERAVONOS GmbH</bdi></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>المشاريع</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Paint-Ball Game</bdi> (مشروع شخصي)</div>
+          <div class="entry-org"><bdi>paint-ball-game.omarfourati.de</bdi></div>
+          <div class="entry-note">لعبة جماعية في المتصفح: خادم ألعاب <bdi>C#/.NET (WSS)</bdi>، وواجهة <bdi>WebGL2</bdi>، ولاعبون آليون، و211 اختبارًا مع <bdi>E2E</bdi></div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">C#</span><span class="tag">.NET 10</span>
+            <span class="tag">ASP.NET Core</span><span class="tag">WebSockets</span>
+            <span class="tag">WebGL2</span><span class="tag">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Redefluss</bdi> – مدرّب ذكي للتحدث بالألمانية</div>
+          <div class="entry-org"><bdi>redefluss.omarfourati.de</bdi></div>
+          <div class="entry-note">مدرّب بالذكاء الاصطناعي مع ذاكرة للأخطاء، وتقييم للنطق، ومقابلة عمل في الوقت الفعلي (<bdi>WebRTC</bdi>)</div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Kotlin</span><span class="tag">Ktor</span><span class="tag">Svelte 5</span><span class="tag">PostgreSQL</span><span class="tag">OpenAI Realtime</span><span class="tag">Azure Speech</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Briefklar</bdi> – شرح الرسائل الحكومية الألمانية</div>
+          <div class="entry-org"><bdi>briefklar.omarfourati.de</bdi></div>
+          <div class="entry-note">التعرّف الضوئي على النص وإخفاء البيانات على الخادم، وشرح بالذكاء الاصطناعي بأربع لغات، والموعد النهائي كملف تقويم</div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Go</span><span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Tesseract</span><span class="tag">Playwright</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Belegfluss</bdi> – صندوق فواتير بالذكاء الاصطناعي</div>
+          <div class="entry-org"><bdi>belegfluss.omarfourati.de</bdi></div>
+          <div class="entry-note">استخراج بالنماذج اللغوية (<bdi>Spring AI</bdi>)، وفواتير إلكترونية <bdi>XRechnung/ZUGFeRD</bdi>، واعتماد بمبدأ الأعين الأربع</div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">Spring AI</span><span class="tag">Spring Security</span><span class="tag">PostgreSQL</span><span class="tag">Testcontainers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">توقعات رياضية بالذكاء الاصطناعي</div>
+          <div class="entry-org"><bdi>ki-fussball-prognosen.de</bdi></div>
+          <div class="entry-note">توقعات لمباريات كرة القدم بعدة نماذج لغوية ونظام للتوافق بينها</div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Next.js 15</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>SecureVault</bdi> – مدير المفاتيح الخاصة</div>
+          <div class="entry-org"><bdi>securevault.omarfourati.de</bdi></div>
+          <div class="entry-note">تطبيق <bdi>PWA</bdi> لإدارة كلمات المرور مع تشفير <bdi>AES-256-GCM</bdi> على جهاز المستخدم وبنية <bdi>Zero-Knowledge</bdi></div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span><span class="tag">Docker</span><span class="tag">Nginx</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>DayFlow</bdi></div>
+          <div class="entry-org"><bdi>tnt.sg-digital.de</bdi></div>
+          <div class="entry-note">تطبيق إنتاجية لتخطيط المهام مع لوحة أفكار ومجموعة روابط</div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag">TypeScript</span><span class="tag">Zustand</span><span class="tag">Playwright</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body">
+          <div class="entry-title"><bdi>Trading-Bot</bdi></div>
+          <div class="entry-note">تداول خوارزمي: توقعات بالتعلّم الآلي، وتحليل فني، واختبار رجعي، ومراقبة مباشرة عبر <bdi>MetaTrader5</bdi></div>
+          <div class="tag-row">
+            <span class="tag-label">خبرة في:</span>
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">LangChain</span><span class="tag">XGBoost</span><span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>التعليم</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2020 – 2025</div>
+        <div class="entry-body">
+          <div class="entry-title">بكالوريوس علوم الحاسوب (<bdi>B.Sc.</bdi>)</div>
+          <div class="entry-org">الجامعة التقنية بكولونيا (<bdi>TH Köln</bdi>)، غومرسباخ</div>
+          <div class="entry-note">هندسة البرمجيات، والخوارزميات، وأنظمة الذكاء الاصطناعي</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2018 – 2020</div>
+        <div class="entry-body">
+          <div class="entry-title">امتحان اللغة الألمانية <bdi>DSH</bdi>، بتقدير 2</div>
+          <div class="entry-org"><bdi>F+U Academy Heidelberg / TH Köln</bdi></div>
+          <div class="entry-note">امتحان اللغة الألمانية للقبول الجامعي</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2013 – 2017</div>
+        <div class="entry-body">
+          <div class="entry-title">البكالوريا (شعبة الرياضيات)</div>
+          <div class="entry-org">معهد <bdi>L.A.K.C</bdi>، صفاقس (تونس)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>الشهادات</span></div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>React – Complete Developer Course with Hands-On Projects</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Artificial Intelligence in SEO (Extreme Edition)</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Physics For Unity 6.2 &amp; C#</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>The Complete Cyber Security Course: Network Security!</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Build a Custom E-Commerce Site in React + JavaScript Basics</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Learn Java and Artificial Intelligence Programming Tools</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Build a Backend REST API with Python &amp; Django</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>JavaScript: From Zero to Expert</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">ضمان جودة البرمجيات</div>
+          <div class="entry-org"><bdi>German Testing Board / TH Köln</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2022 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">إدارة الضغوط وتطوير الذات</div>
+          <div class="entry-org"><bdi>TH Köln</bdi></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">2021 – 2023</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title"><bdi>Python: Complete Pro Bootcamp</bdi></div>
+          <div class="entry-org"><bdi>Udemy</bdi></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>التقنيات</span></div>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Vue 3</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">React</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">Java / Spring Boot</span>
+        <span class="tag">C# / .NET</span>
+        <span class="tag">WebGL</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">WebSockets</span>
+        <span class="tag">OAuth 2.0</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Caddy</span>
+        <span class="tag">Prometheus</span>
+        <span class="tag">Grafana</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><span>العمل التطوعي</span></div>
+      <div class="entry">
+        <div class="entry-date">2018 – 2020</div>
+        <div class="entry-body entry-line">
+          <div class="entry-title">مساعدة تطوعية للجيران</div>
+          <div class="entry-org">هايدلبرغ</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section two-col">
+      <section>
+        <div class="section-title"><span>اللغات</span></div>
+        <div class="inline-list">
+          <span><strong>العربية</strong> — اللغة الأم</span>
+          <span><strong>الألمانية</strong> — C1</span>
+          <span><strong>الفرنسية</strong> — C1</span>
+          <span><strong>الإنجليزية</strong> — B2</span>
+        </div>
+      </section>
+      <section>
+        <div class="section-title"><span>الاهتمامات</span></div>
+        <div class="inline-list">
+          <span>الرياضة</span><span>السفر</span><span>الأفلام</span><span>الطبخ</span><span>ألعاب الفيديو</span><span>ألعاب الورق</span>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+</div>
+</body>
+</html>

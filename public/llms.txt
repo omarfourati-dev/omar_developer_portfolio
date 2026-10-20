@@ -18,6 +18,7 @@ He holds a B.Sc. in Computer Science from TH Köln (Campus Gummersbach), graduat
 - GitHub: https://github.com/omarfourati-dev
 - LinkedIn: https://www.linkedin.com/in/omarfourati/
 - CV (English, PDF): https://omarfourati.de/Omar-Fourati_CV_EN.pdf
+- CV (French, PDF): https://omarfourati.de/Omar-Fourati_CV_FR.pdf
 - Lebenslauf (German, PDF): https://omarfourati.de/Lebenslauf.pdf
 
 ## Availability
