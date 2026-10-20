@@ -31,6 +31,21 @@ export const projects: Project[] = [
     category: "fullstack",
   },
   {
+    id: "redefluss",
+    title: "Redefluss",
+    description: {
+      de: "Persönlicher KI-Sprechtrainer für Deutsch: Man spricht, ein KI-Coach korrigiert und antwortet mit Stimme, wiederkehrende Fehler landen im Fehler-Gedächtnis. Dazu Wortschatz mit Wiederholung nach SM-2, Aussprache-Bewertung pro Wort und Laut (Azure Speech) und ein Live-Vorstellungsgespräch in Echtzeit (OpenAI Realtime über WebRTC) mit Bericht. Aufnahmen werden nie gespeichert. Kotlin/Ktor-Backend mit PostgreSQL, Svelte-5-Frontend als PWA, Kostenbremsen und Monitoring.",
+      en: "Personal AI speaking coach for German: you speak, an AI coach corrects you and replies with a voice, recurring mistakes go into a mistake memory. Plus vocabulary with SM-2 spaced repetition, pronunciation scoring per word and sound (Azure Speech) and a live job interview in real time (OpenAI Realtime over WebRTC) with a report. Recordings are never stored. Kotlin/Ktor backend with PostgreSQL, Svelte 5 frontend as a PWA, cost limits and monitoring.",
+      fr: "Coach vocal personnel en allemand basé sur l'IA : on parle, un coach IA corrige et répond à voix haute, les erreurs récurrentes sont gardées en mémoire. S'y ajoutent un vocabulaire avec répétition espacée SM-2, l'évaluation de la prononciation par mot et par son (Azure Speech) et un entretien d'embauche en temps réel (OpenAI Realtime via WebRTC) avec rapport. Les enregistrements ne sont jamais stockés. Backend Kotlin/Ktor avec PostgreSQL, frontend Svelte 5 en PWA, plafonds de coûts et monitoring.",
+      ar: "مدرّب شخصي للتحدث بالألمانية بالذكاء الاصطناعي: تتحدث فيصحح المدرب أخطاءك ويرد بصوت، وتُحفظ الأخطاء المتكررة في ذاكرة الأخطاء. بالإضافة إلى مفردات مع تكرار متباعد (SM-2)، وتقييم النطق لكل كلمة وصوت (Azure Speech)، ومقابلة عمل مباشرة في الوقت الفعلي (OpenAI Realtime عبر WebRTC) مع تقرير. لا يتم حفظ التسجيلات أبدًا. واجهة خلفية Kotlin/Ktor مع PostgreSQL، وواجهة أمامية Svelte 5 كتطبيق PWA، مع حدود للتكاليف ومراقبة.",
+    },
+    tags: ["Kotlin", "Ktor", "Svelte 5", "PostgreSQL", "OpenAI Realtime", "WebRTC", "Azure Speech", "PWA", "Playwright"],
+    github: "https://github.com/omarfourati-dev/Redefluss",
+    demo: "https://redefluss.omarfourati.de/",
+    featured: true,
+    category: "ai",
+  },
+  {
     id: "briefklar",
     title: "Briefklar",
     description: {

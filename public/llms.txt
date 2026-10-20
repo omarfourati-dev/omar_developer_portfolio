@@ -13,7 +13,7 @@ He holds a B.Sc. in Computer Science from TH Köln (Campus Gummersbach), graduat
 ## Contact & Location
 
 - Email: info@omarfourati.de
-- Location: Köln, Nordrhein-Westfalen, Germany
+- Location: Gummersbach (near Cologne), Nordrhein-Westfalen, Germany
 - Website: https://omarfourati.de
 - GitHub: https://github.com/omarfourati-dev
 - LinkedIn: https://www.linkedin.com/in/omarfourati/
@@ -27,13 +27,13 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 ## Technical Skills
 
 ### Frontend
-- Vue 3, TypeScript, Tailwind CSS (expert); React, Next.js, Vite (advanced); WebGL2, Framer Motion
+- Vue 3, TypeScript, Tailwind CSS (expert); React, Next.js, Vite (advanced); Angular, Svelte 5, WebGL2, Framer Motion
 
 ### Backend
-- Python, FastAPI, REST APIs (expert); WebSockets, Node.js (advanced); Java / Spring Boot, C# / .NET, Server-Sent Events
+- Python, FastAPI, REST APIs (expert); WebSockets, Node.js (advanced); Java / Spring Boot, C# / .NET, Go, Kotlin / Ktor, Server-Sent Events
 
 ### AI & Agentic Coding
-- LLM integration, OpenAI API, Claude API, prompt engineering (expert); Gemini API (advanced); Spring AI, LangChain, TensorFlow / PyTorch
+- LLM integration, OpenAI API, Claude API, prompt engineering (expert); Gemini API (advanced); Spring AI, speech AI (OpenAI Realtime, Azure Speech), LangChain, TensorFlow / PyTorch
 - Agentic coding with Claude Code (task decomposition, agent steering, code review and automated tests as quality gates)
 
 ### Databases
@@ -49,6 +49,16 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 - German (C1), English (B2), French (C1), Arabic (Native)
 
 ## Selected Projects
+
+### Redefluss (AI German Speaking Coach)
+Personal speaking coach for German: spoken sentences are transcribed, corrected and answered by an AI coach with a
+voice reply; recurring mistakes go into a mistake memory that feeds the next rounds. Daily vocabulary with SM-2 spaced
+repetition, pronunciation scoring per word and phoneme (Azure Speech, free tier only, with an in-app quota) and a live
+job interview in real time (OpenAI Realtime over WebRTC, ephemeral client secret, daily minute budget) with a report
+per answer. Recordings are never stored. Kotlin/Ktor backend (coroutines, Exposed, Flyway, JWT, Micrometer/Prometheus),
+SvelteKit/Svelte 5 frontend as an installable PWA, Testcontainers, Vitest and Playwright end-to-end tests in CI.
+Stack: Kotlin, Ktor, PostgreSQL, Svelte 5, SvelteKit, TypeScript, OpenAI API, Azure Speech, Docker, GitHub Actions
+Live: https://redefluss.omarfourati.de (private, single account) · Code: https://github.com/omarfourati-dev/Redefluss
 
 ### Briefklar (German Authority Letters Explained)
 Explains German authority letters (immigration office, tax office, health insurance, broadcasting fee) in plain
