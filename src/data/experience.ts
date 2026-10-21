@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-projektmanagement",
+    company: "LinkedIn Learning",
+    role: {
+      de: "Berufsbild: Projektmanagement",
+      en: "Berufsbild: Projektmanagement",
+      fr: "Berufsbild: Projektmanagement",
+      ar: "Berufsbild: Projektmanagement",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Einführung in Rolle, Aufgaben und Methoden von Projektmanager:innen (25 Min.).",
+      en: "Introduction to the role, tasks and methods of a project manager (25 min).",
+      fr: "Introduction au rôle, aux missions et aux méthodes du chef de projet (25 min).",
+      ar: "مقدمة عن دور مدير المشاريع ومهامه وأساليبه (25 دقيقة).",
+    },
+    tags: ["Project Management"],
+  },
+  {
     id: "cert-devops-ai",
     company: "Udemy",
     role: {
