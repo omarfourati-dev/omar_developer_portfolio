@@ -31,6 +31,21 @@ export const projects: Project[] = [
     category: "fullstack",
   },
   {
+    id: "kibuka",
+    title: "Kibuka",
+    description: {
+      de: "Mehrsprachige KI-Kinderbücher: Jeden Morgen erzeugt ein Hintergrund-Job automatisch ein neues Buch – Geschichte mit GPT-4.1, zweistufige Kindersicherheitsprüfung (OpenAI Moderation plus LLM-Urteil), Übersetzung ins Arabische, Französische und Englische, Illustrationen mit gpt-image-1 und Vorlese-Audio pro Seite und Sprache mit Wort-Zeitmarken (Google TTS) fürs Mitlesen. FastAPI in hexagonaler Architektur, React, PostgreSQL, ARQ-Worker, selbst gehosteter S3-Speicher und ein Tagesbudget für KI-Kosten.",
+      en: "Multilingual AI children's books: every morning a background job generates a new book – story with GPT-4.1, two-stage child-safety check (OpenAI Moderation plus an LLM verdict), translation into Arabic, French and English, illustrations with gpt-image-1 and read-aloud audio per page and language with word timestamps (Google TTS) for follow-along reading. FastAPI with hexagonal architecture, React, PostgreSQL, ARQ worker, self-hosted S3 storage and a daily AI cost budget.",
+      fr: "Livres pour enfants multilingues générés par IA : chaque matin, une tâche de fond crée un nouveau livre – histoire avec GPT-4.1, double contrôle de sécurité pour enfants (OpenAI Moderation et verdict d’un LLM), traduction en arabe, français et anglais, illustrations avec gpt-image-1 et audio par page et par langue avec horodatage des mots (Google TTS) pour suivre la lecture. FastAPI en architecture hexagonale, React, PostgreSQL, worker ARQ, stockage S3 auto-hébergé et budget quotidien pour les coûts d’IA.",
+      ar: "كتب أطفال متعددة اللغات بالذكاء الاصطناعي: كل صباح تُنشئ مهمة في الخلفية كتابًا جديدًا تلقائيًا – قصة بواسطة GPT-4.1، وفحص أمان مزدوج للأطفال (OpenAI Moderation وحكم من نموذج لغوي)، وترجمة إلى العربية والفرنسية والإنجليزية، ورسوم بواسطة gpt-image-1، وتسجيل صوتي لكل صفحة ولغة مع توقيت الكلمات (Google TTS) لمتابعة القراءة. FastAPI بمعمارية سداسية، وReact، وPostgreSQL، وعامل ARQ، وتخزين S3 مستضاف ذاتيًا، وميزانية يومية لتكاليف الذكاء الاصطناعي.",
+    },
+    tags: ["FastAPI", "React", "PostgreSQL", "OpenAI API", "Google Cloud TTS", "Redis / ARQ", "Docker", "Playwright"],
+    github: "https://github.com/omarfourati-dev/Kibuka",
+    demo: "https://kibuka.omarfourati.de/",
+    featured: true,
+    category: "ai",
+  },
+  {
     id: "redefluss",
     title: "Redefluss",
     description: {
@@ -171,19 +186,6 @@ export const projects: Project[] = [
     demo: "https://tnt.sg-digital.de/",
     featured: true,
     category: "fullstack",
-  },
-  {
-    id: "ai-children-books",
-    title: "LiguaKids",
-    description: {
-      de: "In Bearbeitung: KI-Plattform zur Generierung interaktiver Kinderbücher mit mehrsprachigen Lernfunktionen und Stripe-Zahlungsintegration.",
-      en: "In progress: AI platform for generating interactive children's books with multilingual learning features and Stripe payment integration.",
-      fr: "En cours : plateforme IA pour générer des livres interactifs pour enfants avec apprentissage multilingue et paiement Stripe.",
-      ar: "قيد التطوير: منصة ذكاء اصطناعي لإنشاء كتب أطفال تفاعلية متعددة اللغات.",
-    },
-    tags: ["Next.js 14", "Claude API", "OpenAI", "Stripe", "Supabase", "Radix UI"],
-    featured: false,
-    category: "ai",
   },
 ];
 

@@ -79,7 +79,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Prompt Engineering", level: "expert" },
       { name: "Gemini API", level: "advanced" },
       { name: "Spring AI", level: "intermediate" },
-      { name: "Speech AI (OpenAI Realtime, Azure)", level: "intermediate" },
+      { name: "Speech AI (OpenAI Realtime, Azure, Google TTS)", level: "intermediate" },
       { name: "LangChain", level: "intermediate" },
       { name: "TensorFlow / PyTorch", level: "intermediate" },
     ],

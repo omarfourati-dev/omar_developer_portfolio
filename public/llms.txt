@@ -36,7 +36,7 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 - Python, FastAPI, REST APIs (expert); WebSockets, Node.js (advanced); Java / Spring Boot, C# / .NET, Go, Kotlin / Ktor, Server-Sent Events
 
 ### AI & Agentic Coding
-- LLM integration, OpenAI API, Claude API, prompt engineering (expert); Gemini API (advanced); Spring AI, speech AI (OpenAI Realtime, Azure Speech), LangChain, TensorFlow / PyTorch
+- LLM integration, OpenAI API, Claude API, prompt engineering (expert); Gemini API (advanced); Spring AI, speech AI (OpenAI Realtime, Azure Speech, Google Cloud TTS), LangChain, TensorFlow / PyTorch
 - Agentic coding with Claude Code (task decomposition, agent steering, code review and automated tests as quality gates)
 
 ### Databases
@@ -52,6 +52,15 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 - German (C1), English (B2), French (C1), Arabic (Native)
 
 ## Selected Projects
+
+### Kibuka (Multilingual AI Children's Books)
+Every morning a background job (ARQ, Redis) generates a new children's book: a German story with GPT-4.1, a two-stage
+child-safety check (OpenAI Moderation as a hard gate, then an LLM verdict), translation into Arabic, French and English,
+illustrations with gpt-image-1 and read-aloud audio per page and language with word timestamps (Google Cloud TTS, SSML
+marks) for follow-along highlighting. Assets live in self-hosted S3 storage (SeaweedFS); a fail-closed daily cost budget
+caps AI spending. FastAPI with hexagonal architecture, SQLAlchemy async, React, PostgreSQL, Playwright tests.
+Stack: Python, FastAPI, React, TypeScript, PostgreSQL, Redis, OpenAI API, Google Cloud TTS, Docker, GitHub Actions
+Live: https://kibuka.omarfourati.de · Code: https://github.com/omarfourati-dev/Kibuka
 
 ### Redefluss (AI German Speaking Coach)
 Personal speaking coach for German: spoken sentences are transcribed, corrected and answered by an AI coach with a
