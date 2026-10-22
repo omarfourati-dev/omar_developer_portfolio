@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-projektmanagement-initiierung",
+    company: "LinkedIn Learning",
+    role: {
+      de: "Projektmanagement: Initiierung und Setup",
+      en: "Projektmanagement: Initiierung und Setup",
+      fr: "Projektmanagement: Initiierung und Setup",
+      ar: "Projektmanagement: Initiierung und Setup",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Projekte sauber starten: Initiierung, Auftrag und Setup (53 Min.).",
+      en: "Starting projects properly: initiation, project mandate and setup (53 min).",
+      fr: "Bien démarrer un projet : initialisation, mandat et mise en place (53 min).",
+      ar: "بدء المشاريع بشكل صحيح: الإطلاق والتكليف والإعداد (53 دقيقة).",
+    },
+    tags: ["Project Management"],
+  },
+  {
     id: "cert-einfuehrung-projektmanagement",
     company: "LinkedIn Learning",
     role: {
