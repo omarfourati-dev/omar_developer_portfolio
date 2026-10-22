@@ -133,6 +133,7 @@ B.Sc. Computer Science, 2020 – September 2025
 Focus: Software Engineering, Algorithms, AI Systems
 
 ## Certifications
+- Einführung ins Projektmanagement (LinkedIn Learning, 2026)
 - Berufsbild: Projektmanagement (LinkedIn Learning, 2026)
 - Decoding DevOps – From Basics to Advanced Projects with AI (Udemy, 2026)
 - React – Complete Developer Course with Hands-On Projects (Udemy, 2026)

@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-einfuehrung-projektmanagement",
+    company: "LinkedIn Learning",
+    role: {
+      de: "Einführung ins Projektmanagement",
+      en: "Einführung ins Projektmanagement",
+      fr: "Einführung ins Projektmanagement",
+      ar: "Einführung ins Projektmanagement",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Einführung in Methoden und Ablauf des Projektmanagements (53 Min.).",
+      en: "Introduction to project management methods and workflow (53 min).",
+      fr: "Introduction aux méthodes et au déroulement de la gestion de projet (53 min).",
+      ar: "مقدمة في أساليب إدارة المشاريع ومراحلها (53 دقيقة).",
+    },
+    tags: ["Project Management"],
+  },
+  {
     id: "cert-projektmanagement",
     company: "LinkedIn Learning",
     role: {
