@@ -125,9 +125,16 @@ export default async function DatenschutzPage({
           Auf dieser Website sowie auf den öffentlichen Startseiten meiner Projekte{" "}
           <code>belegfluss.omarfourati.de</code> und <code>briefklar.omarfourati.de</code> (nicht in den
           Anwendungen selbst unter <code>/app/</code>) sowie in meiner Lern-App{" "}
-          <code>redefluss.omarfourati.de</code> blende ich Werbeanzeigen über{" "}
+          <code>redefluss.omarfourati.de</code> und auf der Website meiner Kinderbuch-App{" "}
+          <code>kibuka.omarfourati.de</code> blende ich Werbeanzeigen über{" "}
           <strong>Google AdSense</strong> ein. Anbieter ist die Google Ireland Limited, Gordon House, Barrow
           Street, Dublin 4, Irland („Google“).
+        </p>
+        <p>
+          <strong>Kibuka:</strong> Da sich Kibuka an Kinder richtet, fordere ich dort ausschließlich{" "}
+          <strong>nicht personalisierte Anzeigen</strong> an – unabhängig von der Einwilligung. In den
+          Android- und iOS-Apps von Kibuka sowie im Login- und Verwaltungsbereich wird keine Werbung
+          geladen. Die „Datenschutzeinstellungen“ findest du in Kibuka unter „Profil“.
         </p>
         <p>
           <strong>Einwilligung:</strong> Beim ersten Besuch zeigt Google in meinem Auftrag ein
