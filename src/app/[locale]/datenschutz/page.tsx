@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: "Datenschutzerklärung — Omar Fourati",
     description:
-      "Datenschutzerklärung der Website omarfourati.de: Verantwortlicher, Hosting, Server-Logs, Reichweitenmessung, Google AdSense mit Einwilligung und Betroffenenrechte.",
+      "Datenschutzerklärung der Website omarfourati.de: Verantwortlicher, Hosting, Server-Logs, Reichweitenmessung, Google AdSense mit Einwilligung, die Lern-App Redefluss und Betroffenenrechte.",
     alternates: { canonical: `${BASE_URL}/${locale}/datenschutz` },
     robots: { index: false, follow: true },
     other: ADSENSE_META,
@@ -34,7 +34,7 @@ export default async function DatenschutzPage({
       locale={locale}
       backLabel={t("back")}
       title="Datenschutzerklärung"
-      updated="Stand: 19. Oktober 2026"
+      updated="Stand: 23. Oktober 2026"
     >
       <section>
         <h2>1. Verantwortlicher</h2>
@@ -179,7 +179,49 @@ export default async function DatenschutzPage({
       </section>
 
       <section>
-        <h2>7. Kontaktaufnahme</h2>
+        <h2>7. Lern-App Redefluss (nur auf Einladung)</h2>
+        <p>
+          <code>redefluss.omarfourati.de</code> ist mein Deutsch-Sprechtrainer. Es gibt keine offene
+          Registrierung: Ich lade einzelne Personen ein, indem ich für ihre E-Mail-Adresse einen Link erstelle
+          und ihn selbst weitergebe – Redefluss verschickt keine E-Mails. Der Link ist 7 Tage gültig und nur
+          einmal nutzbar.
+        </p>
+        <p>
+          <strong>Gespeicherte Daten:</strong> zu jedem Konto die E-Mail-Adresse, das Passwort nur als
+          bcrypt-Hash, die Rolle und das Anlagedatum; zu einer Einladung die E-Mail-Adresse, ein Hash des
+          Einladungs-Tokens (nie das Token selbst) sowie Erstellungs-, Ablauf- und Nutzungszeitpunkt. Beim
+          Üben speichert Redefluss pro Konto die erkannten Fehler mit Beispielsatz, Thema und Zeitpunkt der
+          Übungen, die Wortschatz-Karten mit Lernstand, Tageszähler für die Limits und nach einem
+          Vorstellungsgespräch die Zusammenfassung des Berichts (von einer Stellenanzeige nur die erste Zeile
+          als Thema). Jedes Konto sieht ausschließlich seine eigenen Daten. <strong>Aufnahmen werden nie
+          gespeichert</strong>, weder auf dem Server noch in der Datenbank. Im Browser legt Redefluss nur
+          die Anmeldung (Token, E-Mail-Adresse, Rolle) im lokalen Speicher ab; das ist für die Anmeldung
+          technisch notwendig (§ 25 Abs. 2 Nr. 2 TDDDG).
+        </p>
+        <p>
+          <strong>Dienstleister:</strong> Für Spracherkennung, Korrektur, Sprachausgabe und das
+          Live-Vorstellungsgespräch sende ich deine Aufnahme bzw. deinen Text an <strong>OpenAI</strong>{" "}
+          (OpenAI Ireland Ltd., Dublin, Irland); beim Live-Gespräch läuft der Ton direkt zwischen deinem
+          Browser und OpenAI. OpenAI kann die Daten auch in den USA verarbeiten; Grundlage sind die
+          EU-Standardvertragsklauseln im Auftragsverarbeitungsvertrag von OpenAI. Nach eigenen Angaben nutzt
+          OpenAI Daten aus der API nicht zum Training und speichert sie höchstens 30 Tage zur
+          Missbrauchserkennung. Für die Aussprache-Bewertung geht die Aufnahme an{" "}
+          <strong>Microsoft Azure Speech</strong> (Microsoft Ireland Operations Ltd., Dublin, Irland) mit
+          Verarbeitung in einem Rechenzentrum in Deutschland. Beide sind als Auftragsverarbeiter tätig
+          (Art. 28 DSGVO).
+        </p>
+        <p>
+          <strong>Rechtsgrundlage und Löschung:</strong> Die Nutzung erfolgt auf Grundlage des
+          Nutzungsverhältnisses (Art. 6 Abs. 1 lit. b DSGVO), die Speicherung einer noch nicht angenommenen
+          Einladung auf Grundlage meines berechtigten Interesses, dich wie vorher abgesprochen einzuladen
+          (Art. 6 Abs. 1 lit. f DSGVO). Möchtest du dein Konto nicht mehr nutzen, schreib mir eine E-Mail:
+          Ich lösche es dann mit allen Übungsdaten vollständig. Nicht angenommene Einladungen lösche ich,
+          sobald sie nicht mehr gebraucht werden.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Kontaktaufnahme</h2>
         <p>
           Bei einer Kontaktaufnahme per E-Mail an{" "}
           <a href="mailto:info@omarfourati.de">info@omarfourati.de</a> verarbeite ich die von dir
@@ -189,7 +231,7 @@ export default async function DatenschutzPage({
       </section>
 
       <section>
-        <h2>8. Deine Rechte</h2>
+        <h2>9. Deine Rechte</h2>
         <p>
           Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17),
           Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21).
@@ -204,7 +246,7 @@ export default async function DatenschutzPage({
       </section>
 
       <section>
-        <h2>9. Keine automatisierte Entscheidungsfindung</h2>
+        <h2>10. Keine automatisierte Entscheidungsfindung</h2>
         <p>Auf dieser Website findet keine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO statt.</p>
       </section>
     </LegalArticle>
