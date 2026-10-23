@@ -212,6 +212,20 @@ export default function Experience() {
                 >
                   {cert.period}
                 </span>
+                {cert.verifyUrl && (
+                  <p className="mt-3">
+                    <a
+                      href={cert.verifyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${t("verify_certificate")}: ${cert.role[locale as keyof typeof cert.role] ?? cert.role.de}`}
+                      className="text-xs hover:underline"
+                      style={{ fontFamily: "var(--font-space-mono)", color: "#C9A84C" }}
+                    >
+                      {t("verify_certificate")} ↗
+                    </a>
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>

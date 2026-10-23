@@ -7,6 +7,8 @@ export interface ExperienceEntry {
   description: { de: string; en: string; fr: string; ar: string };
   tags?: string[];
   current?: boolean;
+  /** Public verification page of a certificate (LinkedIn Learning, Udemy). */
+  verifyUrl?: string;
 }
 
 export const experiences: ExperienceEntry[] = [
@@ -121,6 +123,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/770988d68c1f202b343763bd3e80eba8317bd0d528cfc4b147231138b99600b3/",
     description: {
       de: "Projekte planen, klassisch und agil: von den Anforderungen zum Plan, Ablauf- und Terminplanung mit Netzplan und Gantt-Diagramm, Kosten, Ressourcen und Qualität (1 Std. 11 Min.).",
       en: "Planning projects, classic and agile: from requirements to plan, scheduling with network diagrams and Gantt charts, costs, resources and quality (1 h 11 min).",
@@ -140,6 +143,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/27d02659f0e9611f5b1c46a97ac00b7233be3d9095b4e779b4d15942f3ca341b/",
     description: {
       de: "Projekte sauber starten: Initiierung, Auftrag und Setup (53 Min.).",
       en: "Starting projects properly: initiation, project mandate and setup (53 min).",
@@ -159,6 +163,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/937afb155ee3348128cb6e7c4ae2fdd49fb9c92c20eca51fbf1daf5570f9bb37/",
     description: {
       de: "Einführung in Methoden und Ablauf des Projektmanagements (53 Min.).",
       en: "Introduction to project management methods and workflow (53 min).",
@@ -178,6 +183,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.linkedin.com/learning/certificates/a477017884da999891bc743e65c1c52164e25997314b624a1f602dbd8d6af576/",
     description: {
       de: "Einführung in Rolle, Aufgaben und Methoden von Projektmanager:innen (24 Min.).",
       en: "Introduction to the role, tasks and methods of a project manager (24 min).",
@@ -197,6 +203,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-9e0b9aa1-0a8f-47b5-aca6-00f8d1be701e/",
     description: {
       de: "DevOps von den Grundlagen bis zu fortgeschrittenen Projekten mit KI (64 Std.).",
       en: "DevOps from the basics to advanced projects with AI (64 hrs).",
@@ -216,6 +223,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-9d3fe6fb-eebd-489f-900b-3cdd35d43157/",
     description: {
       de: "Umfassender React-Kurs mit praxisnahen Projekten (10,5 Std.).",
       en: "Comprehensive React course with hands-on projects (10.5 hrs).",
@@ -235,6 +243,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-14348314-3e3b-466d-8b2a-378d216730f6/",
     description: {
       de: "Einsatz von Künstlicher Intelligenz und KI-Tools in der Suchmaschinenoptimierung (SEO) (1,5 Std.).",
       en: "Using artificial intelligence and AI tools for search engine optimization (SEO) (1.5 hrs).",
@@ -254,6 +263,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-feb15b63-d0cf-49dc-9393-d52cb21f77ae/",
     description: {
       de: "Physik-Simulation in Unity 6.2 mit C#: Rigidbodies, Kollisionen und Kräfte für Spiele (3,5 Std.).",
       en: "Physics simulation in Unity 6.2 with C#: rigidbodies, collisions and forces for games (3.5 hrs).",
@@ -273,6 +283,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-5f3c968a-8021-4663-a70a-4ddc016e79ce/",
     description: {
       de: "Netzwerksicherheit: Firewalls, sichere Netzwerkarchitektur, WLAN-Sicherheit und Netzwerk-Monitoring (12,5 Std.).",
       en: "Network security: firewalls, secure network architecture, Wi-Fi security and network monitoring (12.5 hrs).",
@@ -292,6 +303,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-be7e4fb9-6c56-48e4-8c43-65ceceba7fb6/",
     description: {
       de: "Entwicklung einer individuellen E-Commerce-Website mit React und JavaScript.",
       en: "Building a custom e-commerce website with React and JavaScript.",
@@ -311,6 +323,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2026",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-126c98de-5c7c-43c2-8281-0dba44cc10c6/",
     description: {
       de: "Java-Programmierung in Kombination mit KI-gestützten Entwicklungswerkzeugen.",
       en: "Java programming combined with AI-assisted development tools.",
@@ -330,6 +343,7 @@ export const certificates: ExperienceEntry[] = [
     },
     period: "2023",
     type: "certificate",
+    verifyUrl: "https://www.udemy.com/certificate/UC-31a93f86-03c4-4531-9f0b-6cfb6bb2e3d5/",
     description: {
       de: "Aufbau einer produktionsnahen REST-API mit Python, Django und dem Django REST Framework.",
       en: "Building a production-style REST API with Python, Django and the Django REST Framework.",
