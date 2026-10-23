@@ -111,6 +111,25 @@ export const education: ExperienceEntry[] = [
 
 export const certificates: ExperienceEntry[] = [
   {
+    id: "cert-projektmanagement-planung",
+    company: "LinkedIn Learning",
+    role: {
+      de: "Projektmanagement: Planung und Strukturierung",
+      en: "Projektmanagement: Planung und Strukturierung",
+      fr: "Projektmanagement: Planung und Strukturierung",
+      ar: "Projektmanagement: Planung und Strukturierung",
+    },
+    period: "2026",
+    type: "certificate",
+    description: {
+      de: "Projekte planen, klassisch und agil: von den Anforderungen zum Plan, Ablauf- und Terminplanung mit Netzplan und Gantt-Diagramm, Kosten, Ressourcen und Qualität (1 Std. 11 Min.).",
+      en: "Planning projects, classic and agile: from requirements to plan, scheduling with network diagrams and Gantt charts, costs, resources and quality (1 h 11 min).",
+      fr: "Planifier un projet, en mode classique et agile : des exigences au plan, ordonnancement avec diagramme de réseau et diagramme de Gantt, coûts, ressources et qualité (1 h 11 min).",
+      ar: "تخطيط المشاريع بالطريقة التقليدية والرشيقة: من المتطلبات إلى الخطة، والجدولة بمخطط الشبكة ومخطط غانت، والتكاليف والموارد والجودة (ساعة و11 دقيقة).",
+    },
+    tags: ["Project Management"],
+  },
+  {
     id: "cert-projektmanagement-initiierung",
     company: "LinkedIn Learning",
     role: {
