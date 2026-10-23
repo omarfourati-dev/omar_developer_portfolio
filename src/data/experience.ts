@@ -3,7 +3,7 @@ export interface ExperienceEntry {
   company: string;
   role: { de: string; en: string; fr: string; ar: string };
   period: string;
-  type: "work" | "education" | "certificate";
+  type: "work" | "education" | "certificate" | "volunteer";
   description: { de: string; en: string; fr: string; ar: string };
   tags?: string[];
   current?: boolean;
@@ -107,6 +107,45 @@ export const education: ExperienceEntry[] = [
       en: "Passed the German language proficiency exam for university admission with grade 2.",
       fr: "Réussi l'examen d'allemand pour l'accès aux études supérieures avec la note 2.",
       ar: "اجتياز امتحان اللغة الألمانية للقبول الجامعي بدرجة 2.",
+    },
+  },
+  {
+    id: "abitur-sfax",
+    company: "Lycée L.A.K.C, Sfax",
+    role: {
+      de: "Abitur (Schwerpunkt Mathematik)",
+      en: "Baccalaureate (Mathematics)",
+      fr: "Baccalauréat (section mathématiques)",
+      ar: "البكالوريا (شعبة الرياضيات)",
+    },
+    period: "2013 – 2017",
+    type: "education",
+    description: {
+      de: "Tunesisches Abitur (Baccalauréat) im Zweig Mathematik.",
+      en: "Tunisian baccalaureate in the mathematics track.",
+      fr: "Baccalauréat tunisien, section mathématiques.",
+      ar: "البكالوريا التونسية، شعبة الرياضيات.",
+    },
+  },
+];
+
+export const volunteering: ExperienceEntry[] = [
+  {
+    id: "nachbarschaftshilfe-heidelberg",
+    company: "Ökumenische Nachbarschaftshilfe mit Sozialdienst, Heidelberg",
+    role: {
+      de: "Freiwillige Nachbarschaftshilfe",
+      en: "Volunteer neighbourhood support",
+      fr: "Aide bénévole de voisinage",
+      ar: "مساعدة تطوعية للجيران",
+    },
+    period: "2018 – 2020",
+    type: "volunteer",
+    description: {
+      de: "Ehrenamtliche Unterstützung von Menschen in der Nachbarschaft im Alltag.",
+      en: "Volunteer support for people in the neighbourhood with everyday tasks.",
+      fr: "Soutien bénévole aux personnes du quartier dans leur quotidien.",
+      ar: "دعم تطوعي لسكان الحي في شؤون حياتهم اليومية.",
     },
   },
 ];
@@ -389,6 +428,24 @@ export const certificates: ExperienceEntry[] = [
       ar: "شهادة ضمان جودة البرمجيات من مجلس الاختبار الألماني.",
     },
     tags: ["QA", "Testing", "Software-Qualität"],
+  },
+  {
+    id: "cert-stressmanagement",
+    company: "TH Köln",
+    role: {
+      de: "Stressmanagement & Persönlichkeitsentwicklung",
+      en: "Stress Management & Personal Development",
+      fr: "Gestion du stress et développement personnel",
+      ar: "إدارة الضغوط وتطوير الذات",
+    },
+    period: "2022 – 2023",
+    type: "certificate",
+    description: {
+      de: "Wahlfach im Wintersemester 2022/23: Achtsamkeit, Zeitmanagement und Coaching-Methoden (48 Unterrichtsstunden, 5 CP).",
+      en: "Elective in winter semester 2022/23: mindfulness, time management and coaching methods (48 hours, 5 ECTS).",
+      fr: "Module optionnel, semestre d'hiver 2022/23 : pleine conscience, gestion du temps et méthodes de coaching (48 heures, 5 ECTS).",
+      ar: "مادة اختيارية في الفصل الشتوي 2022/23: اليقظة الذهنية وإدارة الوقت وأساليب التدريب (48 ساعة، 5 نقاط ECTS).",
+    },
   },
   {
     id: "cert-python",

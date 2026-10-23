@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { experiences, education, certificates } from "@/data/experience";
+import { experiences, education, volunteering, certificates } from "@/data/experience";
 import { motion } from "framer-motion";
 
 interface TimelineItemProps {
@@ -174,6 +174,21 @@ export default function Experience() {
           <div>
             {education.map((edu, i) => (
               <TimelineItem key={edu.id} entry={edu} locale={locale} index={i} />
+            ))}
+          </div>
+        </ScrollReveal>
+
+        {/* Volunteering */}
+        <ScrollReveal className="mb-12">
+          <h3
+            className="text-xs tracking-[0.25em] uppercase mb-8"
+            style={{ fontFamily: "var(--font-space-mono)", color: "#938572" }}
+          >
+            {t("volunteering")}
+          </h3>
+          <div>
+            {volunteering.map((entry, i) => (
+              <TimelineItem key={entry.id} entry={entry} locale={locale} index={i} />
             ))}
           </div>
         </ScrollReveal>
