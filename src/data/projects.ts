@@ -16,6 +16,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "daftar",
+    title: "Daftar",
+    description: {
+      de: "Termin- und Praxisverwaltung für Arztpraxen aller Fachrichtungen in Tunesien, auf Französisch und Arabisch (RTL) und als installierbare PWA. Doppelbuchungen schließt die Datenbank selbst aus (PostgreSQL-Exclusion-Constraints); jede Praxis bekommt eine eigene Subdomain mit Online-Terminbuchung samt Schutz vor Spam-Buchungen. Dazu Telefon-Schnellbuchung, Wartezimmer mit automatischem „nächster Patient“ und Aufrufbildschirm, Patientenkartei mit Nichterscheinen-Zähler, Kasse mit Tagesabschluss, Erinnerungstexte für WhatsApp und SMS sowie Excel/CSV-Import mit frei einstellbarer Spaltenzuordnung. Mandantenfähiges FastAPI-Backend, SvelteKit-Frontend, über 1.700 automatisierte Tests inklusive Playwright und axe.",
+      en: "Appointment and practice management for medical practices of all specialties in Tunisia, in French and Arabic (RTL) and as an installable PWA. The database itself rules out double bookings (PostgreSQL exclusion constraints); every practice gets its own subdomain with online booking and protection against spam bookings. Plus quick phone booking, a waiting room with an automatic “next patient” and a call screen, patient records with a no-show counter, a cash desk with daily closing, reminder texts for WhatsApp and SMS, and Excel/CSV import with user-defined column mapping. Multi-tenant FastAPI backend, SvelteKit frontend, more than 1,700 automated tests including Playwright and axe.",
+      fr: "Gestion des rendez-vous et du cabinet pour les médecins de toutes spécialités en Tunisie, en français et en arabe (RTL) et en PWA installable. La base de données exclut elle-même les doubles réservations (contraintes d’exclusion PostgreSQL) ; chaque cabinet a son propre sous-domaine avec prise de rendez-vous en ligne protégée contre les réservations abusives. S’y ajoutent la prise de rendez-vous rapide par téléphone, une salle d’attente avec « patient suivant » automatique et écran d’appel, un dossier patient avec compteur d’absences, une caisse avec clôture journalière, des rappels prêts à envoyer par WhatsApp et SMS et l’import Excel/CSV avec correspondance des colonnes au choix. Backend FastAPI multi-cabinets, frontend SvelteKit, plus de 1 700 tests automatisés dont Playwright et axe.",
+      ar: "إدارة المواعيد والعيادة للأطباء من جميع الاختصاصات في تونس، بالفرنسية والعربية (من اليمين إلى اليسار) وكتطبيق PWA قابل للتثبيت. قاعدة البيانات نفسها تمنع الحجز المزدوج (قيود الاستبعاد في PostgreSQL)، ولكل عيادة نطاق فرعي خاص بها للحجز عبر الإنترنت مع حماية من الحجوزات المزعجة. بالإضافة إلى الحجز السريع عبر الهاتف، وقاعة انتظار تحدد «المريض التالي» تلقائيًا مع شاشة نداء، وملف المريض مع عدّاد الغيابات، وصندوق مع إقفال يومي، ونصوص تذكير جاهزة لواتساب والرسائل القصيرة، واستيراد ملفات Excel/CSV مع ربط الأعمدة حسب الاختيار. واجهة خلفية FastAPI متعددة العيادات، وواجهة أمامية SvelteKit، وأكثر من 1700 اختبار آلي من بينها Playwright وaxe.",
+    },
+    tags: ["Python", "FastAPI", "PostgreSQL", "SvelteKit", "Svelte 5", "PWA", "Tailwind CSS", "Docker", "Playwright"],
+    github: "https://github.com/omarfourati-dev/daftar",
+    demo: "https://daftar.omarfourati.de/",
+    featured: true,
+    category: "saas",
+  },
+  {
     id: "paint-ball-game",
     title: "Paint-Ball Game",
     description: {

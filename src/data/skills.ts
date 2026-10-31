@@ -35,7 +35,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Next.js", level: "advanced" },
       { name: "Vite", level: "advanced" },
       { name: "Angular", level: "intermediate" },
-      { name: "Svelte 5", level: "intermediate" },
+      { name: "Svelte 5", level: "advanced" },
       { name: "WebGL2", level: "intermediate" },
       { name: "Framer Motion", level: "intermediate" },
     ],

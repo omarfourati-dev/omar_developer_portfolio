@@ -30,7 +30,7 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 ## Technical Skills
 
 ### Frontend
-- Vue 3, TypeScript, Tailwind CSS (expert); React, Next.js, Vite (advanced); Angular, Svelte 5, WebGL2, Framer Motion
+- Vue 3, TypeScript, Tailwind CSS (expert); React, Next.js, Vite, Svelte 5 (advanced); Angular, WebGL2, Framer Motion
 
 ### Backend
 - Python, FastAPI, REST APIs (expert); WebSockets, Node.js (advanced); Java / Spring Boot, C# / .NET, Go, Kotlin / Ktor, Server-Sent Events
@@ -52,6 +52,17 @@ workers (§ 18b AufenthG); no visa sponsorship is required.
 - German (C1), English (B2), French (C1), Arabic (Native)
 
 ## Selected Projects
+
+### Daftar (Appointment & Practice Management for Doctors in Tunisia)
+Multi-tenant SaaS for medical practices of all specialties in Tunisia, in French and Arabic (RTL), installable as a
+PWA. Double bookings are ruled out by the database itself (PostgreSQL exclusion constraints with btree_gist); every
+practice gets its own subdomain with online booking, rate-limited per IP and per phone number. Quick phone booking,
+waiting room with an automatic "next patient" and a call screen, patient records with a no-show counter, cash desk
+with daily closing (amounts in millimes), reminder texts for WhatsApp and SMS, Excel/CSV import with user-defined column
+mapping, subscriptions via Flouci. Python/FastAPI with SQLAlchemy Core and Alembic, SvelteKit/Svelte 5 frontend,
+Prometheus metrics, daily backups, pytest, Vitest and Playwright tests with axe accessibility checks in CI.
+Stack: Python, FastAPI, PostgreSQL, SvelteKit, Svelte 5, TypeScript, Tailwind CSS, Docker, GitHub Actions
+Live: https://daftar.omarfourati.de · Code: https://github.com/omarfourati-dev/daftar
 
 ### Kibuka (Multilingual AI Children's Books)
 Every morning a background job (ARQ, Redis) generates a new children's book: a German story with GPT-4.1, a two-stage
